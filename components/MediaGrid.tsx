@@ -2,7 +2,7 @@
 import Image from "next/image";
 
 export type MediaItem = {
-  src: string; // es: "/media/01-portrait.jpeg"
+  src: string;
   alt?: string;
 };
 
@@ -17,11 +17,12 @@ export default function MediaGrid({ items }: { items: MediaItem[] }) {
           <div className="relative aspect-[4/3] w-full">
             <Image
               src={it.src}
-              alt={it.alt ?? "Media"}
+              alt={it.alt ?? ""}
               fill
-              className="object-cover transition duration-700 hover:scale-[1.02]"
+              className="object-cover"
             />
           </div>
+          {/* NIENTE CAPTION. NIENTE NOMI. */}
         </div>
       ))}
     </div>

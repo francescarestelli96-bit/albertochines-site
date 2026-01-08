@@ -4,7 +4,8 @@
 import { useLanguage } from "../../components/LanguageProvider";
 
 export default function AboutPage() {
-  const { lang } = useLanguage();
+  const ctx = useLanguage() as any;
+  const lang: "it" | "en" = (ctx?.lang ?? ctx?.language ?? "it") as "it" | "en";
 
   return (
     <main className="min-h-screen bg-noise bg-neutral-950 text-neutral-100">
@@ -13,46 +14,45 @@ export default function AboutPage() {
           Bio
         </h1>
 
-        <div className="mt-10 max-w-3xl space-y-6 text-sm md:text-base text-neutral-300/90 leading-relaxed">
-          {lang === "it" && (
-            <>
-              <p>
-                Alberto Chines è un pianista italiano attivo nel repertorio
-                solistico e cameristico, con particolare attenzione alla musica
-                romantica e del primo Novecento.
-              </p>
-              <p>
-                Dopo la formazione accademica, ha intrapreso un’intensa attività
-                concertistica esibendosi in contesti nazionali e internazionali,
-                collaborando con musicisti e istituzioni culturali.
-              </p>
-              <p>
-                Il suo lavoro interpretativo si concentra sull’equilibrio tra
-                rigore formale e libertà espressiva, con una costante ricerca
-                timbrica e strutturale.
-              </p>
-            </>
-          )}
+        {/* NIENTE BOX: solo testo pulito */}
+        <div className="mt-10 max-w-3xl">
+          <h2 className="uppercase tracking-[0.25em] text-neutral-200 text-sm">
+            {lang === "it" ? "Profilo artistico" : "Artistic profile"}
+          </h2>
 
-          {lang === "en" && (
-            <>
-              <p>
-                Alberto Chines is an Italian pianist active in both solo and
-                chamber repertoire, with a particular focus on Romantic and
-                early 20th-century music.
-              </p>
-              <p>
-                Following his academic training, he developed an intense concert
-                activity, performing in national and international venues and
-                collaborating with musicians and cultural institutions.
-              </p>
-              <p>
-                His interpretative work focuses on the balance between formal
-                rigor and expressive freedom, with constant attention to timbral
-                and structural research.
-              </p>
-            </>
-          )}
+          <div className="mt-6 space-y-5 text-sm md:text-base text-neutral-300/90 leading-relaxed">
+            {lang === "it" ? (
+              <>
+                <p>
+                  Alberto Chines è un pianista italiano attivo nel repertorio solistico e cameristico,
+                  con particolare attenzione alla musica romantica e del primo Novecento.
+                </p>
+                <p>
+                  Dopo la formazione accademica, ha intrapreso un’intensa attività concertistica
+                  esibendosi in contesti nazionali e internazionali, collaborando con musicisti e istituzioni culturali.
+                </p>
+                <p>
+                  Il suo lavoro interpretativo si concentra sull’equilibrio tra rigore formale e libertà espressiva,
+                  con una costante ricerca timbrica e strutturale.
+                </p>
+              </>
+            ) : (
+              <>
+                <p>
+                  Alberto Chines is an Italian pianist active in both solo and chamber repertoire,
+                  with a particular focus on Romantic and early 20th-century music.
+                </p>
+                <p>
+                  Following his academic training, he developed an intense concert activity, performing in national
+                  and international venues and collaborating with musicians and cultural institutions.
+                </p>
+                <p>
+                  His interpretative work focuses on the balance between formal rigor and expressive freedom,
+                  with constant attention to timbral and structural research.
+                </p>
+              </>
+            )}
+          </div>
         </div>
       </section>
     </main>
