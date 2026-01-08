@@ -1,93 +1,82 @@
-// components/Header.tsx
 "use client";
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useLanguage } from "./LanguageProvider";
 
-const NAV = [
-  { label: "Bio", href: "/about" },
-  { label: "Repertorio", href: "/repertorio" },
-  { label: "Media", href: "/media" },
-  { label: "Concerti", href: "/concerts" },
-  { label: "Contatti", href: "/contact" },
-];
+const navItemClass =
+  "text-[12px] uppercase tracking-[0.35em] text-white/60 hover:text-white transition";
 
 export default function Header() {
   const pathname = usePathname();
-  const [open, setOpen] = useState(false);
+  const { lang, setLang, t } = useLanguage();
 
-  useEffect(() => {
-    setOpen(false);
-  }, [pathname]);
+  const isActive = (href: string) => (pathname === href ? "text-white" : "");
 
   return (
-    <header className="sticky top-0 z-50 border-b border-white/10 bg-neutral-950/70 backdrop-blur-xl">
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+    <header className="sticky top-0 z-50 bg-neutral-950/70 backdrop-blur border-b border-white/10">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 py-4 flex items-center justify-between gap-4">
         {/* Brand */}
         <Link
           href="/"
-          className="text-[11px] uppercase tracking-[0.4em] text-neutral-200 hover:text-white transition"
+          className="text-[12px] uppercase tracking-[0.45em] text-white/90 hover:text-white transition whitespace-nowrap"
         >
-          Alberto Chines
+          ALBERTO CHINES
         </Link>
 
-        {/* Desktop nav */}
-        <nav className="hidden md:flex items-center gap-8 text-[11px] uppercase tracking-[0.35em] text-neutral-400">
-          {NAV.map((i) => (
-            <Link
-              key={i.href}
-              href={i.href}
-              className={`hover:text-neutral-200 transition ${
-                pathname === i.href ? "text-neutral-200" : ""
-              }`}
-            >
-              {i.label}
-            </Link>
-          ))}
+        {/* Nav - sempre visibile anche mobile (wrap) */}
+        <nav className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
+          <Link className={`${navItemClass} ${isActive("/")}`} href="/">
+            {t.nav.home}
+          </Link>
+          <Link className={`${navItemClass} ${isActive("/about")}`} href="/about">
+            {t.nav.bio}
+          </Link>
+          <Link className={`${navItemClass} ${isActive("/repertorio")}`} href="/repertorio">
+            {t.nav.repertorio}
+          </Link>
+          <Link className={`${navItemClass} ${isActive("/media")}`} href="/media">
+            {t.nav.media}
+          </Link>
+          <Link className={`${navItemClass} ${isActive("/concerts")}`} href="/concerts">
+            {t.nav.concerts}
+          </Link>
+          <Link className={`${navItemClass} ${isActive("/contact")}`} href="/contact">
+            {t.nav.contact}
+          </Link>
         </nav>
 
-        {/* Right side */}
-        <div className="flex items-center gap-3">
-          {/* Lang pill */}
-          <div className="hidden sm:flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-3 py-2 text-[11px] uppercase tracking-[0.35em] text-neutral-400">
-            <span>Lang</span>
-            <span className="rounded-full border border-white/10 bg-white/[0.04] px-2 py-1 text-neutral-200">
-              IT
+        {/* Lang switch */}
+        <div className="flex items-center gap-2 shrink-0">
+          <div className="rounded-full border border-white/15 bg-white/[0.03] px-3 py-1.5 flex items-center gap-2">
+            <span className="text-[11px] uppercase tracking-[0.3em] text-white/60">
+              {t.common.lang}
             </span>
-          </div>
 
-          {/* Mobile menu button */}
-          <button
-            type="button"
-            className="md:hidden rounded-full border border-white/10 bg-white/[0.03] px-3 py-2 text-[11px] uppercase tracking-[0.35em] text-neutral-200 hover:bg-white/[0.06] transition"
-            onClick={() => setOpen((v) => !v)}
-            aria-expanded={open}
-            aria-label="Apri menu"
-          >
-            Menu
-          </button>
+            <button
+              onClick={() => setLang("it")}
+              className={`text-[11px] uppercase tracking-[0.3em] transition ${
+                lang === "it" ? "text-white" : "text-white/50 hover:text-white/80"
+              }`}
+              aria-pressed={lang === "it"}
+              type="button"
+            >
+              IT
+            </button>
+            <span className="text-white/20">•</span>
+            <button
+              onClick={() => setLang("en")}
+              className={`text-[11px] uppercase tracking-[0.3em] transition ${
+                lang === "en" ? "text-white" : "text-white/50 hover:text-white/80"
+              }`}
+              aria-pressed={lang === "en"}
+              type="button"
+            >
+              EN
+            </button>
+          </div>
         </div>
       </div>
-
-      {/* Mobile dropdown */}
-      {open && (
-        <div className="md:hidden border-t border-white/10 bg-neutral-950/80 backdrop-blur-xl">
-          <nav className="mx-auto max-w-6xl px-6 py-4 flex flex-col gap-3 text-[11px] uppercase tracking-[0.35em] text-neutral-300">
-            {NAV.map((i) => (
-              <Link
-                key={i.href}
-                href={i.href}
-                className={`py-2 hover:text-white transition ${
-                  pathname === i.href ? "text-white" : ""
-                }`}
-              >
-                {i.label}
-              </Link>
-            ))}
-          </nav>
-        </div>
-      )}
     </header>
   );
 }
