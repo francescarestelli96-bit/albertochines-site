@@ -21,7 +21,7 @@ export default function HomePage() {
 
           {/* FOTO */}
           <div className="relative">
-           <div className="relative aspect-[4/5] w-full max-w-md overflow-hidden rounded-3xl border border-white/25 bg-white/[0.02]">
+         <div className="relative overflow-hidden rounded-3xl border border-white/25 bg-white/[0.02]">
               <Image
                 src="/media/05-hands.jpeg"
                 alt="Alberto Chines"
