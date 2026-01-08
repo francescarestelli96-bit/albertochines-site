@@ -1,41 +1,40 @@
+"use client";
+
 import Image from "next/image";
+import { useLanguage } from "@/components/LanguageProvider";
 
 export default function HomePage() {
+  const { t } = useLanguage();
+
   return (
-    <main className="min-h-[calc(100vh-72px)]">
-      <section className="mx-auto max-w-6xl px-4 sm:px-6 py-10 sm:py-16">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-          {/* Text */}
-          <div className="lg:col-span-6">
-            <div className="text-[11px] uppercase tracking-[0.45em] text-white/50">
-              ALBERTO CHINES
+    <main className="min-h-screen bg-neutral-950 text-neutral-100">
+      <section className="mx-auto max-w-7xl px-4 py-20 md:py-24">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-14 items-center">
+          {/* LEFT */}
+          <div className="text-left">
+            <div className="text-[12px] uppercase tracking-[0.45em] text-white/45">
+              Alberto Chines
             </div>
 
-            <h1 className="mt-4 text-white/95 uppercase tracking-[0.35em] leading-[1.05]">
-              <span className="block text-[clamp(28px,4vw,56px)] whitespace-nowrap">
-                ALBERTO CHINES — PIANIST
-              </span>
+            <h1 className="mt-5 font-light uppercase tracking-[0.18em] leading-[1.05] text-[40px] sm:text-[56px]">
+              ALBERTO CHINES – PIANIST
             </h1>
 
-            <p className="mt-6 text-white/60 max-w-xl">
-              Un profilo essenziale dedicato all’interpretazione, al repertorio e all’attività
-              concertistica.
+            <p className="mt-7 max-w-md text-white/65 leading-[1.9]">
+              {t.home.tagline}
             </p>
           </div>
 
-          {/* Image */}
-          <div className="lg:col-span-6">
-            <div className="relative w-full overflow-hidden rounded-3xl border border-white/15 bg-white/[0.02]">
-              <div className="relative aspect-[4/5] w-full">
-                <Image
-                  src="/media/05-hands.jpeg"
-                  alt="Alberto Chines"
-                  fill
-                  priority
-                  className="object-cover"
-                />
-              </div>
-            </div>
+          {/* RIGHT — no border/ring */}
+          <div className="w-full">
+            <Image
+              src="/media/12-wide-stage.jpeg"
+              alt="Alberto Chines"
+              width={1600}
+              height={1000}
+              priority
+              className="w-full h-auto object-cover"
+            />
           </div>
         </div>
       </section>

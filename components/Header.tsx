@@ -2,79 +2,73 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useLanguage } from "./LanguageProvider";
+import { useLanguage } from "@/components/LanguageProvider";
 
-const navItemClass =
-  "text-[12px] uppercase tracking-[0.35em] text-white/60 hover:text-white transition";
-
-export default function Header() {
+function NavLink({ href, label }: { href: string; label: string }) {
   const pathname = usePathname();
-  const { lang, setLang, t } = useLanguage();
-
-  const isActive = (href: string) => (pathname === href ? "text-white" : "");
+  const active = pathname === href;
 
   return (
-    <header className="sticky top-0 z-50 bg-neutral-950/70 backdrop-blur border-b border-white/10">
-      <div className="mx-auto max-w-6xl px-4 sm:px-6 py-4 flex items-center justify-between gap-4">
-        {/* Brand */}
-        <Link
-          href="/"
-          className="text-[12px] uppercase tracking-[0.45em] text-white/90 hover:text-white transition whitespace-nowrap"
-        >
-          ALBERTO CHINES
+    <Link
+      href={href}
+      className={[
+        "text-[11px] uppercase tracking-[0.45em] transition-colors",
+        active ? "text-white" : "text-white/55 hover:text-white/85",
+      ].join(" ")}
+    >
+      {label}
+    </Link>
+  );
+}
+
+export default function Header() {
+  const { lang, setLang, t } = useLanguage();
+
+  return (
+    <header className="sticky top-0 z-50 border-b border-white/10 bg-neutral-950/70 backdrop-blur">
+      <div className="mx-auto max-w-7xl px-4 py-4 flex items-center justify-between gap-6">
+        <Link href="/" className="text-[12px] uppercase tracking-[0.45em] text-white/85 hover:text-white">
+          Alberto Chines
         </Link>
 
-        {/* Nav - sempre visibile anche mobile (wrap) */}
-        <nav className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
-          <Link className={`${navItemClass} ${isActive("/")}`} href="/">
-            {t.nav.home}
-          </Link>
-          <Link className={`${navItemClass} ${isActive("/about")}`} href="/about">
-            {t.nav.bio}
-          </Link>
-          <Link className={`${navItemClass} ${isActive("/repertorio")}`} href="/repertorio">
-            {t.nav.repertorio}
-          </Link>
-          <Link className={`${navItemClass} ${isActive("/media")}`} href="/media">
-            {t.nav.media}
-          </Link>
-          <Link className={`${navItemClass} ${isActive("/concerts")}`} href="/concerts">
-            {t.nav.concerts}
-          </Link>
-          <Link className={`${navItemClass} ${isActive("/contact")}`} href="/contact">
-            {t.nav.contact}
-          </Link>
+        <nav className="hidden md:flex items-center gap-8">
+          <NavLink href="/" label={t.nav.home} />
+          <NavLink href="/about" label={t.nav.bio} />
+          <NavLink href="/repertorio" label={t.nav.repertorio} />
+          <NavLink href="/media" label={t.nav.media} />
+          <NavLink href="/concerts" label={t.nav.concerti} />
+          <NavLink href="/contact" label={t.nav.contatti} />
         </nav>
 
-        {/* Lang switch */}
-        <div className="flex items-center gap-2 shrink-0">
-          <div className="rounded-full border border-white/15 bg-white/[0.03] px-3 py-1.5 flex items-center gap-2">
-            <span className="text-[11px] uppercase tracking-[0.3em] text-white/60">
-              {t.common.lang}
-            </span>
+        <div className="flex items-center gap-3 text-[11px] uppercase tracking-[0.35em] text-white/70">
+          <span className="hidden sm:inline">Lang</span>
+          <button
+            onClick={() => setLang("it")}
+            className={lang === "it" ? "text-white" : "text-white/50 hover:text-white/80"}
+            aria-label="Italiano"
+          >
+            IT
+          </button>
+          <span className="text-white/25">·</span>
+          <button
+            onClick={() => setLang("en")}
+            className={lang === "en" ? "text-white" : "text-white/50 hover:text-white/80"}
+            aria-label="English"
+          >
+            EN
+          </button>
+        </div>
+      </div>
 
-            <button
-              onClick={() => setLang("it")}
-              className={`text-[11px] uppercase tracking-[0.3em] transition ${
-                lang === "it" ? "text-white" : "text-white/50 hover:text-white/80"
-              }`}
-              aria-pressed={lang === "it"}
-              type="button"
-            >
-              IT
-            </button>
-            <span className="text-white/20">•</span>
-            <button
-              onClick={() => setLang("en")}
-              className={`text-[11px] uppercase tracking-[0.3em] transition ${
-                lang === "en" ? "text-white" : "text-white/50 hover:text-white/80"
-              }`}
-              aria-pressed={lang === "en"}
-              type="button"
-            >
-              EN
-            </button>
-          </div>
+      {/* mobile ultra-minimale */}
+      <div className="md:hidden border-t border-white/10">
+        <div className="mx-auto max-w-7xl px-4 py-3 flex gap-5 overflow-x-auto">
+          <NavLink href="/" label={t.nav.home} />
+          <NavLink href="/about" label={t.nav.bio} />
+          <NavLink href="/repertorio" label={t.nav.repertorio} />
+          <NavLink href="/media" label={t.nav.media} />
+          <NavLink href="/concerts" label={t.nav.concerti} />
+          <NavLink href="/contact" label={t.nav.contatti} />
         </div>
       </div>
     </header>

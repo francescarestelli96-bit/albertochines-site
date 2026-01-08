@@ -1,19 +1,20 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-
-html, body {
-  height: 100%;
+body {
+  letter-spacing: 0.01em;
+  text-rendering: geometricPrecision;
 }
 
-.bg-noise {
-  position: relative;
+p {
+  line-height: 1.9;
 }
 
-.bg-noise::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  opacity: 0.08;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='.35'/%3E%3C/svg%3E");
+h1, h2, h3 {
+  text-rendering: geometricPrecision;
+}
+
+@media (max-width: 640px) {
+  p { line-height: 1.7; }
 }

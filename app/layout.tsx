@@ -1,7 +1,7 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import Header from "../components/Header";
-import LanguageProvider from "../components/LanguageProvider";
+import Header from "@/components/Header";
+import { LanguageProvider } from "@/components/LanguageProvider";
 
 export const metadata: Metadata = {
   title: "Alberto Chines",
@@ -13,10 +13,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="it">
       <body className="bg-neutral-950 text-neutral-100">
         <LanguageProvider>
-          <div className="bg-noise min-h-screen">
-            <Header />
-            {children}
-          </div>
+          <Header />
+          {children}
         </LanguageProvider>
       </body>
     </html>
