@@ -1,65 +1,99 @@
-import Image from "next/image";
+"use client";
+
+import Link from "next/link";
+import { useLanguage } from "@/components/LanguageProvider";
+import PlaceholderMedia from "@/components/PlaceholderMedia";
+
+function Tile({
+  href,
+  kicker,
+  title,
+  body,
+  right,
+}: {
+  href: string;
+  kicker: string;
+  title: string;
+  body: string;
+  right?: React.ReactNode;
+}) {
+  return (
+    <Link
+      href={href}
+      className="group rounded-3xl border border-white/10 bg-white/[0.04] p-7 hover:bg-white/[0.07] transition"
+    >
+      <div className="flex items-start justify-between gap-6">
+        <div>
+          <div className="text-xs tracking-[0.28em] uppercase text-white/55">
+            {kicker}
+          </div>
+          <div className="mt-3 text-white/90 text-lg">{title}</div>
+          <div className="mt-2 text-white/55 text-sm leading-relaxed">{body}</div>
+          <div className="mt-6 text-sm text-white/55 group-hover:text-white/75 transition">
+            Apri →
+          </div>
+        </div>
+
+        {right ? <div className="hidden lg:block w-48">{right}</div> : null}
+      </div>
+    </Link>
+  );
+}
 
 export default function Home() {
+  const { t } = useLanguage();
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <main className="min-h-screen px-6 py-16">
+      <section className="mx-auto max-w-6xl">
+        <div className="text-xs tracking-[0.34em] uppercase text-white/60">
+          Alberto Chines
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
+
+        <h1 className="mt-4 text-5xl md:text-6xl font-light tracking-wide">
+          {t.home.headline}
+        </h1>
+
+        <p className="mt-5 max-w-2xl text-white/65 leading-relaxed">
+          {t.home.subheadline}
+        </p>
+
+        <div className="mt-10 grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <Tile
+            href="/about"
+            kicker={t.nav.bio}
+            title={t.home.bioTeaser}
+            body="Formazione, debutto, premi, attività e profilo completo."
+          />
+          <Tile
+            href="/media"
+            kicker={t.nav.media}
+            title={t.home.mediaTeaser}
+            body="Galleria foto selezionate (press-ready)."
+            right={<PlaceholderMedia label="Preview" ratio="aspect-[16/10]" />}
+          />
+          <Tile
+            href="/repertorio"
+            kicker={t.nav.repertoire}
+            title={t.home.repertoireTeaser}
+            body="Programmi solistici, cameristici e progetti."
+          />
+          <Tile
+            href="/concerts"
+            kicker={t.nav.concerts}
+            title={t.home.concertsTeaser}
+            body="Prossimi concerti e archivio."
+          />
+          <div className="lg:col-span-2">
+            <Tile
+              href="/contact"
+              kicker={t.nav.contact}
+              title={t.home.contactTeaser}
+              body="Booking, comunicazione, richieste stampa."
             />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+          </div>
         </div>
-      </main>
-    </div>
+      </section>
+    </main>
   );
 }
