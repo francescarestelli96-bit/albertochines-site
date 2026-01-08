@@ -1,22 +1,16 @@
-import MediaGrid, { MediaItem } from "@/components/MediaGrid";
-
-const items: MediaItem[] = [
-  { src: "/media/01-portrait.jpeg" },
-  { src: "/media/02-profile.jpeg" },
-  { src: "/media/05-hands.jpeg" },
-  { src: "/media/09-close-reading.jpeg" },
-  { src: "/media/12-wide-stage.jpeg" },
-];
+"use client";
+import MediaGrid from "@/components/MediaGrid";
+import { useLanguage } from "@/components/LanguageProvider";
 
 export default function MediaPage() {
+  const { t } = useLanguage();
+
   return (
-    <main className="min-h-screen bg-neutral-950 text-neutral-100">
-      <section className="mx-auto max-w-7xl px-4 py-16">
-        <h1 className="text-[12px] uppercase tracking-[0.45em] text-white/50">Media</h1>
-        <div className="mt-8">
-          <MediaGrid items={items} />
-        </div>
-      </section>
+    <main className="min-h-screen pt-40 pb-20 px-6 max-w-7xl mx-auto">
+      <h1 className="text-[12px] uppercase tracking-[0.45em] text-white/40 mb-16">
+        {t.nav.media}
+      </h1>
+      <MediaGrid />
     </main>
   );
 }

@@ -1,22 +1,21 @@
 "use client";
 
-import Image from "next/image";
+const mediaItems = [
+  { src: "/media/01-portrait.jpeg" },
+  { src: "/media/02-profile.jpeg" },
+  { src: "/media/12-wide-stage.jpeg" },
+  // Aggiungi qui gli altri file che hai nella cartella public/media
+];
 
-export type MediaItem = {
-  src: string;
-};
-
-export default function MediaGrid({ items }: { items: MediaItem[] }) {
+export default function MediaGrid() {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      {items.map((item, i) => (
-        <div key={i} className="overflow-hidden rounded-2xl">
-          <Image
-            src={item.src}
-            alt=""
-            width={1400}
-            height={1800}
-            className="w-full h-full object-cover transition-transform duration-700 ease-out hover:scale-[1.03]"
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      {mediaItems.map((item, i) => (
+        <div key={i} className="overflow-hidden rounded-sm bg-neutral-900">
+          <img 
+            src={item.src} 
+            alt="Alberto Chines"
+            className="w-full h-full object-cover grayscale hover:grayscale-0 hover:scale-105 transition duration-700 aspect-[4/5]"
           />
         </div>
       ))}

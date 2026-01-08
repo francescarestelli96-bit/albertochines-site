@@ -1,74 +1,41 @@
 "use client";
-
 import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { useLanguage } from "@/components/LanguageProvider";
-
-function NavLink({ href, label }: { href: string; label: string }) {
-  const pathname = usePathname();
-  const active = pathname === href;
-
-  return (
-    <Link
-      href={href}
-      className={[
-        "text-[11px] uppercase tracking-[0.45em] transition-colors",
-        active ? "text-white" : "text-white/55 hover:text-white/85",
-      ].join(" ")}
-    >
-      {label}
-    </Link>
-  );
-}
+import { useLanguage } from "./LanguageProvider";
 
 export default function Header() {
-  const { lang, setLang, t } = useLanguage();
+  const { t, lang, setLang } = useLanguage();
+
+  const menuItems = [
+    { name: t.nav.home, href: "/" },
+    { name: t.nav.bio, href: "/about" },
+    { name: t.nav.repertorio, href: "/repertorio" },
+    { name: t.nav.media, href: "/media" },
+    { name: t.nav.concerti, href: "/concerts" },
+    { name: t.nav.contatti, href: "/contact" },
+  ];
 
   return (
-    <header className="sticky top-0 z-50 border-b border-white/10 bg-neutral-950/70 backdrop-blur">
-      <div className="mx-auto max-w-7xl px-4 py-4 flex items-center justify-between gap-6">
-        <Link href="/" className="text-[12px] uppercase tracking-[0.45em] text-white/85 hover:text-white">
-          Alberto Chines
-        </Link>
-
-        <nav className="hidden md:flex items-center gap-8">
-          <NavLink href="/" label={t.nav.home} />
-          <NavLink href="/about" label={t.nav.bio} />
-          <NavLink href="/repertorio" label={t.nav.repertorio} />
-          <NavLink href="/media" label={t.nav.media} />
-          <NavLink href="/concerts" label={t.nav.concerti} />
-          <NavLink href="/contact" label={t.nav.contatti} />
-        </nav>
-
-        <div className="flex items-center gap-3 text-[11px] uppercase tracking-[0.35em] text-white/70">
-          <span className="hidden sm:inline">Lang</span>
-          <button
-            onClick={() => setLang("it")}
-            className={lang === "it" ? "text-white" : "text-white/50 hover:text-white/80"}
-            aria-label="Italiano"
-          >
-            IT
-          </button>
-          <span className="text-white/25">·</span>
-          <button
-            onClick={() => setLang("en")}
-            className={lang === "en" ? "text-white" : "text-white/50 hover:text-white/80"}
-            aria-label="English"
-          >
-            EN
-          </button>
-        </div>
-      </div>
-
-      {/* mobile ultra-minimale */}
-      <div className="md:hidden border-t border-white/10">
-        <div className="mx-auto max-w-7xl px-4 py-3 flex gap-5 overflow-x-auto">
-          <NavLink href="/" label={t.nav.home} />
-          <NavLink href="/about" label={t.nav.bio} />
-          <NavLink href="/repertorio" label={t.nav.repertorio} />
-          <NavLink href="/media" label={t.nav.media} />
-          <NavLink href="/concerts" label={t.nav.concerti} />
-          <NavLink href="/contact" label={t.nav.contatti} />
+    <header className="fixed top-0 w-full z-50 bg-neutral-950/80 backdrop-blur-sm">
+      <div className="max-w-7xl mx-auto px-6 py-8 flex justify-between items-start">
+        <div className="flex flex-col gap-8 w-full">
+          <div className="flex justify-between items-center">
+            <Link href="/" className="text-sm tracking-[0.3em] font-light text-white uppercase">
+              ALBERTO CHINES
+            </Link>
+            <div className="flex gap-4 text-[10px] tracking-widest text-white/40 uppercase">
+              <button onClick={() => setLang("it")} className={lang === "it" ? "text-white" : ""}>IT</button>
+              <span>/</span>
+              <button onClick={() => setLang("en")} className={lang === "en" ? "text-white" : ""}>EN</button>
+            </div>
+          </div>
+          
+          <nav className="flex flex-wrap gap-x-6 gap-y-2 text-[11px] uppercase tracking-[0.2em] text-white/60">
+            {menuItems.map((item) => (
+              <Link key={item.href} href={item.href} className="hover:text-white transition-colors">
+                {item.name}
+              </Link>
+            ))}
+          </nav>
         </div>
       </div>
     </header>
