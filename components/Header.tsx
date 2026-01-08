@@ -1,61 +1,93 @@
+// components/Header.tsx
 "use client";
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useLanguage } from "./LanguageProvider";
+import { useEffect, useState } from "react";
 
-function NavLink({
-  href,
-  label,
-}: {
-  href: string;
-  label: string;
-}) {
-  const pathname = usePathname();
-  const active = pathname === href;
-
-  return (
-    <Link
-      href={href}
-      className={[
-        "text-xs tracking-[0.28em] uppercase transition",
-        active ? "text-white" : "text-white/55 hover:text-white/85",
-      ].join(" ")}
-    >
-      {label}
-    </Link>
-  );
-}
+const nav = [
+  { label: "Bio", href: "/about" },
+  { label: "Repertorio", href: "/repertorio" },
+  { label: "Media", href: "/media" },
+  { label: "Concerti", href: "/concerts" },
+  { label: "Contatti", href: "/contact" },
+];
 
 export default function Header() {
-  const { lang, toggleLang, t } = useLanguage();
+  const pathname = usePathname();
+  const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    setOpen(false); // chiudi menu quando cambi pagina
+  }, [pathname]);
 
   return (
-    <header className="sticky top-0 z-50 bg-black/40 backdrop-blur-xl border-b border-white/10">
-      <div className="mx-auto max-w-6xl px-6 py-5 flex items-center justify-between">
+    <header className="sticky top-0 z-50 border-b border-white/10 bg-neutral-950/70 backdrop-blur-xl">
+      <div className="mx-auto max-w-6xl px-6 py-4 flex items-center justify-between">
+        {/* Brand */}
         <Link
           href="/"
-          className="text-xs tracking-[0.34em] uppercase text-white/85 hover:text-white transition"
+          className="text-[11px] uppercase tracking-[0.4em] text-neutral-200 hover:text-white transition"
         >
           Alberto Chines
         </Link>
 
-        <nav className="hidden md:flex items-center gap-8">
-          <NavLink href="/about" label={t.nav.bio} />
-          <NavLink href="/repertorio" label={t.nav.repertoire} />
-          <NavLink href="/media" label={t.nav.media} />
-          <NavLink href="/concerts" label={t.nav.concerts} />
-          <NavLink href="/contact" label={t.nav.contact} />
+        {/* Desktop nav */}
+        <nav className="hidden md:flex items-center gap-8 text-[11px] uppercase tracking-[0.35em] text-neutral-400">
+          {nav.map((i) => (
+            <Link
+              key={i.href}
+              href={i.href}
+              className={`hover:text-neutral-200 transition ${
+                pathname === i.href ? "text-neutral-200" : ""
+              }`}
+            >
+              {i.label}
+            </Link>
+          ))}
         </nav>
 
-        <button
-          onClick={toggleLang}
-          className="rounded-full border border-white/15 bg-white/5 px-4 py-2 text-xs tracking-[0.22em] uppercase text-white/80 hover:bg-white/10 hover:text-white transition"
-          aria-label="Toggle language"
-        >
-          Lang <span className="ml-2 rounded-full border border-white/15 px-2 py-1">{lang.toUpperCase()}</span>
-        </button>
+        {/* Right controls */}
+        <div className="flex items-center gap-3">
+          {/* Lang pill (static) */}
+          <div className="hidden sm:flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-3 py-2 text-[11px] uppercase tracking-[0.35em] text-neutral-400">
+            <span>Lang</span>
+            <span className="rounded-full border border-white/10 bg-white/[0.04] px-2 py-1 text-neutral-200">
+              IT
+            </span>
+          </div>
+
+          {/* Mobile menu button */}
+          <button
+            type="button"
+            className="md:hidden rounded-full border border-white/10 bg-white/[0.03] px-3 py-2 text-[11px] uppercase tracking-[0.35em] text-neutral-200 hover:bg-white/[0.06] transition"
+            onClick={() => setOpen((v) => !v)}
+            aria-expanded={open}
+            aria-label="Apri menu"
+          >
+            Menu
+          </button>
+        </div>
       </div>
+
+      {/* Mobile dropdown */}
+      {open && (
+        <div className="md:hidden border-t border-white/10 bg-neutral-950/80 backdrop-blur-xl">
+          <nav className="mx-auto max-w-6xl px-6 py-4 flex flex-col gap-3 text-[11px] uppercase tracking-[0.35em] text-neutral-300">
+            {nav.map((i) => (
+              <Link
+                key={i.href}
+                href={i.href}
+                className={`py-2 hover:text-white transition ${
+                  pathname === i.href ? "text-white" : ""
+                }`}
+              >
+                {i.label}
+              </Link>
+            ))}
+          </nav>
+        </div>
+      )}
     </header>
   );
 }

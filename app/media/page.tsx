@@ -1,33 +1,24 @@
-"use client";
+// app/media/page.tsx
+import MediaGrid, { MediaItem } from "@/components/MediaGrid";
 
-import { useLanguage } from "@/components/LanguageProvider";
-import MediaGrid from "@/components/MediaGrid";
+const items: MediaItem[] = [
+  // metti qui le tue immagini in public/media
+  { src: "/media/01-portrait.jpeg", alt: "Portrait" },
+  { src: "/media/02-profile.jpeg", alt: "Profile" },
+  { src: "/media/05-hands.jpeg", alt: "Hands" },
+  { src: "/media/09-close-reading.jpeg", alt: "Close reading" },
+  { src: "/media/12-wide-stage.jpeg", alt: "Stage" },
+];
 
 export default function MediaPage() {
-  const { t } = useLanguage();
-
-  const items = [
-    { kind: "photo" as const, title: "Portrait", src: "/media/01-portrait.jpeg", ratio: "portrait" as const },
-    { kind: "photo" as const, title: "Profile", src: "/media/02-profile.jpeg", ratio: "portrait" as const },
-    { kind: "photo" as const, title: "Wide Piano", src: "/media/03-wide-piano.jpeg", ratio: "landscape" as const },
-    { kind: "photo" as const, title: "Back", src: "/media/04-back.jpeg", ratio: "portrait" as const },
-    { kind: "photo" as const, title: "Hands", src: "/media/05-hands.jpeg", ratio: "portrait" as const },
-    { kind: "photo" as const, title: "Score Open", src: "/media/06-score-open.jpeg", ratio: "landscape" as const },
-    { kind: "photo" as const, title: "Vertical Stage", src: "/media/07-vertical-stage.jpeg", ratio: "portrait" as const },
-    { kind: "photo" as const, title: "Mid Performance", src: "/media/08-mid-performance.jpeg", ratio: "landscape" as const },
-    { kind: "photo" as const, title: "Close Reading", src: "/media/09-close-reading.jpeg", ratio: "landscape" as const },
-    { kind: "photo" as const, title: "Hands II", src: "/media/10-hands-2.jpeg", ratio: "portrait" as const },
-    { kind: "photo" as const, title: "Profile II", src: "/media/11-profile-2.jpeg", ratio: "portrait" as const },
-    { kind: "photo" as const, title: "Wide Stage", src: "/media/12-wide-stage.jpeg", ratio: "landscape" as const },
-  ];
-
   return (
-    <main className="min-h-screen px-6 py-16">
-      <section className="mx-auto max-w-6xl">
-        <h1 className="text-4xl font-light tracking-wide">{t.nav.media}</h1>
-        <p className="mt-4 text-white/60">Photos & video. (Video coming soon.)</p>
+    <main className="min-h-screen bg-noise bg-neutral-950 text-neutral-100">
+      <section className="mx-auto max-w-6xl px-6 pt-14 pb-20">
+        <h1 className="text-[11px] uppercase tracking-[0.4em] text-neutral-400">
+          Media
+        </h1>
 
-        <div className="mt-10">
+        <div className="mt-8">
           <MediaGrid items={items} />
         </div>
       </section>
