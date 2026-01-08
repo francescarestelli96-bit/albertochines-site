@@ -1,99 +1,55 @@
-"use client";
+// app/page.tsx
+import Image from "next/image";
 
-import Link from "next/link";
-import { useLanguage } from "@/components/LanguageProvider";
-import PlaceholderMedia from "@/components/PlaceholderMedia";
-
-function Tile({
-  href,
-  kicker,
-  title,
-  body,
-  right,
-}: {
-  href: string;
-  kicker: string;
-  title: string;
-  body: string;
-  right?: React.ReactNode;
-}) {
+export default function HomePage() {
   return (
-    <Link
-      href={href}
-      className="group rounded-3xl border border-white/10 bg-white/[0.04] p-7 hover:bg-white/[0.07] transition"
-    >
-      <div className="flex items-start justify-between gap-6">
-        <div>
-          <div className="text-xs tracking-[0.28em] uppercase text-white/55">
-            {kicker}
+    <main className="min-h-screen bg-noise bg-neutral-950 text-neutral-100">
+      <section className="mx-auto max-w-6xl px-6 pt-28 pb-20">
+        <div className="grid grid-cols-1 items-center gap-12 md:grid-cols-2">
+          
+          {/* Testo */}
+          <div className="flex flex-col gap-6">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-extralight tracking-[-0.02em] leading-[0.95]">
+              Alberto Chines
+            </h1>
+
+            <p className="max-w-md text-sm md:text-base text-neutral-300/90 leading-relaxed">
+              Un profilo essenziale dedicato all’interpretazione,  
+              al repertorio e all’attività concertistica.
+            </p>
+
+            <p className="text-[11px] uppercase tracking-[0.4em] text-neutral-500">
+              Pianoforte · Musica classica
+            </p>
           </div>
-          <div className="mt-3 text-white/90 text-lg">{title}</div>
-          <div className="mt-2 text-white/55 text-sm leading-relaxed">{body}</div>
-          <div className="mt-6 text-sm text-white/55 group-hover:text-white/75 transition">
-            Apri →
+
+          {/* Immagine */}
+          <div className="relative">
+            <div className="relative aspect-[3/4] w-full overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03]">
+              <Image
+                src="/alberto.jpg"
+                alt="Alberto Chines"
+                fill
+                priority
+                className="object-cover grayscale transition duration-700 hover:grayscale-0"
+              />
+            </div>
           </div>
-        </div>
 
-        {right ? <div className="hidden lg:block w-48">{right}</div> : null}
-      </div>
-    </Link>
-  );
-}
-
-export default function Home() {
-  const { t } = useLanguage();
-
-  return (
-    <main className="min-h-screen px-6 py-16">
-      <section className="mx-auto max-w-6xl">
-        <div className="text-xs tracking-[0.34em] uppercase text-white/60">
-          Alberto Chines
-        </div>
-
-        <h1 className="mt-4 text-5xl md:text-6xl font-light tracking-wide">
-          {t.home.headline}
-        </h1>
-
-        <p className="mt-5 max-w-2xl text-white/65 leading-relaxed">
-          {t.home.subheadline}
-        </p>
-
-        <div className="mt-10 grid grid-cols-1 lg:grid-cols-2 gap-6">
-          <Tile
-            href="/about"
-            kicker={t.nav.bio}
-            title={t.home.bioTeaser}
-            body="Formazione, debutto, premi, attività e profilo completo."
-          />
-          <Tile
-            href="/media"
-            kicker={t.nav.media}
-            title={t.home.mediaTeaser}
-            body="Galleria foto selezionate (press-ready)."
-            right={<PlaceholderMedia label="Preview" ratio="aspect-[16/10]" />}
-          />
-          <Tile
-            href="/repertorio"
-            kicker={t.nav.repertoire}
-            title={t.home.repertoireTeaser}
-            body="Programmi solistici, cameristici e progetti."
-          />
-          <Tile
-            href="/concerts"
-            kicker={t.nav.concerts}
-            title={t.home.concertsTeaser}
-            body="Prossimi concerti e archivio."
-          />
-          <div className="lg:col-span-2">
-            <Tile
-              href="/contact"
-              kicker={t.nav.contact}
-              title={t.home.contactTeaser}
-              body="Booking, comunicazione, richieste stampa."
-            />
-          </div>
         </div>
       </section>
+
+      {/* Footer minimale */}
+      <footer className="mx-auto max-w-6xl px-6 pb-10">
+        <div className="border-t border-white/10 pt-8 flex flex-col gap-2 md:flex-row md:items-center md:justify-between">
+          <div className="text-[11px] uppercase tracking-[0.4em] text-neutral-600">
+            © {new Date().getFullYear()} Alberto Chines
+          </div>
+          <div className="text-xs text-neutral-500">
+            Sito ufficiale
+          </div>
+        </div>
+      </footer>
     </main>
   );
 }
