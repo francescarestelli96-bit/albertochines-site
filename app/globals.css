@@ -2,22 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 255, 255, 255;
-  --background-start-rgb: 0, 0, 0;
-  --background-end-rgb: 0, 0, 0;
-}
-
 body {
-  color: rgb(var(--foreground-rgb));
-  background: rgb(var(--background-start-rgb));
-  font-family: 'Inter', sans-serif; /* o il font che preferisci */
-  -webkit-font-smoothing: antialiased;
-}
-
-/* Grana leggera per un look più ricercato */
-.bg-noise {
-  background-image: url("https://grainy-gradients.vercel.app/noise.svg");
-  opacity: 0.05;
-  pointer-events: none;
+  background-color: #000;
+  color: #fff;
+  overflow-x: hidden;
 }
