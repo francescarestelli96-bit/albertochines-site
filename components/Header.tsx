@@ -5,7 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
-const nav = [
+const NAV = [
   { label: "Bio", href: "/about" },
   { label: "Repertorio", href: "/repertorio" },
   { label: "Media", href: "/media" },
@@ -18,12 +18,12 @@ export default function Header() {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    setOpen(false); // chiudi menu quando cambi pagina
+    setOpen(false);
   }, [pathname]);
 
   return (
     <header className="sticky top-0 z-50 border-b border-white/10 bg-neutral-950/70 backdrop-blur-xl">
-      <div className="mx-auto max-w-6xl px-6 py-4 flex items-center justify-between">
+      <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         {/* Brand */}
         <Link
           href="/"
@@ -34,7 +34,7 @@ export default function Header() {
 
         {/* Desktop nav */}
         <nav className="hidden md:flex items-center gap-8 text-[11px] uppercase tracking-[0.35em] text-neutral-400">
-          {nav.map((i) => (
+          {NAV.map((i) => (
             <Link
               key={i.href}
               href={i.href}
@@ -47,9 +47,9 @@ export default function Header() {
           ))}
         </nav>
 
-        {/* Right controls */}
+        {/* Right side */}
         <div className="flex items-center gap-3">
-          {/* Lang pill (static) */}
+          {/* Lang pill */}
           <div className="hidden sm:flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-3 py-2 text-[11px] uppercase tracking-[0.35em] text-neutral-400">
             <span>Lang</span>
             <span className="rounded-full border border-white/10 bg-white/[0.04] px-2 py-1 text-neutral-200">
@@ -74,7 +74,7 @@ export default function Header() {
       {open && (
         <div className="md:hidden border-t border-white/10 bg-neutral-950/80 backdrop-blur-xl">
           <nav className="mx-auto max-w-6xl px-6 py-4 flex flex-col gap-3 text-[11px] uppercase tracking-[0.35em] text-neutral-300">
-            {nav.map((i) => (
+            {NAV.map((i) => (
               <Link
                 key={i.href}
                 href={i.href}

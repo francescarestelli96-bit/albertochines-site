@@ -1,8 +1,8 @@
 // app/media/page.tsx
-import MediaGrid, { MediaItem } from "@/components/MediaGrid";
+import MediaGrid, { MediaItem } from "../../components/MediaGrid";
 
 const items: MediaItem[] = [
-  // metti qui le tue immagini in public/media
+  // Aggiungi/togli liberamente: devono esistere in public/media
   { src: "/media/01-portrait.jpeg", alt: "Portrait" },
   { src: "/media/02-profile.jpeg", alt: "Profile" },
   { src: "/media/05-hands.jpeg", alt: "Hands" },
