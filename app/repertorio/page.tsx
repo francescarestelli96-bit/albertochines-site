@@ -1,24 +1,31 @@
-"use client";
+'use client';
 import { useLanguage } from "../../components/LanguageProvider";
 
 export default function Repertorio() {
   const { t } = useLanguage();
 
   return (
-    <main className="min-h-screen bg-neutral-950 text-neutral-100 pt-48 px-6 pb-20">
-      <div className="max-w-4xl mx-auto space-y-16">
-        <section>
-          <h1 className="text-5xl font-light uppercase tracking-tighter mb-8">{t('repertorio.title')}</h1>
-          <h2 className="text-2xl font-light text-white/40 mb-6 uppercase tracking-widest">{t('repertorio.subtitle')}</h2>
-          <div className="text-white/70 font-light leading-loose whitespace-pre-wrap columns-1 md:columns-2 gap-12">
-            {t('repertorio.content')}
+    <main className="min-h-screen bg-black text-white pt-32 px-6 pb-20">
+      <div className="max-w-4xl mx-auto">
+        <h1 className="text-4xl md:text-5xl font-extralight uppercase tracking-[0.3em] border-b border-white/10 pb-8 mb-12">
+          {t('repertorio.title')}
+        </h1>
+
+        <section className="mb-16">
+          <h2 className="text-2xl font-light uppercase tracking-widest text-white/50 mb-8 italic">
+            Solistico
+          </h2>
+          <div className="text-lg font-light leading-relaxed text-gray-300 whitespace-pre-line border-l border-white/10 pl-6">
+            {t('repertorio.solistico')}
           </div>
         </section>
-        
-        <section className="border-t border-white/10 pt-16">
-          <h2 className="text-2xl font-light text-white/40 mb-6 uppercase tracking-widest">{t('repertorio.orchestraTitle')}</h2>
-          <div className="text-white/70 font-light leading-loose whitespace-pre-wrap">
-            {t('repertorio.orchestraContent')}
+
+        <section>
+          <h2 className="text-2xl font-light uppercase tracking-widest text-white/50 mb-8 italic">
+            Orchestra
+          </h2>
+          <div className="text-lg font-light leading-relaxed text-gray-300 whitespace-pre-line border-l border-white/10 pl-6">
+            {t('repertorio.orchestra')}
           </div>
         </section>
       </div>
