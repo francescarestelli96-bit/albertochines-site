@@ -1,21 +1,14 @@
-/* FORZA IL DESIGN ANCHE SENZA TAILWIND */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 html, body {
   background-color: #0a0a0a !important;
   color: white !important;
-  margin: 0 !important;
-  padding: 0 !important;
-}
-
-main, section, div {
-  background-color: transparent !important;
+  margin: 0;
+  padding: 0;
 }
 
 * {
   color: white !important;
-  font-family: sans-serif;
-}
-
-a {
-  color: #cccccc !important;
-  text-decoration: none;
 }
