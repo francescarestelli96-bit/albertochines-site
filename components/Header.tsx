@@ -1,50 +1,31 @@
-"use client";
-import Link from "next/link";
-import { useLanguage } from "./LanguageProvider";
+'use client';
+
+import Link from 'next/link';
+import { useLanguage } from './LanguageProvider';
 
 export default function Header() {
-  const { t, lang, setLang } = useLanguage();
-
-  const menuItems = [
-    { name: t.nav.home, href: "/" },
-    { name: t.nav.bio, href: "/about" },
-    { name: t.nav.repertorio, href: "/repertorio" },
-    { name: t.nav.media, href: "/media" },
-    { name: t.nav.concerti, href: "/concerts" },
-    { name: t.nav.contatti, href: "/contact" },
-  ];
+  const { lang, setLang, t } = useLanguage();
 
   return (
-    <header className="fixed top-0 w-full z-50 bg-neutral-950/80 backdrop-blur-md border-b border-white/5">
-      <div className="max-w-7xl mx-auto px-6 py-8 flex justify-between items-center">
-        <Link href="/" className="text-[11px] tracking-[0.4em] font-light text-white uppercase">
-          ALBERTO CHINES
-        </Link>
-        <div className="flex items-center gap-8">
-          <nav className="hidden md:flex gap-6 text-[10px] uppercase tracking-[0.2em] text-white/50">
-            {menuItems.map((item) => (
-              <Link key={item.href} href={item.href} className="hover:text-white transition-colors">
-                {item.name}
-              </Link>
-            ))}
-          </nav>
-          <div className="flex gap-3 text-[10px] font-bold">
-            <button 
-              onClick={() => setLang("it")} 
-              className={`transition-colors ${lang === "it" ? "text-white" : "text-white/20 hover:text-white/50"}`}
-            >
-              IT
-            </button>
-            <span className="text-white/10">|</span>
-            <button 
-              onClick={() => setLang("en")} 
-              className={`transition-colors ${lang === "en" ? "text-white" : "text-white/20 hover:text-white/50"}`}
-            >
-              EN
-            </button>
-          </div>
-        </div>
-      </div>
+    <header style={{ padding: '2rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+      <Link href="/" style={{ fontSize: '1.5rem', fontWeight: 'bold', textDecoration: 'none', color: 'white' }}>
+        ALBERTO CHINES
+      </Link>
+      
+      <nav style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}>
+        <Link href="/about">{t('nav.about')}</Link>
+        <Link href="/concerts">{t('nav.concerts')}</Link>
+        <Link href="/repertorio">{t('nav.repertorio')}</Link>
+        <Link href="/media">{t('nav.media')}</Link>
+        <Link href="/contact">{t('nav.contact')}</Link>
+        
+        <button 
+          onClick={() => setLang(lang === 'it' ? 'en' : 'it')}
+          style={{ background: 'none', border: '1px solid white', color: 'white', cursor: 'pointer', padding: '0.2rem 0.5rem' }}
+        >
+          {lang === 'it' ? 'EN' : 'IT'}
+        </button>
+      </nav>
     </header>
   );
 }

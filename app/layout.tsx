@@ -10,11 +10,7 @@ export const metadata: Metadata = {
   description: "Pianist",
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="it">
       <body className={inter.className} style={{ backgroundColor: '#0a0a0a', color: 'white', margin: 0 }}>
