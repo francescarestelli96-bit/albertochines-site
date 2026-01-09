@@ -29,9 +29,19 @@ export default function Header() {
             ))}
           </nav>
           <div className="flex gap-3 text-[10px] font-bold">
-            <button onClick={() => setLang("it")} className={lang === "it" ? "text-white" : "text-white/20"}>IT</button>
+            <button 
+              onClick={() => setLang("it")} 
+              className={`transition-colors ${lang === "it" ? "text-white" : "text-white/20 hover:text-white/50"}`}
+            >
+              IT
+            </button>
             <span className="text-white/10">|</span>
-            <button onClick={() => setLang("en")} className={lang === "en" ? "text-white" : "text-white/20"}>EN</button>
+            <button 
+              onClick={() => setLang("en")} 
+              className={`transition-colors ${lang === "en" ? "text-white" : "text-white/20 hover:text-white/50"}`}
+            >
+              EN
+            </button>
           </div>
         </div>
       </div>
