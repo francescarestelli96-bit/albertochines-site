@@ -1,17 +1,24 @@
-"use client";
+'use client';
 import { useLanguage } from "../../components/LanguageProvider";
 
 export default function Contact() {
   const { t } = useLanguage();
 
   return (
-    <main className="min-h-screen bg-neutral-950 text-neutral-100 pt-48 px-6">
-      <div className="max-w-3xl mx-auto space-y-12">
-        <h1 className="text-5xl font-light uppercase tracking-tighter">
+    <main className="min-h-screen bg-black text-white pt-32 px-6 pb-20 animate-in fade-in duration-1000">
+      <div className="max-w-4xl mx-auto text-center">
+        <h1 className="text-4xl md:text-5xl font-extralight uppercase tracking-[0.3em] border-b border-white/10 pb-8 mb-12">
           {t('contact.title')}
         </h1>
-        <div className="space-y-4 text-xl font-light">
-          <p>Email: <a href="mailto:info@albertochines.com" className="border-b border-white/20 hover:border-white transition-colors">info@albertochines.com</a></p>
+        
+        <div className="space-y-8 mt-12">
+          <p className="text-xl font-light tracking-widest text-zinc-400 uppercase">General Inquiries</p>
+          <a 
+            href="mailto:info@albertochines.com" 
+            className="text-2xl md:text-4xl font-extralight hover:text-zinc-400 transition-colors duration-300"
+          >
+            info@albertochines.com
+          </a>
         </div>
       </div>
     </main>
