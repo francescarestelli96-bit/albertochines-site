@@ -8,14 +8,21 @@ const translations: any = {
   it: {
     title: "Alberto Chines",
     subtitle: "Pianista",
+    // Queste sono le sezioni che facevano crashare Vercel:
     about: { title: "Biografia" },
     concerti: { title: "Concerti" },
     repertorio: { title: "Repertorio" },
     media: { title: "Media" },
     contatti: { title: "Contatti" },
-    nav: { about: "Bio", concerts: "Concerti", repertorio: "Repertorio", media: "Media", contact: "Contatti" },
-    common: { back: "Indietro" },
-    home: { title: "Alberto Chines", subtitle: "Pianista" }
+    nav: {
+      about: "Bio",
+      concerts: "Concerti",
+      repertorio: "Repertorio",
+      media: "Media",
+      contact: "Contatti"
+    },
+    home: { title: "Alberto Chines", subtitle: "Pianista" },
+    common: { back: "Indietro" }
   },
   en: {
     title: "Alberto Chines",
@@ -25,18 +32,24 @@ const translations: any = {
     repertorio: { title: "Repertoire" },
     media: { title: "Media" },
     contatti: { title: "Contact" },
-    nav: { about: "About", concerts: "Concerts", repertorio: "Repertoire", media: "Media", contact: "Contact" },
-    common: { back: "Back" },
-    home: { title: "Alberto Chines", subtitle: "Pianist" }
+    nav: {
+      about: "About",
+      concerts: "Concerts",
+      repertorio: "Repertoire",
+      media: "Media",
+      contact: "Contact"
+    },
+    home: { title: "Alberto Chines", subtitle: "Pianist" },
+    common: { back: "Back" }
   }
 };
 
 interface LanguageContextType {
   language: Language;
-  setLanguage: (l: Language) => void;
-  lang: Language;
-  setLang: (l: Language) => void;
-  t: any; // Fondamentale: deve essere 'any' per ignorare gli errori nelle pagine
+  setLanguage: (lang: Language) => void;
+  lang: Language; 
+  setLang: (lang: Language) => void;
+  t: any;
 }
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
@@ -48,8 +61,11 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     const keys = path.split('.');
     let result: any = translations[language];
     for (const key of keys) {
-      if (result && result[key] !== undefined) result = result[key];
-      else return path;
+      if (result && result[key] !== undefined) {
+        result = result[key];
+      } else {
+        return path; 
+      }
     }
     return result;
   };
