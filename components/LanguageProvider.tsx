@@ -13,7 +13,11 @@ Si è esibito presso la Sala Mozart dell’Accademia Filarmonica di Bologna, al 
 
 Ha recentemente debuttato a Londra per il Keyboard Charitable Trust e al Tiroler Festspiele Erl (Austria), ed è da poco stato pubblicato il suo primo CD con musiche di Bach, Schumann, Ravel e Bartók (BAM International).
 
-Alberto Chines è molto attivo anche nell’ambito cameristico, collabora con la violista Anna Serova, col chitarrista Eugenio Della Chiara, col Quartetto Nôus e con il pianista Emanuele Delucchi. Alberto Chines è Steinway Artist dal 2020.`;
+Alberto Chines è molto attivo anche nell’ambito cameristico, collabora con la violista Anna Serova, col chitarrista Eugenio Della Chiara, col Quartetto Nôus e con il pianista Emanuele Delucchi, e ha negli anni seguito diversi progetti in trio (Trio Casa Bernardini), quartetto e quintetto.
+
+Ha inoltre ideato la rassegna concertistica internazionale Musica Manent Festival (Ustica) e collabora con la Primavera di Baggio di Milano.
+
+Alberto Chines è Steinway Artist dal 2020.`;
 
 const BIO_EN = `A solid education and the merging of many diversified learning and professional experiences have contributed to make Alberto Chines a smart and many sided artist.
 
@@ -25,7 +29,11 @@ He performed in prestigious venues such as the Mozart Hall of Accademia Filarmon
 
 He has recently appeared at Tiroler Festspiele Erl (Austria) and he made his London debut for the Keyboard Charitable Trust. His first CD with music by Bach, Schumann, Ravel and Bartók has been recently released on BAM International.
 
-Alberto Chines is a very passionate chamber musician, he collaborates with violist Anna Serova, with Guitarist Eugenio Della Chiara, with Quartetto Nôus and with pianist Emanuele Delucchi. Alberto Chines is Steinway Artist since 2020.`;
+Alberto Chines is a very passionate chamber musician, he collaborates with violist Anna Serova, with Guitarist Eugenio Della Chiara, with Quartetto Nôus, with pianist Emanuele Delucchi and, over the years, he followed several projects in trio (Trio Casa Bernardini), quartet and quintet.
+
+He is also the creator and artistic director of Musica Manent Festival in Ustica (Sicily) and he collaborates with international concert series Primavera di Baggio in Milan.
+
+Alberto Chines is Steinway Artist since 2020.`;
 
 export const DICTS = {
   it: {
