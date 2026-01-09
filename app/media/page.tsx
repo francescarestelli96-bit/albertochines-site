@@ -27,13 +27,13 @@ export default function Media() {
         </h1>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {photos.map((src, index) => (
-            <div key={index} className="aspect-[4/5] bg-zinc-900 overflow-hidden group relative">
+          {photos.map((src) => (
+            <div key={src} className="aspect-[4/5] bg-zinc-900 overflow-hidden group relative">
               <img 
                 src={src} 
                 alt="Alberto Chines"
                 className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 scale-100 group-hover:scale-105"
-                // Rimuoviamo il display none per capire se caricano
+                loading="eager"
               />
             </div>
           ))}
