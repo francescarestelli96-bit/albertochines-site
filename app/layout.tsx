@@ -2,11 +2,6 @@ import "./global.css";
 import { LanguageProvider } from "../components/LanguageProvider";
 import Header from "../components/Header";
 
-export const metadata = {
-  title: 'Alberto Chines | Pianista',
-  description: 'Sito ufficiale del pianista Alberto Chines',
-};
-
 export default function RootLayout({
   children,
 }: {
@@ -14,10 +9,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="it">
-      <body className="bg-neutral-950 text-white">
+      <body className="bg-black text-white m-0 p-0 min-h-screen">
         <LanguageProvider>
           <Header />
-          {children}
+          <main className="relative z-10">{children}</main>
         </LanguageProvider>
       </body>
     </html>
