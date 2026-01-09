@@ -6,25 +6,37 @@ type Language = 'it' | 'en';
 
 const translations: any = {
   it: {
-    nav: { about: "Bio", concerts: "Concerti", repertorio: "Repertorio", media: "Media", contact: "Contatti" },
-    home: { title: "Alberto Chines", subtitle: "Pianista" },
+    title: "Alberto Chines",
+    subtitle: "Pianista",
     about: { title: "Biografia" },
-    common: { back: "Indietro" }
+    concerti: { title: "Concerti" },
+    repertorio: { title: "Repertorio" },
+    media: { title: "Media" },
+    contatti: { title: "Contatti" },
+    nav: { about: "Bio", concerts: "Concerti", repertorio: "Repertorio", media: "Media", contact: "Contatti" },
+    common: { back: "Indietro" },
+    home: { title: "Alberto Chines", subtitle: "Pianista" }
   },
   en: {
-    nav: { about: "About", concerts: "Concerts", repertorio: "Repertoire", media: "Media", contact: "Contact" },
-    home: { title: "Alberto Chines", subtitle: "Pianist" },
+    title: "Alberto Chines",
+    subtitle: "Pianist",
     about: { title: "Biography" },
-    common: { back: "Back" }
+    concerti: { title: "Concerts" },
+    repertorio: { title: "Repertoire" },
+    media: { title: "Media" },
+    contatti: { title: "Contact" },
+    nav: { about: "About", concerts: "Concerts", repertorio: "Repertoire", media: "Media", contact: "Contact" },
+    common: { back: "Back" },
+    home: { title: "Alberto Chines", subtitle: "Pianist" }
   }
 };
 
 interface LanguageContextType {
   language: Language;
-  setLanguage: (lang: Language) => void;
-  lang: Language; 
-  setLang: (lang: Language) => void;
-  t: any; // Cambiato in 'any' per spegnere gli errori nelle pagine
+  setLanguage: (l: Language) => void;
+  lang: Language;
+  setLang: (l: Language) => void;
+  t: any; // Fondamentale: deve essere 'any' per ignorare gli errori nelle pagine
 }
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
