@@ -1,14 +1,19 @@
 'use client';
 import { useLanguage } from "../../components/LanguageProvider";
 
-// Percorsi corretti per Next.js (senza la parola 'public')
 const photos = [
   "/media/01-portrait.jpeg",
   "/media/02-profile.jpeg",
   "/media/03-wide-piano.jpeg",
   "/media/04-back.jpeg",
-  "/media/01-portrait.jpeg",
-  "/media/02-profile.jpeg"
+  "/media/05-hands.jpeg",
+  "/media/06-score-open.jpeg",
+  "/media/07-vertical-stage.jpeg",
+  "/media/08-mid-performance.jpeg",
+  "/media/09-close-reading.jpeg",
+  "/media/10-hands-2.jpeg",
+  "/media/11-profile-2.jpeg",
+  "/media/12-wide-stage.jpeg"
 ];
 
 export default function Media() {
@@ -23,15 +28,12 @@ export default function Media() {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {photos.map((src, index) => (
-            <div key={index} className="aspect-square bg-zinc-900 overflow-hidden group relative">
+            <div key={index} className="aspect-[4/5] bg-zinc-900 overflow-hidden group relative">
               <img 
                 src={src} 
                 alt="Alberto Chines"
-                className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500 scale-100 group-hover:scale-105"
-                // Se l'immagine proprio non esiste, mettiamo un colore grigio scuro invece del loop
-                onError={(e) => {
-                  e.currentTarget.style.display = 'none';
-                }}
+                className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 scale-100 group-hover:scale-105"
+                // Rimuoviamo il display none per capire se caricano
               />
             </div>
           ))}
