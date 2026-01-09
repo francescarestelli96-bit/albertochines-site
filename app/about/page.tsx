@@ -5,14 +5,13 @@ export default function About() {
   const { t } = useLanguage();
 
   return (
-    <main className="min-h-screen bg-neutral-950 text-neutral-100 pt-48 px-6">
+    <main className="min-h-screen bg-neutral-950 text-neutral-100 pt-48 px-6 pb-20">
       <div className="max-w-3xl mx-auto space-y-12">
-        <h1 className="text-5xl font-light uppercase tracking-tighter">
+        <h1 className="text-5xl font-light uppercase tracking-tighter border-b border-white/10 pb-4">
           {t('about.title')}
         </h1>
-        <div className="prose prose-invert text-white/70 font-light leading-relaxed">
-          {/* Qui andrà il testo della bio, per ora t('about.content') */}
-          <p>{t('about.description') || "Testo biografia in arrivo..."}</p>
+        <div className="text-white/80 font-light leading-relaxed whitespace-pre-wrap text-lg">
+          {t('about.content')}
         </div>
       </div>
     </main>
