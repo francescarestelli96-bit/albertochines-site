@@ -1,18 +1,20 @@
 "use client";
-import { useLanguage } from "@/components/LanguageProvider";
+import { useLanguage } from "../../components/LanguageProvider";
 
-export default function AboutPage() {
+export default function About() {
   const { t } = useLanguage();
+
   return (
-    <main className="min-h-screen bg-neutral-950 text-neutral-100 pt-32 pb-20 px-6">
-      <section className="mx-auto max-w-3xl">
-        <h1 className="text-[12px] uppercase tracking-[0.45em] text-white/40 mb-12">
-          {t.about.title}
+    <main className="min-h-screen bg-neutral-950 text-neutral-100 pt-48 px-6">
+      <div className="max-w-3xl mx-auto space-y-12">
+        <h1 className="text-5xl font-light uppercase tracking-tighter">
+          {t('about.title')}
         </h1>
-        <div className="text-white/70 leading-relaxed font-light whitespace-pre-line text-base antialiased tracking-wide">
-          {t.about.body}
+        <div className="prose prose-invert text-white/70 font-light leading-relaxed">
+          {/* Qui andrà il testo della bio, per ora t('about.content') */}
+          <p>{t('about.description') || "Testo biografia in arrivo..."}</p>
         </div>
-      </section>
+      </div>
     </main>
   );
 }
