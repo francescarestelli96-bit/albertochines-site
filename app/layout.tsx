@@ -1,20 +1,22 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./global.css";
-import { LanguageProvider } from "../components/LanguageProvider";
+import './globals.css';
+import { LanguageProvider } from '@/components/LanguageProvider';
+import Header from '@/components/Header';
 
-const inter = Inter({ subsets: ["latin"] });
-
-export const metadata: Metadata = {
-  title: "Alberto Chines",
-  description: "Pianist",
+export const metadata = {
+  title: 'Alberto Chines | Pianista',
+  description: 'Sito ufficiale del pianista Alberto Chines',
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="it">
-      <body className={inter.className} style={{ backgroundColor: '#0a0a0a', color: 'white', margin: 0 }}>
+      <body>
         <LanguageProvider>
+          <Header />
           {children}
         </LanguageProvider>
       </body>
