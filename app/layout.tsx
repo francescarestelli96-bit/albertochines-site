@@ -16,7 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="it">
-      <body className={`${inter.className} bg-[#0a0a0a] text-white`}>
+      <body className={inter.className} style={{ backgroundColor: '#0a0a0a', color: 'white', margin: 0 }}>
         {children}
       </body>
     </html>
