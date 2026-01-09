@@ -1,8 +1,4 @@
-/* Forza il nero assoluto */
-:root {
-  background-color: #0a0a0a !important;
-}
-
+/* FORZA IL DESIGN ANCHE SENZA TAILWIND */
 html, body {
   background-color: #0a0a0a !important;
   color: white !important;
@@ -10,7 +6,16 @@ html, body {
   padding: 0 !important;
 }
 
+main, section, div {
+  background-color: transparent !important;
+}
+
 * {
   color: white !important;
-  border-color: rgba(255,255,255,0.1) !important;
+  font-family: sans-serif;
+}
+
+a {
+  color: #cccccc !important;
+  text-decoration: none;
 }
