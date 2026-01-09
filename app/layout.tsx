@@ -1,4 +1,4 @@
-import "../app/globals.css"; // Percorso corretto per trovare il CSS
+import "./global.css"; 
 import { LanguageProvider } from "../components/LanguageProvider";
 import Header from "../components/Header";
 
@@ -14,10 +14,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="it">
-      <body className="bg-neutral-950">
+      <body className="bg-neutral-950 text-white">
         <LanguageProvider>
           <Header />
-          <main>{children}</main>
+          {children}
         </LanguageProvider>
       </body>
     </html>
