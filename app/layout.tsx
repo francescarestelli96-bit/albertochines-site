@@ -1,6 +1,6 @@
-import './globals.css';
-import { LanguageProvider } from '@/components/LanguageProvider';
-import Header from '@/components/Header';
+import "../app/globals.css"; // Percorso corretto per trovare il CSS
+import { LanguageProvider } from "../components/LanguageProvider";
+import Header from "../components/Header";
 
 export const metadata = {
   title: 'Alberto Chines | Pianista',
@@ -14,10 +14,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="it">
-      <body>
+      <body className="bg-neutral-950">
         <LanguageProvider>
           <Header />
-          {children}
+          <main>{children}</main>
         </LanguageProvider>
       </body>
     </html>
