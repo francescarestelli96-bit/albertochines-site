@@ -9,11 +9,3 @@ html, body {
   padding: 0;
   min-height: 100vh;
 }
-
-main {
-  background-color: #0a0a0a !important;
-}
-
-* {
-  box-sizing: border-box;
-}
