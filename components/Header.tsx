@@ -5,33 +5,46 @@ import { useLanguage } from "./LanguageProvider";
 export default function Header() {
   const { t, lang, setLang } = useLanguage();
 
-  const menu = [
-    { n: t.nav.home, h: "/" },
-    { n: t.nav.bio, h: "/about" },
-    { n: t.nav.repertorio, h: "/repertorio" },
-    { n: t.nav.media, h: "/media" },
-    { n: t.nav.concerti, h: "/concerts" },
-    { n: t.nav.contatti, h: "/contact" },
+  const menuItems = [
+    { name: t.nav.home, href: "/" },
+    { name: t.nav.bio, href: "/about" },
+    { name: t.nav.repertorio, href: "/repertorio" },
+    { name: t.nav.media, href: "/media" },
+    { name: t.nav.concerti, href: "/concerts" },
+    { name: t.nav.contatti, href: "/contact" },
   ];
 
   return (
-    <header className="fixed top-0 w-full z-50 px-6 py-10 flex justify-between items-center bg-gradient-to-b from-black/80 to-transparent">
-      <Link href="/" className="text-[11px] uppercase tracking-[0.4em] font-medium">
-        ALBERTO CHINES
-      </Link>
+    <header className="fixed top-0 w-full z-50 bg-neutral-950/50 backdrop-blur-md border-b border-white/5">
+      <div className="max-w-7xl mx-auto px-6 py-8 flex justify-between items-center">
+        <Link href="/" className="text-[11px] tracking-[0.4em] font-light text-white uppercase">
+          ALBERTO CHINES
+        </Link>
 
-      <nav className="hidden md:flex gap-8 text-[10px] uppercase tracking-[0.2em] text-white/60">
-        {menu.map((m) => (
-          <Link key={m.h} href={m.h} className="hover:text-white transition-colors">{m.n}</Link>
-        ))}
-      </nav>
+        <div className="flex items-center gap-8">
+          <nav className="hidden md:flex gap-6 text-[10px] uppercase tracking-[0.2em] text-white/50">
+            {menuItems.map((item) => (
+              <Link key={item.href} href={item.href} className="hover:text-white transition-colors">
+                {item.name}
+              </Link>
+            ))}
+          </nav>
 
-      <div className="flex items-center gap-4 bg-white/5 border border-white/10 px-4 py-2 rounded-full backdrop-blur-md">
-        <span className="text-[9px] uppercase tracking-widest text-white/40 font-medium">Lang</span>
-        <div className="flex gap-2 text-[10px] font-bold">
-          <button onClick={() => setLang("it")} className={lang === "it" ? "text-white" : "text-white/20"}>IT</button>
-          <span className="text-white/10">·</span>
-          <button onClick={() => setLang("en")} className={lang === "en" ? "text-white" : "text-white/20"}>EN</button>
+          <div className="flex gap-3 text-[10px] tracking-widest font-bold">
+            <button 
+              onClick={() => setLang("it")} 
+              className={lang === "it" ? "text-white" : "text-white/20 hover:text-white/40"}
+            >
+              IT
+            </button>
+            <span className="text-white/10">|</span>
+            <button 
+              onClick={() => setLang("en")} 
+              className={lang === "en" ? "text-white" : "text-white/20 hover:text-white/40"}
+            >
+              EN
+            </button>
+          </div>
         </div>
       </div>
     </header>
