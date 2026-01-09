@@ -1,4 +1,4 @@
-import './globals.css'
+import './global.css'
 import { LanguageProvider } from '@/components/LanguageProvider'
 import Header from '@/components/Header'
 
