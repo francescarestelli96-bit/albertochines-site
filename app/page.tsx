@@ -9,7 +9,7 @@ export default function Home() {
       <div className="max-w-7xl w-full grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-20 items-center">
         
         {/* Foto: Sopra su mobile, a destra su desktop */}
-        <div className="relative aspect-[4/5] grayscale opacity-70 order-1 md:order-2 overflow-hidden w-full max-w-sm mx-auto md:max-w-none">
+        <div className="relative aspect-[3/5] grayscale opacity-70 order-1 md:order-2 overflow-hidden w-full max-w-sm mx-auto md:max-w-none">
           <img 
             src="/media/01-portrait.jpeg" 
             alt="Alberto Chines" 
