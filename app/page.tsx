@@ -5,10 +5,10 @@ export default function Home() {
   const { t } = useLanguage();
 
   return (
-    <main className="relative min-h-screen w-full bg-black overflow-hidden flex flex-col md:flex-row">
+    <main className="relative min-h-screen w-full bg-black flex flex-col md:flex-row overflow-x-hidden">
       
-      {/* SEZIONE TESTO: Spostata verso il basso su mobile con pt-32 per non finire sotto l'header */}
-      <div className="relative z-20 w-full md:w-1/2 flex flex-col justify-center px-6 md:px-20 pt-32 pb-12 md:py-0 animate-in fade-in slide-in-from-left-12 duration-1000">
+      {/* SEZIONE TESTO (SINISTRA SU DESKTOP / SOPRA SU MOBILE) */}
+      <div className="relative z-20 w-full md:w-1/2 flex flex-col justify-center px-6 md:px-20 pt-32 pb-12 md:pt-0 md:pb-0 animate-in fade-in slide-in-from-left-12 duration-1000">
         <div className="max-w-xl">
           <h1 className="text-[2.6rem] sm:text-5xl md:text-6xl lg:text-7xl font-extralight uppercase tracking-[0.2em] md:tracking-[0.3em] text-white leading-[1.1]">
             Alberto<br />Chines
@@ -27,19 +27,18 @@ export default function Home() {
         </div>
       </div>
 
-      {/* SEZIONE FOTO: Assicurati che il file sia in public/media/01-portrait.jpeg */}
-      <div className="relative w-full md:w-1/2 h-[50vh] md:h-full z-10 animate-in fade-in md:slide-in-from-right-12 duration-1000 delay-300">
-        <div className="absolute inset-0 bg-zinc-900"> {/* Sfondo di sicurezza se l'immagine non carica */}
+      {/* SEZIONE FOTO (DESTRA SU DESKTOP / SOTTO SU MOBILE) */}
+      <div className="relative w-full md:w-1/2 h-[50vh] md:h-screen z-10 animate-in fade-in md:slide-in-from-right-12 duration-1000 delay-300">
+        <div className="absolute inset-0 w-full h-full">
           <img 
             src="/media/01-portrait.jpeg" 
             alt="Alberto Chines" 
-            className="w-full h-full object-cover object-top md:object-center grayscale hover:grayscale-0 transition-all duration-1000"
-            onError={(e) => {
-              console.error("Errore caricamento immagine. Controlla il percorso in public/media/");
-            }}
+            className="w-full h-full object-cover object-top md:object-center grayscale hover:grayscale-0 transition-all duration-1000 block"
+            style={{ display: 'block' }}
           />
-          {/* Gradienti per raccordare il layout al nero dello sfondo */}
+          {/* Sfumatura nera per fondere l'immagine con il testo su desktop (da sinistra) */}
           <div className="absolute inset-0 bg-gradient-to-r from-black via-transparent to-transparent hidden md:block" />
+          {/* Sfumatura nera per fondere l'immagine con il testo su mobile (dall'alto) */}
           <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent md:hidden" />
         </div>
       </div>
