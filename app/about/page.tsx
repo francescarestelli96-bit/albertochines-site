@@ -11,6 +11,7 @@ export default function About() {
           {t('about.title')}
         </h1>
         <div className="prose prose-invert max-w-none">
+          {/* whitespace-pre-line mantiene i paragrafi inseriti nel provider */}
           <p className="text-base md:text-lg font-extralight leading-relaxed tracking-wide text-zinc-300 whitespace-pre-line text-justify">
             {t('about.content')}
           </p>
