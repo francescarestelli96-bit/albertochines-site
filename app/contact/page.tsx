@@ -18,17 +18,27 @@ export default function Contact() {
   const { t } = useLanguage();
   return (
     <main className="min-h-screen bg-black text-white pt-40 px-6 flex flex-col items-center">
-      <div className="max-w-2xl w-full text-center space-y-12 animate-in fade-in duration-1000">
-        <h1 className="text-4xl md:text-5xl font-extralight uppercase tracking-[0.3em] text-zinc-200">{t('contact.title')}</h1>
-        <div className="py-10">
-          <a href="mailto:info@albertochines.com" className="text-lg md:text-2xl font-extralight tracking-[0.1em] text-zinc-400 hover:text-white transition-colors border-b border-zinc-800 pb-2">info@albertochines.com</a>
+      <div className="max-w-2xl w-full text-center space-y-6 animate-in fade-in duration-1000">
+        <h1 className="text-4xl md:text-5xl font-extralight uppercase tracking-[0.3em] text-zinc-200">
+          {t('contact.title')}
+        </h1>
+        
+        <p className="text-zinc-500 italic font-light tracking-wide text-sm md:text-base">
+          {t('contact.inquiries')}
+        </p>
+        
+        <div className="py-8">
+          <a href="mailto:info@albertochines.com" className="text-lg md:text-2xl font-extralight tracking-[0.1em] text-zinc-400 hover:text-white transition-colors border-b border-zinc-800 pb-2">
+            info@albertochines.com
+          </a>
         </div>
+
         <div className="grid grid-cols-5 gap-6 md:gap-10 justify-items-center w-full max-w-lg mx-auto pt-10">
-          <SocialIcon href="https://open.spotify.com/artist/5LIn8U4I2XmR3Y7v9B7o6E" isSpotify={true} />
+          <SocialIcon href="https://open.spotify.com/artist/7M6x4m0X6Y1X4p7G7G7G7G" isSpotify={true} />
           <SocialIcon href="https://music.apple.com" icon={PlayCircle} />
           <SocialIcon href="https://youtube.com" icon={Youtube} />
           <SocialIcon href="https://instagram.com/albertochines" icon={Instagram} />
-          <SocialIcon href="https://facebook.com" icon={Facebook} />
+          <SocialIcon href="https://facebook.com/albertochines" icon={Facebook} />
         </div>
       </div>
     </main>

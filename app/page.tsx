@@ -1,5 +1,4 @@
 'use client';
-// Usiamo @ per puntare direttamente alla cartella components
 import { useLanguage } from "@/components/LanguageProvider";
 
 export default function Home() {
@@ -8,8 +7,21 @@ export default function Home() {
   return (
     <main className="relative min-h-screen w-full bg-black flex flex-col md:flex-row overflow-x-hidden">
       
-      {/* TESTO */}
-      <div className="relative z-20 w-full md:w-1/2 flex flex-col justify-center px-6 md:px-20 pt-32 pb-12 md:pt-0 md:pb-0 animate-in fade-in slide-in-from-left-12 duration-1000">
+      {/* SEZIONE FOTO: PRIMA SU MOBILE, SECONDA SU DESKTOP */}
+      <div className="relative w-full md:w-1/2 h-[40vh] md:h-screen z-10 animate-in fade-in md:slide-in-from-right-12 duration-1000 delay-300 md:order-2">
+        <div className="absolute inset-0 w-full h-full bg-zinc-900">
+          <img 
+            src="/media/01-portrait.jpeg" 
+            alt="Alberto Chines" 
+            className="w-full h-full object-cover object-top md:object-center grayscale hover:grayscale-0 transition-all duration-1000"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-black via-transparent to-transparent hidden md:block" />
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black md:hidden" />
+        </div>
+      </div>
+
+      {/* SEZIONE TESTO: SECONDA SU MOBILE, PRIMA SU DESKTOP */}
+      <div className="relative z-20 w-full md:w-1/2 flex flex-col justify-start md:justify-center px-6 md:px-20 pt-8 pb-12 md:pt-0 md:pb-0 animate-in fade-in slide-in-from-left-12 duration-1000 md:order-1">
         <div className="max-w-xl">
           <h1 className="text-[2.6rem] sm:text-5xl md:text-6xl lg:text-7xl font-extralight uppercase tracking-[0.2em] md:tracking-[0.3em] text-white leading-[1.1]">
             Alberto<br />Chines
@@ -26,18 +38,6 @@ export default function Home() {
         </div>
       </div>
 
-      {/* FOTO */}
-      <div className="relative w-full md:w-1/2 h-[50vh] md:h-screen z-10 animate-in fade-in md:slide-in-from-right-12 duration-1000 delay-300">
-        <div className="absolute inset-0 w-full h-full bg-zinc-900">
-          <img 
-            src="/media/01-portrait.jpeg" 
-            alt="Alberto Chines" 
-            className="w-full h-full object-cover object-top md:object-center grayscale hover:grayscale-0 transition-all duration-1000"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-black via-transparent to-transparent hidden md:block" />
-          <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent md:hidden" />
-        </div>
-      </div>
     </main>
   );
 }
