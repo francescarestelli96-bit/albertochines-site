@@ -4,7 +4,6 @@ import { useLanguage } from "../../components/LanguageProvider";
 export default function Repertorio() {
   const { t } = useLanguage();
 
-  // Funzione per formattare la lista: Compositore in bianco, Opera in grigio
   const renderList = (text: string) => {
     return text.split('\n').map((line, i) => {
       const parts = line.split(':');
@@ -27,7 +26,7 @@ export default function Repertorio() {
   return (
     <main className="min-h-screen bg-black text-white pt-32 px-6 pb-20">
       <div className="max-w-5xl mx-auto">
-        <h1 className="text-4xl md:text-5xl font-extralight uppercase tracking-[0.3em] border-b border-white/10 pb-8 mb-16">
+        <h1 className="text-4xl md:text-5xl font-extralight uppercase tracking-[0.3em] border-b border-white/10 pb-8 mb-16 text-center md:text-left">
           {t('repertorio.title')}
         </h1>
 

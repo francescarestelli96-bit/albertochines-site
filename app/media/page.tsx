@@ -1,19 +1,20 @@
 'use client';
 import { useLanguage } from "../../components/LanguageProvider";
 
+// Ordine rimescolato per il ritmo
 const photos = [
-  { src: "/media/01-portrait.jpeg", size: "large" },
-  { src: "/media/03-wide-piano.jpeg", size: "small" },
-  { src: "/media/02-profile.jpeg", size: "small" },
-  { src: "/media/12-wide-stage.jpeg", size: "large" },
-  { src: "/media/07-vertical-stage.jpeg", size: "small" },
-  { src: "/media/05-hands.jpeg", size: "small" },
-  { src: "/media/06-score-open.jpeg", size: "large" },
-  { src: "/media/04-back.jpeg", size: "small" },
-  { src: "/media/08-mid-performance.jpeg", size: "small" },
-  { src: "/media/09-close-reading.jpeg", size: "small" },
-  { src: "/media/11-profile-2.jpeg", size: "small" },
-  { src: "/media/10-hands-2.jpeg", size: "small" }
+  "/media/01-portrait.jpeg", 
+  "/media/12-wide-stage.jpeg", 
+  "/media/05-hands.jpeg", 
+  "/media/07-vertical-stage.jpeg", 
+  "/media/03-wide-piano.jpeg", 
+  "/media/06-score-open.jpeg", 
+  "/media/02-profile.jpeg", 
+  "/media/08-mid-performance.jpeg", 
+  "/media/11-profile-2.jpeg",
+  "/media/04-back.jpeg",
+  "/media/09-close-reading.jpeg",
+  "/media/10-hands-2.jpeg"
 ];
 
 export default function Media() {
@@ -26,26 +27,27 @@ export default function Media() {
           {t('media.title')}
         </h1>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 items-center">
-          {photos.map((item, index) => (
+        {/* Layout a colonne per dinamismo altezze */}
+        <div className="columns-1 md:columns-2 lg:columns-3 gap-8 space-y-8">
+          {photos.map((src, index) => (
             <div 
-              key={item.src} 
-              className={`relative bg-zinc-900/10 overflow-hidden group animate-in fade-in duration-1000 ${
-                item.size === 'large' ? 'md:col-span-2 aspect-video' : 'aspect-[4/5]'
-              }`}
-              style={{ animationDelay: `${index * 100}ms` }}
+              key={src} 
+              className="relative overflow-hidden group animate-in fade-in zoom-in-95 duration-700"
+              style={{ animationDelay: `${index * 150}ms` }}
             >
               <img 
-                src={item.src} 
-                className="w-full h-full object-contain transition-all duration-1000 grayscale group-hover:grayscale-0" 
+                src={src} 
+                className="w-full h-auto object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-105" 
                 alt="Alberto Chines"
+                loading="lazy"
               />
+              <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-700" />
             </div>
           ))}
         </div>
 
-        <div className="mt-20 pt-8 border-t border-white/5">
-          <p className="text-[10px] uppercase tracking-[0.2em] text-zinc-600 font-light italic text-left">
+        <div className="mt-20 pt-8 border-t border-white/5 opacity-50">
+          <p className="text-[10px] uppercase tracking-[0.2em] italic font-light">
             Photos by Milana Megina
           </p>
         </div>

@@ -7,7 +7,7 @@ export default function About() {
   return (
     <main className="min-h-screen bg-black text-white pt-32 px-6 pb-20 animate-in fade-in duration-1000">
       <div className="max-w-3xl mx-auto">
-        <h1 className="text-4xl md:text-5xl font-extralight uppercase tracking-[0.3em] border-b border-white/10 pb-8 mb-12 text-center md:text-left">
+        <h1 className="text-4xl md:text-5xl font-extralight uppercase tracking-[0.3em] border-b border-white/10 pb-8 mb-12">
           {t('about.title')}
         </h1>
         <div className="prose prose-invert max-w-none">
@@ -16,7 +16,6 @@ export default function About() {
           </p>
         </div>
 
-        {/* Press Kit Section */}
         <div className="mt-24 pt-12 border-t border-white/10 text-center">
           <a 
             href="#" 
@@ -24,9 +23,6 @@ export default function About() {
           >
             Download Press Kit
           </a>
-          <p className="mt-4 text-[9px] text-zinc-600 uppercase tracking-widest italic">
-            Bio • Photos • Repertoire
-          </p>
         </div>
       </div>
     </main>
