@@ -15,10 +15,10 @@ export default function HomePage() {
       </header>
 
       {/* CONTENITORE */}
-      <div className="flex flex-col md:flex-row-reverse flex-grow items-center">
+      <div className="flex flex-col md:flex-row-reverse flex-grow items-center justify-center">
         
         {/* LATO FOTO */}
-        <div className="w-full md:w-1/2 relative h-[50vh] md:h-[85vh]">
+        <div className="w-full md:w-1/2 relative h-[45vh] md:h-[80vh]">
           <Image
             src={fotoPortrait}
             alt="Alberto Chines Portrait"
@@ -30,25 +30,27 @@ export default function HomePage() {
           <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent md:hidden"></div>
         </div>
 
-        {/* LATO LOGO - VIA DI MEZZO */}
-        <div className="w-full md:w-1/2 flex flex-col justify-center items-center px-6 py-8 md:py-0 md:px-16 bg-black">
-          {/* Mobile: max-w-[340px] e mt-[-20px] per avvicinarlo ma non coprire 
-              Desktop: md:max-w-[550px] (Via di mezzo tra i 300 di prima e gli 850 giganti)
-          */}
-          <div className="relative w-full max-w-[340px] md:max-w-[550px] aspect-[3/1] mt-[-10px] md:mt-0">
-            <Image 
-              src={logoImmagine} 
-              alt="Alberto Chines Logotipo"
-              fill
-              className="object-contain brightness-125 transition-transform duration-700 hover:scale-[1.03]" 
-              priority
-            />
+        {/* LATO LOGO - MASSIMIZZATO */}
+        <div className="w-full md:w-1/2 flex items-center justify-center bg-black p-0 overflow-hidden">
+          <div className="relative w-full flex items-center justify-center">
+            {/* MOBILE: scale-[1.8] per farlo grande come il tuo segno verde
+                DESKTOP: md:scale-[2.2] per occupare tutto lo spazio a sinistra
+            */}
+            <div className="relative w-[120%] aspect-[3/1] scale-[1.8] md:scale-[2.2] origin-center">
+              <Image 
+                src={logoImmagine} 
+                alt="Alberto Chines Logotipo"
+                fill
+                className="object-contain brightness-125 contrast-110" 
+                priority
+              />
+            </div>
           </div>
         </div>
 
       </div>
 
-      <div className="h-8 md:hidden bg-black"></div>
+      <div className="h-10 md:hidden bg-black"></div>
     </main>
   );
 }
