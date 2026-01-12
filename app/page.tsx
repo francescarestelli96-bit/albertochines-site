@@ -18,12 +18,12 @@ export default function HomePage() {
       <div className="flex flex-col md:flex-row-reverse flex-grow">
         
         {/* LATO FOTO */}
-        <div className="w-full md:w-1/2 relative h-[50vh] md:h-[80vh]">
+        <div className="w-full md:w-1/2 relative h-[50vh] md:h-[85vh]">
           <Image
             src={fotoPortrait}
             alt="Alberto Chines Portrait"
             fill
-            className="object-cover object-center grayscale opacity-90"
+            className="object-cover object-center grayscale opacity-80"
             priority
             sizes="(max-width: 768px) 100vw, 50vw"
           />
@@ -31,16 +31,16 @@ export default function HomePage() {
         </div>
 
         {/* LATO LOGO/TITOLO */}
-        <div className="w-full md:w-1/2 flex flex-col justify-center items-center md:items-start px-6 py-12 md:py-0 md:px-24 bg-black">
-          {/* Mobile: max-w-[350px] (bello grande per leggere Steinway)
-              Desktop: md:max-w-[650px] (più del doppio di prima per massima leggibilità)
+        <div className="w-full md:w-1/2 flex flex-col justify-center items-center md:items-start px-4 md:px-16 bg-black">
+          {/* Mobile: w-[95%] (quasi tutto lo schermo)
+              Desktop: md:max-w-[850px] (gigante, si leggerà anche l'ultima riga dello Steinway)
           */}
-          <div className="relative w-full max-w-[350px] md:max-w-[650px] aspect-[3/1]">
+          <div className="relative w-[95%] md:w-full md:max-w-[850px] aspect-[3/1]">
             <Image 
               src={logoImmagine} 
               alt="Alberto Chines Logotipo"
               fill
-              className="object-contain brightness-125 transition-transform duration-700 hover:scale-105" 
+              className="object-contain brightness-125 transition-all duration-1000 hover:scale-105" 
               priority
             />
           </div>
@@ -49,7 +49,7 @@ export default function HomePage() {
       </div>
 
       {/* FOOTER SPAZIATORE PER MOBILE */}
-      <div className="h-10 md:hidden bg-black"></div>
+      <div className="h-12 md:hidden bg-black"></div>
     </main>
   );
 }
