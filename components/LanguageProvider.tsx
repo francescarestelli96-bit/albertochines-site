@@ -9,17 +9,7 @@ const translations: any = {
     home: { title: "Alberto Chines", subtitle: "Pianist", tagline: "Steinway Artist" },
     about: {
       title: "Biografia",
-      content: `Alberto Chines, Steinway Artist dal 2020, è un pianista poliedrico che unisce all'attività solistica un profondo interesse per la musica da camera e per la didattica musicale.
-
-Il suo percorso formativo, ricco di incontri e masterclass con artisti di fama mondiale, si è consolidato presso l’Accademia di Imola sotto la guida di Franco Scala e Piero Rattalino, e al Conservatorio di Bolzano con Davide Cabassi. Dopo il debutto a soli quindici anni al Teatro Massimo di Palermo, si è imposto all’attenzione della critica vincendo il primo premio al Concorso Internazionale Palma d’Oro di Finale Ligure (2011), il Sony Classical Talent Scout di Madesimo (2013) e il secondo premio all’Euregio Piano Award di Geilenkirchen (2014).
-
-La sua attività concertistica lo ha portato a esibirsi in sedi di prestigio internazionale, tra cui la Van Cliburn Recital Hall di Fort Worth (USA), la Sala Mozart dell’Accademia Filarmonica di Bologna, il Teatro Olimpico di Vicenza, il Politeama Garibaldi di Palermo e il Teatro alla Scala di Milano. Ha suonato a Londra per il Keyboard Charitable Trust e ai Klaviertage del Tiroler Festspiele Erl (Austria), e ha recentemente debuttato al Festival Bartolomeo Cristofori di Padova eseguendo il Pierrot Lunaire di Schönberg per voce e pianoforte solo, insieme alla propria trascrizione del Sacre du Printemps di Stravinkskij.
-
-Alberto Chines è inoltre un camerista appassionato. Collabora regolarmente con artisti quali Anna Serova, Eugenio Della Chiara, Emanuele Delucchi, Rebecca Taio, Danilo Pastore e il Quartetto Nôus, esplorando il repertorio dal duo al quintetto con grandi aperture verso la nuova musica. La sua discografia include un album di debutto per BAM International con opere di Bach, Schumann, Ravel e Bartók.
-
-Attivo anche nella promozione culturale, è stato l’ideatore del Musica Manent Festival di Ustica e collabora stabilmente con la Primavera di Baggio di Milano.
-
-Alberto Chines è docente di pianoforte presso il Conservatorio “Francesco Venezze” di Rovigo.`
+      content: `Alberto Chines, Steinway Artist dal 2020, è un pianista poliedrico...` // (Tagliato qui per brevità, tieni il tuo originale)
     },
     repertorio: {
       title: "Repertorio",
@@ -30,41 +20,26 @@ Alberto Chines è docente di pianoforte presso il Conservatorio “Francesco Ven
     },
     concerts: { title: "Concerti", message: "Date in aggiornamento" },
     media: { title: "Media" },
-    contact: { 
-      title: "Contatti", 
-      inquiries: "Per informazioni e contatti" 
-    }
+    contact: { title: "Contatti", inquiries: "Per informazioni e contatti" }
   },
   en: {
     nav: { about: "Bio", concerts: "Concerts", repertorio: "Repertoire", media: "Media", contact: "Contact" },
     home: { title: "Alberto Chines", subtitle: "Pianist", tagline: "Steinway Artist" },
     about: {
       title: "Biography",
-      content: `Alberto Chines, a Steinway Artist since 2020, is a versatile pianist who balances an extensive solo career with a profound dedication to chamber music and music education.
-
-His artistic development, deeply enriched by masterclasses with world-renowned artists, was shaped at the Accademia di Imola under the guidance of Franco Scala and Piero Rattalino, and at the Bolzano Conservatory with Davide Cabassi. Following his debut at the Teatro Massimo in Palermo at just fifteen years old, he gained critical acclaim by winning first prize at the Palma d’Oro International Competition in Finale Ligure (2011), the Sony Classical Talent Scout in Madesimo (2013), and second prize at the Euregio Piano Award in Geilenkirchen (2014).
-
-His concert engagements have taken him to prestigious international venues, including the Van Cliburn Recital Hall in Fort Worth (USA), the Sala Mozart of the Accademia Filarmonica in Bologna, the Teatro Olimpico in Vicenza, the Politeama Garibaldi in Palermo, and the Teatro alla Scala in Milan. He has performed in London for the Keyboard Charitable Trust and at the Klaviertage of the Tiroler Festspiele Erl in Austria. Recently, he debuted at the Bartolomeo Cristofori Festival in Padua, performing Schoenberg’s Pierrot Lunaire for voice and solo piano, alongside his own transcription of Stravinsky’s Le Sacre du Printemps.
-
-A passionate chamber musician, Alberto collaborates regularly with artists such as Anna Serova, Eugenio Della Chiara, Emanuele Delucchi, Rebecca Taio, Danilo Pastore, and the Quartetto Nôus, exploring repertoire ranging from duos to quintets with a strong emphasis on contemporary music. His discography includes a debut album for BAM International featuring works by Bach, Schumann, Ravel, and Bartók.
-
-Beyond the stage, he is deeply involved in cultural promotion; he founded the Musica Manent Festival in Ustica and is a long-standing collaborator of the Primavera di Baggio in Milan.
-
-Alberto Chines currently serves as a Professor of Piano at the “Francesco Venezze” Conservatory in Rovigo.`
+      content: `Alberto Chines, a Steinway Artist since 2020...` // (Tieni il tuo originale)
     },
     repertorio: {
       title: "Repertoire",
-      solisticoTitle: "Solo and chamber music",
+      solisticoTitle: "Solo and Chamber music",
       orchestraTitle: "Piano and orchestra",
-      solistico: `Thomas Adès: Darknesse Visible (after John Dowland)...`, // Inserisci qui l'elenco inglese se lo hai
-      orchestra: `Johann Sebastian Bach: Concerto in re minore BWV 1052...`
+      // QUI HO COPIATO TUTTA LA LISTA ITALIANA TRADUCENDO LE PARTI CHIAVE
+      solistico: `Thomas Adès: Darknesse Visible (after John Dowland)\nCarl Philipp Emanuel Bach: Variations on La Folia H. 263\nJohann Christian Bach: Sonata in C minor Op. 5 No. 6, Piano Quartet in G major W B66\nJohann Sebastian Bach: Partita No. 2 BWV 826, English Suite No. 2 BWV 807, English Suite No. 3 BWV 808, French Suite No. 5 BWV 816, Toccata in E minor BWV 914, Sonata in D major BWV 963, The Well-Tempered Clavier I&II (selection), The Art of Fugue (selection), Fantasia and Fugue in G minor BWV 542 (arr. Liszt), Violin Partita No. 3 (arr. Rachmaninov), Passacaglia and Fugue in C minor BWV 582 (arr. D’Albert), Toccata and Fugue in D minor BWV 565 (arr. Busoni), Brandenburg Concerto No. 3 BWV 1048 (arr. Friedman)\nBéla Bartók: Suite Op. 14, Dance Suite Sz. 77 BB86b\nJerzy Bauer: Sonata for cello and piano\nLudwig van Beethoven: Sonatas Op. 2 Nos. 1 and 3, Sonata Op. 14 No. 2, Sonata Op. 22, Sonata Op. 27 No. 2, Sonata Op. 28, Sonata Op. 31 No. 1, Sonata Op. 53 “Waldstein”, Sonata Op. 81a “Les Adieux”, Sonata Op. 111, Variations and Fugue Op. 35 “Eroica”, Variations in C minor WoO 80, Variations on “Es war einmal ein alter Mann” WoO 66, Serenade for flute and piano Op. 41, Cello Sonata No. 3 Op. 69, Violin Sonata No. 5 Op. 24, Trio Op. 1 No. 1\nPierre Boulez: Douze Notations, Sonatine for flute and piano\nJohannes Brahms: Rhapsodies Op. 79, Souvenir de la Russie Ans. 4/6 for piano four hands, Hungarian Dances for piano four hands (selection), Trio No. 1 Op. 8\nWilliam Byrd: The Battell, BK 94, Pavana Lachrimae\nJohn Cage: In a landscape, Mysterious Adventure for prepared piano, Fads and Fancies in the Academy for piano and percussion, Credo in US for piano, percussion, radio and phonograph\nElliott Carter: Epigrams, for piano trio\nAlfredo Casella: Pupazzetti, for piano four hands\nFryderyk Chopin: Etudes Op. 10, Etudes Op. 25 (selection), Sonata No. 1 Op. 4, Ballade No. 2 Op. 38, Polonaise Op. 44, Polonaise KK IVa No. 5 “Adieu! Á Guillaume Kolberg”, Variations Brillantes Op. 12, Berceuse Op. 57, Barcarolle Op. 60\nMuzio Clementi: Sonata Op. 50 No. 3 “Didone Abbandonata”\nClaude Debussy: Children’s Corner, Suite Bergamasque, Preludes (selection)\nAntonin Dvořák: Piano Quintet No. 2 Op. 81\nCésar Franck: Prélude, Aria et Final\nGirolamo Frescobaldi: Aria detto Balletto\nCarlo Galante: Domenico Fragments, for guitar and piano\nGentle Giant: Experience, for piano (arr. Chines), Experience, for flute, electric guitar, cello and piano (arr. Chines)\nCarlo Gesualdo: Canzon Francese del Principe, Aestimatus sum (arr. Delucchi), Moro, lasso, al mio duolo (arr. Delucchi)\nLouis Moreau Gottschalk: Souvenir de la Havane Op. 39, Souvenir de Porto Rico Op. 31\nFranz Josef Haydn: Sonata in C minor Hob.XVI:20, Sonata in B minor Hob.XVI:32, Sonata in C major Hob.XVI:50\nHenri Herz: Grandes Variations sur le choeur des chasseurs d’Euriante (Weber)\nPaul Hindemith: Sonata for viola and piano Op. 11 No. 4\nGyörgy Ligeti: Musica Ricercata\nFranz Liszt: Réminescences de Lucia di Lammermoor S. 397, Années de pèlerinage (selection), Totentanz S. 525, Hungarian Rhapsody No. 2 S. 244/2\nFelix Mendelssohn: Variations Sérieuses Op. 54, Rondo Capriccioso Op. 14, Fantasia in F sharp minor Op. 28, Lieder Ohne Worte (selection)\nRoberto Molinelli: Milonga y Chacarera for viola and piano trio\nWolfgang Amadeus Mozart: Sonata in A minor KV 310, Sonata in A major KV 331, Sonata in C minor KV 457, Sonata in C major KV 545, Sonata in B flat major KV 570, Variations on “Salve Tu Domine” (Paisiello) KV 398, Variations on “Unser dummer Pobel Meint (Gluck) KV 455, Trio in E major KV 542\nArvo Pärt: Fratres\nSergei Prokofiev: Sonata No. 3 Op. 28, Sarcasms Op. 17, Four Pieces Op. 4, Toccata Op. 11\nJean-Philippe Rameau: Suite in E minor, Suite in A minor, Les Indes Galantes (arr. Dukas) - selection\nMaurice Ravel: Valses Nobles et sentimentales, La Valse, for two pianos\nWolfgang Rihm: Mehrere kurze Walzer, for piano four hands\nCamille Saint-Saens: Le Carnaval des Animaux\nDomenico Scarlatti: 30 Sonatas\nArnold Schönberg: Verklärte Nacht Op. 4 for piano trio (arr. Steuermann), Pierrot Lunaire, op. 21 (version for voice and solo piano by Erwin Stein)\nAlfred Schnittke: Hommage a Stravinsky, Prokofiev and Shostakovich, for piano six hands\nFranz Schubert: Sonata in B flat major D.960, Sonata in A minor D.784, Sonata in D major D.850, Impromptus Op. 90, Arpeggione Sonata D.821 for cello and piano, Marches Caractéristiques D.968b (D.886) for piano four hands, Fantasia in F minor D.940 for piano four hands, Trio Op. 100\nRobert Schumann: Abegg Variations Op. 1, Papillons Op. 2, Kreisleriana Op. 16, Arabeske Op. 18, Piano Quintet Op. 44\nSalvatore Sciarrino: Perduto in una città d’acque, Anamorfosi\nOrazio Sciortino: Scarlattiana, for guitar and piano\nAlexander Scriabin: Sonata No. 9 Op. 68 “Black Mass”, Etudes (selection)\nDmitri Shostakovich: Piano Quintet Op. 57, Trio Op. 67, Preludes and Fugues (selection)\nBedřich Smetana: Trio Op. 15\nAntonio Soler: Fandango in D minor R.146, Sonatas (selection)\nIgor Stravinskij: The Firebird (arr. Agosti)\nJan Pieterszoon Sweelinck: Variations on “Mein Junges Leben hat ein End”, SwWV 324\nPyotr Ilyich Tchaikovsky: Scherzo from Symphony No. 6 (arr. Feinberg)\nCarl Maria von Weber: Sonata No. 3 Op. 49`,
+      orchestra: `Johann Sebastian Bach: Concerto in D minor BWV 1052, Concerto for two pianos in C minor BWV 1060\nBéla Bartók: Concerto No. 3 Sz.119\nLudwig van Beethoven: Concerto No. 3 Op. 37, Concerto No. 4 Op. 58, Triple Concerto Op. 56\nFranz Liszt: Concerto No. 2 S.125, Totentanz S.126\nFelix Mendelssohn: Concerto No. 1 Op. 25\nWolfgang Amadeus Mozart: Concerto in A major KV. 414, Concerto in C major KV. 415, Concerto in A major KV. 488\nSergei Vasilyevic Rachmaninov: Concerto No. 2 Op. 18`
     },
     concerts: { title: "Concerts", message: "Dates coming soon" },
     media: { title: "Media" },
-    contact: { 
-      title: "Contact", 
-      inquiries: "For inquiries contact" 
-    }
+    contact: { title: "Contact", inquiries: "For inquiries contact" }
   }
 };
 
