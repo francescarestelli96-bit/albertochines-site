@@ -18,7 +18,7 @@ export default function HomePage() {
       <div className="flex flex-col md:flex-row-reverse flex-grow">
         
         {/* LATO FOTO */}
-        <div className="w-full md:w-1/2 relative h-[55vh] md:h-[80vh]">
+        <div className="w-full md:w-1/2 relative h-[50vh] md:h-[80vh]">
           <Image
             src={fotoPortrait}
             alt="Alberto Chines Portrait"
@@ -32,15 +32,15 @@ export default function HomePage() {
 
         {/* LATO LOGO/TITOLO */}
         <div className="w-full md:w-1/2 flex flex-col justify-center items-center md:items-start px-6 py-12 md:py-0 md:px-24 bg-black">
-          {/* Su Mobile: max-w-[320px] (più grande)
-              Su Desktop: md:max-w-[300px] (più piccolo ed elegante)
+          {/* Mobile: max-w-[350px] (bello grande per leggere Steinway)
+              Desktop: md:max-w-[650px] (più del doppio di prima per massima leggibilità)
           */}
-          <div className="relative w-full max-w-[320px] md:max-w-[300px] aspect-[3/1]">
+          <div className="relative w-full max-w-[350px] md:max-w-[650px] aspect-[3/1]">
             <Image 
               src={logoImmagine} 
               alt="Alberto Chines Logotipo"
               fill
-              className="object-contain brightness-125" 
+              className="object-contain brightness-125 transition-transform duration-700 hover:scale-105" 
               priority
             />
           </div>
