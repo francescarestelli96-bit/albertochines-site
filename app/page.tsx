@@ -1,8 +1,9 @@
 import Image from "next/image";
 
 export default function HomePage() {
+  // Percorsi basati sulla tua struttura attuale in VS Code
   const logoImmagine = "/media/AC_logotipo_blackBG.jpeg"; 
-  const fotoPortrait = "/01-portrait.jpeg"; // Assicurati che sia nella cartella public
+  const fotoPortrait = "/media/01-portrait.jpeg"; 
 
   return (
     <main className="relative min-h-screen bg-black flex flex-col overflow-hidden">
@@ -14,7 +15,7 @@ export default function HomePage() {
         </p>
       </header>
 
-      {/* CONTENITORE PRINCIPALE (LOGO E FOTO AFFIANCATI) */}
+      {/* CONTENITORE PRINCIPALE */}
       <div className="flex flex-col md:flex-row-reverse flex-grow items-center">
         
         {/* LATO FOTO */}
@@ -27,13 +28,13 @@ export default function HomePage() {
             priority
             sizes="(max-width: 768px) 100vw, 50vw"
           />
+          {/* Sfumatura per mobile */}
           <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent md:hidden"></div>
         </div>
 
-        {/* LATO LOGO (Misure che avevamo deciso) */}
-        <div className="w-full md:w-1/2 flex flex-col justify-center items-center md:items-center bg-black">
-          
-          <div className="relative w-[360px] h-[300px] md:w-[700px] md:h-[500px]">
+        {/* LATO LOGO - Dimensioni calibrate */}
+        <div className="w-full md:w-1/2 flex flex-col justify-center items-center bg-black">
+          <div className="relative w-[340px] h-[280px] md:w-[600px] md:h-[450px]">
             <Image 
               src={logoImmagine} 
               alt="Alberto Chines Logotipo"
@@ -42,7 +43,6 @@ export default function HomePage() {
               priority
             />
           </div>
-          
         </div>
 
       </div>
