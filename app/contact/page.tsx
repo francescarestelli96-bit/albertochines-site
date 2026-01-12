@@ -34,7 +34,7 @@ export default function Contact() {
         </div>
 
         <div className="grid grid-cols-5 gap-6 md:gap-10 justify-items-center w-full max-w-lg mx-auto pt-10">
-          <SocialIcon href="https://open.spotify.com/artist/7M6x4m0X6Y1X4p7G7G7G7G" isSpotify={true} />
+          <SocialIcon href="https://spotify.com" isSpotify={true} />
           <SocialIcon href="https://music.apple.com" icon={PlayCircle} />
           <SocialIcon href="https://youtube.com" icon={Youtube} />
           <SocialIcon href="https://instagram.com/albertochines" icon={Instagram} />

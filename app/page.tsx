@@ -1,43 +1,37 @@
-'use client';
-import { useLanguage } from "@/components/LanguageProvider";
+import Image from "next/image";
 
-export default function Home() {
-  const { t } = useLanguage();
-
+export default function HomePage() {
   return (
-    <main className="relative min-h-screen w-full bg-black flex flex-col md:flex-row overflow-x-hidden">
-      
-      {/* SEZIONE FOTO: PRIMA SU MOBILE, SECONDA SU DESKTOP */}
-      <div className="relative w-full md:w-1/2 h-[40vh] md:h-screen z-10 animate-in fade-in md:slide-in-from-right-12 duration-1000 delay-300 md:order-2">
-        <div className="absolute inset-0 w-full h-full bg-zinc-900">
-          <img 
-            src="/media/01-portrait.jpeg" 
-            alt="Alberto Chines" 
-            className="w-full h-full object-cover object-top md:object-center grayscale hover:grayscale-0 transition-all duration-1000"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-black via-transparent to-transparent hidden md:block" />
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black md:hidden" />
-        </div>
-      </div>
-
-      {/* SEZIONE TESTO: SECONDA SU MOBILE, PRIMA SU DESKTOP */}
-      <div className="relative z-20 w-full md:w-1/2 flex flex-col justify-start md:justify-center px-6 md:px-20 pt-8 pb-12 md:pt-0 md:pb-0 animate-in fade-in slide-in-from-left-12 duration-1000 md:order-1">
-        <div className="max-w-xl">
-          <h1 className="text-[2.6rem] sm:text-5xl md:text-6xl lg:text-7xl font-extralight uppercase tracking-[0.2em] md:tracking-[0.3em] text-white leading-[1.1]">
-            Alberto<br />Chines
-          </h1>
-          <div className="h-[1px] w-16 md:w-24 bg-white/40 my-6 md:my-10" />
-          <div className="space-y-3">
-            <p className="text-[9px] md:text-xs font-light uppercase tracking-[0.5em] md:tracking-[0.8em] text-zinc-300">
-              {t('home.subtitle')}
-            </p>
-            <p className="text-[8px] md:text-[10px] uppercase tracking-[0.4em] text-zinc-500 font-extralight">
-              {t('home.tagline')}
-            </p>
+    <main className="relative min-h-screen bg-black overflow-hidden flex items-center">
+      <div className="flex flex-col md:flex-row w-full h-screen">
+        
+        {/* LATO SINISTRO: NUOVO LOGO */}
+        <div className="w-full md:w-1/2 flex flex-col justify-center items-center md:items-start px-8 md:px-24 z-10 bg-black">
+          <div className="relative w-[280px] md:w-[400px] h-[200px]">
+            <Image 
+              src="/AC_logotipo.png" 
+              alt="Alberto Chines"
+              fill
+              className="object-contain brightness-110" 
+              priority
+            />
           </div>
         </div>
-      </div>
 
+        {/* LATO DESTRO: FOTO */}
+        <div className="w-full md:w-1/2 relative h-[50vh] md:h-full border-l border-zinc-900/30">
+          <Image
+            src="/alberto-hero.jpg" 
+            alt="Alberto Chines"
+            fill
+            className="object-cover grayscale opacity-80"
+            priority
+            sizes="50vw"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent md:hidden"></div>
+        </div>
+
+      </div>
     </main>
   );
 }
