@@ -14,7 +14,7 @@ export default function HomePage() {
         </p>
       </header>
 
-      {/* 1. LOGO SECTION (SINISTRA) */}
+      {/* 1. LOGO SECTION */}
       <section className="relative w-full h-[40vh] md:h-screen md:w-1/2 bg-black flex items-center justify-center p-12 md:p-24 md:order-1 z-30">
         <div className="relative w-full max-w-[240px] sm:max-w-[280px] md:max-w-[500px] aspect-[3/2]">
           <Image 
@@ -27,24 +27,25 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 2. FOTO SECTION (DESTRA) */}
+      {/* 2. FOTO SECTION */}
       <section className="relative w-full h-[60vh] md:h-screen md:w-1/2 md:order-2 bg-black overflow-hidden">
-        {/* CONTAINER DELLA FOTO CON TRASLAZIONE MANUALE PER ALZARLA */}
-        <div className="absolute inset-0 w-full h-full scale-[1.3] md:scale-[1.15] translate-y-[-5%] md:translate-y-[-8%] origin-center">
+        {/* Usiamo object-position 5% per stare vicini al bordo senza tagliare i capelli */}
+        <div className="absolute inset-0 w-full h-full md:scale-105 origin-top">
           <Image
             src={fotoPortrait}
             alt="Alberto Chines Portrait"
             fill
             className="object-cover grayscale brightness-90 md:brightness-100"
             priority
+            style={{ objectPosition: 'center 5%' }} 
           />
         </div>
         
-        {/* SFUMATURA LATERALE SINISTRA (MOLTO PIÙ AMPIA PER DESKTOP) */}
-        <div className="hidden md:block absolute inset-y-0 left-0 w-1/2 bg-gradient-to-r from-black via-black/70 to-transparent z-20 pointer-events-none" />
+        {/* SFUMATURA LATERALE (PIÙ LEGGERA PER NON COPRIRE LA FACCIA) */}
+        <div className="hidden md:block absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-black via-black/20 to-transparent z-20 pointer-events-none" />
         
         {/* SFUMATURA IN BASSO (MOBILE) */}
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/20 to-black z-20 pointer-events-none md:hidden" />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/10 to-black z-20 pointer-events-none md:hidden" />
       </section>
 
     </main>
