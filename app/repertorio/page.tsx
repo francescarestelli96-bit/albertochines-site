@@ -1,5 +1,5 @@
 'use client';
-import { useLanguage } from "../../components/LanguageProvider"; // PERCORSO CORRETTO CON ../../
+import { useLanguage } from "../../components/LanguageProvider";
 
 export default function Repertorio() {
   const { t } = useLanguage();
@@ -10,7 +10,7 @@ export default function Repertorio() {
       const parts = line.split('|');
       if (parts.length >= 2) {
         return (
-          <div key={i} className="mb-8 break-inside-avoid">
+          <div key={i} className="mb-6 break-inside-avoid">
             <h3 className="text-white text-sm md:text-base font-bold tracking-wider mb-1 uppercase">
               {parts[0].trim()}
             </h3>
@@ -21,7 +21,7 @@ export default function Repertorio() {
         );
       }
       return (
-        <div key={i} className="text-zinc-500 text-xs md:text-sm font-extralight mb-1 break-inside-avoid">
+        <div key={i} className="text-zinc-500 text-xs md:text-sm font-extralight tracking-wide leading-relaxed mb-1 break-inside-avoid">
           {line.trim()}
         </div>
       );
@@ -41,7 +41,7 @@ export default function Repertorio() {
               <span className="w-12 h-[1px] bg-zinc-700"></span>
               {t('repertorio.solisticoTitle')}
             </h2>
-            <div className="columns-1 md:columns-2 gap-16 lg:gap-24">
+            <div className="columns-1 md:columns-2 gap-12 lg:gap-20">
               {renderList(t('repertorio.solistico'))}
             </div>
           </section>
@@ -51,7 +51,7 @@ export default function Repertorio() {
               <span className="w-12 h-[1px] bg-zinc-700"></span>
               {t('repertorio.orchestraTitle')}
             </h2>
-            <div className="columns-1 md:columns-2 gap-16 lg:gap-24">
+            <div className="columns-1 md:columns-2 gap-12 lg:gap-20">
               {renderList(t('repertorio.orchestra'))}
             </div>
           </section>
