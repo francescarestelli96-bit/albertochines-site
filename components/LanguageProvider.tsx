@@ -37,7 +37,7 @@ Alberto Chines è docente di pianoforte presso il Conservatorio “Francesco Ven
     home: { title: "Alberto Chines", subtitle: "Pianist", tagline: "Steinway Artist" },
     about: {
       title: "Biography",
-      content: `Alberto Chines, a Steinway Artist since 2020, is a versatile pianist who balances an extensive solo career with a profound dedication to chamber music and education...`
+      content: `Alberto Chines, a Steinway Artist since 2020...` // Aggiungi il testo EN se necessario
     },
     repertorio: {
       title: "Repertoire",
