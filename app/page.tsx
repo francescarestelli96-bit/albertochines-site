@@ -29,22 +29,21 @@ export default function HomePage() {
 
       {/* 2. SEZIONE FOTO (DESTRA DESKTOP / SOPRA MOBILE) */}
       <section className="relative w-full h-[60vh] md:h-screen md:w-1/2 md:order-2 overflow-hidden bg-black">
-        {/* Usiamo un container con zoom e traslazione per portare gli occhiali in linea col nome */}
-        <div className="absolute inset-0 w-full h-full scale-110 md:scale-105 origin-top translate-y-[-2%] md:translate-y-[-4%]">
+        {/* IL CONTENITORE MAGICO: ALZA LA FOTO SENZA TAGLIARE I CAPELLI */}
+        <div className="absolute top-[-10%] md:top-[-12%] left-0 w-full h-[120%] md:h-[125%] z-10">
           <Image
             src={fotoPortrait}
             alt="Alberto Chines Portrait"
             fill
             className="object-cover grayscale brightness-90 md:brightness-100"
             priority
-            style={{ objectPosition: 'center 0%' }} 
           />
         </div>
         
-        {/* SFUMATURA LATERALE (PER DESKTOP - UNISCE FOTO E LOGO) */}
+        {/* SFUMATURA LATERALE (UNISCE FOTO E LOGO - ELIMINA IL TAGLIO NETTO) */}
         <div className="hidden md:block absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-black via-black/40 to-transparent z-20 pointer-events-none" />
         
-        {/* SFUMATURA IN BASSO (PER MOBILE - SFUMA NEL LOGO) */}
+        {/* SFUMATURA IN BASSO (PER MOBILE) */}
         <div className="md:hidden absolute inset-0 bg-gradient-to-b from-transparent via-black/10 to-black z-20 pointer-events-none" />
       </section>
 
