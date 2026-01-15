@@ -8,22 +8,20 @@ export default function Repertorio() {
     if (!text || text.includes('repertorio.')) return null;
     return text.split('\n').map((line, i) => {
       const parts = line.split('|');
-      // Se c'è il separatore: Autore (Bianco Bold) | Opere (Grigio)
       if (parts.length >= 2) {
         return (
-          <div key={i} className="mb-14">
-            <h3 className="text-white text-xl md:text-2xl font-bold tracking-wider mb-4">
+          <div key={i} className="mt-12 mb-2">
+            <h3 className="text-white text-xl md:text-2xl font-bold tracking-wider mb-2">
               {parts[0].trim()}
             </h3>
-            <div className="text-zinc-500 text-base md:text-lg font-extralight tracking-wide leading-relaxed whitespace-pre-line">
+            <p className="text-zinc-500 text-base md:text-lg font-extralight tracking-wide leading-tight whitespace-pre-line">
               {parts[1].trim()}
-            </div>
+            </p>
           </div>
         );
       }
-      // Se è solo una riga di opere (senza autore nuovo)
       return (
-        <div key={i} className="mb-4 text-zinc-500 font-extralight text-base md:text-lg whitespace-pre-line">
+        <div key={i} className="text-zinc-500 text-base md:text-lg font-extralight tracking-wide leading-tight mb-1 whitespace-pre-line">
           {line.trim()}
         </div>
       );
@@ -33,7 +31,7 @@ export default function Repertorio() {
   return (
     <main className="min-h-screen bg-black text-white pt-40 px-6 pb-32">
       <div className="max-w-4xl mx-auto">
-        <h1 className="text-4xl md:text-6xl font-extralight uppercase tracking-[0.4em] mb-24 opacity-90 border-b border-white/10 pb-8">
+        <h1 className="text-4xl md:text-6xl font-extralight uppercase tracking-[0.4em] mb-24 opacity-90 border-b border-white/10 pb-8 text-left">
           {t('repertorio.title')}
         </h1>
 
@@ -43,7 +41,7 @@ export default function Repertorio() {
               <span className="w-8 h-[1px] bg-zinc-800"></span>
               {t('repertorio.solisticoTitle')}
             </h2>
-            <div>{renderList(t('repertorio.solistico'))}</div>
+            <div className="flex flex-col">{renderList(t('repertorio.solistico'))}</div>
           </section>
 
           <section>
@@ -51,7 +49,7 @@ export default function Repertorio() {
               <span className="w-8 h-[1px] bg-zinc-800"></span>
               {t('repertorio.orchestraTitle')}
             </h2>
-            <div>{renderList(t('repertorio.orchestra'))}</div>
+            <div className="flex flex-col">{renderList(t('repertorio.orchestra'))}</div>
           </section>
         </div>
       </div>
