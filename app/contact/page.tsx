@@ -7,7 +7,7 @@ export default function Contact() {
   return (
     <main className="min-h-screen bg-black text-white pt-32 px-8 flex items-center justify-center">
       <div className="max-w-xl w-full text-center">
-        <h1 className="text-3xl md:text-4xl font-extralight uppercase tracking-[0.4em] mb-20 opacity-80">
+        <h1 className="text-3xl md:text-4xl font-extralight uppercase tracking-[0.4em] mb-20">
           {t('contact.title')}
         </h1>
         
@@ -18,11 +18,11 @@ export default function Contact() {
 
           <div className="flex justify-center gap-10 pt-10">
             {/* Spotify */}
-            <a href="https://open.spotify.com/artist/..." target="_blank" className="text-zinc-500 hover:text-white transition-colors">
+            <a href="https://open.spotify.com/artist/5X4G9z..." target="_blank" className="text-zinc-500 hover:text-white transition-colors">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.503 17.306c-.218.358-.684.471-1.042.254-2.856-1.745-6.452-2.14-10.686-1.171-.41.094-.82-.163-.914-.574-.094-.411.163-.82.574-.914 4.63-1.059 8.604-.613 11.784 1.332.357.218.47.684.254 1.042zm1.468-3.26c-.274.446-.856.59-1.302.316-3.27-2.01-8.252-2.592-12.119-1.417-.5.152-1.026-.134-1.178-.634-.152-.5.134-1.026.634-1.178 4.417-1.34 9.907-.7 13.649 1.603.447.274.59.856.316 1.31zm.126-3.39c-3.922-2.329-10.378-2.544-14.126-1.405-.601.183-1.243-.162-1.426-.763-.183-.601.162-1.243.763-1.426 4.303-1.307 11.432-1.048 15.962 1.641.54.32.716 1.014.397 1.554-.32.541-1.015.717-1.554.398z"/></svg>
             </a>
             {/* YouTube */}
-            <a href="https://youtube.com/..." target="_blank" className="text-zinc-500 hover:text-white transition-colors">
+            <a href="https://www.youtube.com/@albertochines" target="_blank" className="text-zinc-500 hover:text-white transition-colors">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
             </a>
             {/* Instagram */}
