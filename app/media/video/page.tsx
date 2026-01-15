@@ -2,7 +2,7 @@
 import { useLanguage } from "../../../components/LanguageProvider";
 import Link from "next/link";
 
-// Video ufficiali di Alberto Chines
+// Video ufficiali di Alberto Chines - REALI
 const videos = [
   {
     id: "fN25pS9M57A", 
@@ -29,7 +29,7 @@ export default function VideosPage() {
     <main className="min-h-screen bg-black text-white pt-32 px-8 pb-24 overflow-x-hidden">
       <div className="max-w-[1400px] mx-auto">
         
-        {/* HEADER CON SWITCHER (COERENTE CON GALLERY FOTO) */}
+        {/* HEADER CON SWITCHER */}
         <header className="mb-24 flex flex-col md:flex-row md:items-end justify-between gap-8">
           <div>
             <h1 className="text-3xl md:text-4xl font-extralight uppercase tracking-[0.4em] opacity-80">
@@ -51,7 +51,7 @@ export default function VideosPage() {
           </nav>
         </header>
         
-        {/* GRIGLIA VIDEO CINEMATOGRAFICA */}
+        {/* GRIGLIA VIDEO */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-24">
           {videos.map((video, index) => (
             <div 
