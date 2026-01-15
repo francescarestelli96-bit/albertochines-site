@@ -29,22 +29,20 @@ export default function HomePage() {
 
       {/* 2. SEZIONE FOTO (DESTRA DESKTOP / SOPRA MOBILE) */}
       <section className="relative w-full h-[60vh] md:h-screen md:w-1/2 md:order-2 overflow-hidden bg-black">
-        <div className="relative w-full h-full scale-110 md:scale-100"> 
-          {/* Lo scale-110 su mobile ci permette di mangiarci i bordi e tirarlo su a morte */}
+        <div className="relative w-full h-full scale-125 md:scale-110 origin-top"> 
+          {/* Aumentato scale e impostato origin-top per poter salire ancora di più */}
           <Image
             src={fotoPortrait}
             alt="Alberto Chines Portrait"
             fill
             className="object-cover grayscale brightness-90 md:brightness-100"
             priority
-            style={{ objectPosition: 'center 0%' }} // PORTATO AL LIMITE ZERO
+            style={{ objectPosition: 'center 0%' }} 
           />
         </div>
         
-        {/* SFUMATURA IN BASSO (MOLTO MORBIDA) */}
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/20 to-black z-20 pointer-events-none" />
-        
-        {/* SFUMATURA LATERALE (DESKTOP) */}
+        {/* SFUMATURE PER IL BLEND PERFETTO */}
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/10 to-black z-20 pointer-events-none md:hidden" />
         <div className="hidden md:block absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-black via-black/60 to-transparent z-20 pointer-events-none" />
       </section>
 
