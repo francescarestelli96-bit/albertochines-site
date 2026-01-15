@@ -16,28 +16,27 @@ export default function HomePage() {
 
       {/* 1. SEZIONE FOTO (SOPRA MOBILE / DESTRA DESKTOP) */}
       <section className="relative w-full h-[55vh] md:h-screen md:w-1/2 md:order-2 overflow-hidden bg-black">
-        {/* DESKTOP: Alzata a morte con translate-y e scale per non tagliare */}
-        <div className="absolute inset-0 w-full h-full scale-[1.1] md:scale-[1.15] origin-top translate-y-[-2%] md:translate-y-[-12%]">
+        <div className="absolute inset-0 w-full h-full md:scale-110">
           <Image
             src={fotoPortrait}
             alt="Alberto Chines Portrait"
             fill
             className="object-cover grayscale brightness-90 md:brightness-100"
             priority
-            style={{ objectPosition: 'center top' }}
+            /* Desktop: spinto in su al limite per allineare gli occhiali */
+            style={{ objectPosition: 'center 0%' }} 
           />
         </div>
         
-        {/* SFUMATURA IN BASSO PER MOBILE */}
+        {/* SFUMATURA MOBILE (NON TOCCARE) */}
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black z-20 pointer-events-none md:hidden" />
         
-        {/* SFUMATURA LATERALE PER DESKTOP (MOLTO MORBIDA) */}
+        {/* SFUMATURA DESKTOP */}
         <div className="hidden md:block absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-black via-black/30 to-transparent z-20 pointer-events-none" />
       </section>
 
       {/* 2. SEZIONE LOGO (SOTTO MOBILE / SINISTRA DESKTOP) */}
       <section className="relative w-full h-[45vh] md:h-screen md:w-1/2 bg-black flex items-center justify-center p-4 md:p-24 md:order-1 z-30">
-        {/* In mobile usiamo -mt-12 per tirare il logo più vicino alla foto */}
         <div className="relative w-full max-w-[280px] md:max-w-[500px] aspect-[3/2] -mt-16 md:mt-0">
           <Image 
             src={logoImmagine} 
