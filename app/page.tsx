@@ -16,15 +16,15 @@ export default function HomePage() {
 
       {/* 1. SEZIONE FOTO (SOPRA MOBILE / DESTRA DESKTOP) */}
       <section className="relative w-full h-[55vh] md:h-screen md:w-1/2 md:order-2 overflow-hidden bg-black">
-        <div className="absolute inset-0 w-full h-full md:scale-110">
+        {/* DESKTOP: Usiamo un contenitore che esce dai bordi superiori per forzare la risalita */}
+        <div className="absolute -top-[5%] md:-top-[15%] left-0 w-full h-[120%] md:h-[130%]">
           <Image
             src={fotoPortrait}
             alt="Alberto Chines Portrait"
             fill
             className="object-cover grayscale brightness-90 md:brightness-100"
             priority
-            /* Desktop: spinto in su al limite per allineare gli occhiali */
-            style={{ objectPosition: 'center 0%' }} 
+            style={{ objectPosition: 'center top' }}
           />
         </div>
         
