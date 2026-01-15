@@ -4,27 +4,49 @@ import { useLanguage } from "../../components/LanguageProvider";
 export default function Repertorio() {
   const { t } = useLanguage();
 
+  const renderList = (text: string) => {
+    if (!text || text.includes('repertorio.')) return null;
+    return text.split('\n').map((line, i) => {
+      const parts = line.split('|');
+      if (parts.length < 2) return null;
+      return (
+        <div key={i} className="mb-10 group">
+          <h3 className="text-white text-lg md:text-xl font-light tracking-wider mb-2">
+            {parts[0].trim()}
+          </h3>
+          <p className="text-zinc-500 text-sm md:text-base font-extralight tracking-wide leading-relaxed">
+            {parts[1].trim()}
+          </p>
+        </div>
+      );
+    });
+  };
+
   return (
-    <main className="min-h-screen bg-black text-white pt-32 px-6 pb-20 animate-in fade-in duration-1000">
+    <main className="min-h-screen bg-black text-white pt-40 px-6 pb-24">
       <div className="max-w-4xl mx-auto">
-        <h1 className="text-4xl md:text-5xl font-extralight uppercase tracking-[0.3em] border-b border-white/10 pb-8 mb-16">
+        <h1 className="text-4xl md:text-5xl font-extralight uppercase tracking-[0.4em] mb-24 opacity-90 border-b border-white/10 pb-8">
           {t('repertorio.title')}
         </h1>
-        <div className="space-y-24">
+
+        <div className="space-y-32">
           <section>
-            <h2 className="text-[10px] uppercase tracking-[0.5em] text-zinc-500 mb-10 italic">
+            <h2 className="text-[10px] uppercase tracking-[0.6em] text-zinc-500 italic mb-12 flex items-center gap-4">
+              <span className="w-8 h-[1px] bg-zinc-800"></span>
               {t('repertorio.solisticoTitle')}
             </h2>
-            <div className="text-base md:text-lg font-extralight leading-relaxed tracking-wide text-zinc-300 whitespace-pre-line text-justify hyphens-auto">
-              {t('repertorio.solistico')}
+            <div className="grid gap-2">
+              {renderList(t('repertorio.solistico'))}
             </div>
           </section>
+
           <section>
-            <h2 className="text-[10px] uppercase tracking-[0.5em] text-zinc-500 mb-10 italic">
+            <h2 className="text-[10px] uppercase tracking-[0.6em] text-zinc-500 italic mb-12 flex items-center gap-4">
+              <span className="w-8 h-[1px] bg-zinc-800"></span>
               {t('repertorio.orchestraTitle')}
             </h2>
-            <div className="text-base md:text-lg font-extralight leading-relaxed tracking-wide text-zinc-300 whitespace-pre-line text-justify hyphens-auto">
-              {t('repertorio.orchestra')}
+            <div className="grid gap-2">
+              {renderList(t('repertorio.orchestra'))}
             </div>
           </section>
         </div>
