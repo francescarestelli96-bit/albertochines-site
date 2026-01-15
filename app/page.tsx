@@ -14,7 +14,7 @@ export default function HomePage() {
         </p>
       </header>
 
-      {/* 1. SEZIONE LOGO (SINISTRA DESKTOP / SOTTO MOBILE) */}
+      {/* 1. SEZIONE LOGO (SOTTO IN MOBILE / SINISTRA IN DESKTOP) */}
       <section className="relative w-full h-[40vh] md:h-screen md:w-1/2 bg-black flex items-center justify-center p-12 md:p-24 md:order-1 z-30">
         <div className="relative w-full max-w-[240px] sm:max-w-[280px] md:max-w-[500px] aspect-[3/2]">
           <Image 
@@ -27,7 +27,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 2. SEZIONE FOTO (DESTRA DESKTOP / SOPRA MOBILE) */}
+      {/* 2. SEZIONE FOTO (SOPRA IN MOBILE / DESTRA IN DESKTOP) */}
       <section className="relative w-full h-[60vh] md:h-screen md:w-1/2 md:order-2 overflow-hidden bg-black">
         <Image
           src={fotoPortrait}
@@ -35,17 +35,14 @@ export default function HomePage() {
           fill
           className="object-cover grayscale brightness-90 md:brightness-100"
           priority
-          style={{ objectPosition: 'center 5%' }} // ALZATO AL MASSIMO PER NON TAGLIARE I CAPELLI
+          style={{ objectPosition: 'center 2%' }} // ALZATO ANCORA DI PIÙ PER IL MASSIMO RESPIRO
         />
         
-        {/* SFUMATURA VERSO IL BASSO (MOLTO MORBIDA) */}
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/10 to-black z-20 pointer-events-none" />
+        {/* SFUMATURA IN BASSO (PER MOBILE) */}
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/30 to-black z-20 pointer-events-none md:hidden" />
         
-        {/* SFUMATURA VERSO SINISTRA (PER DESKTOP - UNISCE FOTO E LOGO) */}
-        <div className="hidden md:block absolute inset-y-0 left-0 w-1/2 bg-gradient-to-r from-black via-black/40 to-transparent z-20 pointer-events-none" />
-        
-        {/* SFUMATURA VERSO SINISTRA (PER MOBILE - SFUMA IL BORDO LATERALE) */}
-        <div className="md:hidden absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-black to-transparent z-20 pointer-events-none" />
+        {/* SFUMATURA LATERALE (PER DESKTOP - UNISCE AL LOGO) */}
+        <div className="hidden md:block absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-black via-black/60 to-transparent z-20 pointer-events-none" />
       </section>
 
     </main>
