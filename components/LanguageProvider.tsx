@@ -115,58 +115,17 @@ Johann Christian Bach | Sonata in C minor Op. 5 No. 6\nPiano quartet in G major 
 Johann Sebastian Bach | Partita No. 1 BWV 825\nPartita No. 2 BWV 826\nEnglish Suite No. 2 BWV 807\nEnglish Suite No. 3 BWV 808\nFrench Suite No.5 BWV 816\nToccata in E minor BWV 914\nSonata in D major BWV 963\nDas wohltemperierte Klavier I&II (selection)\nDie Kunst der Fuge (selection)\nFantasia and Fugue in G minor BWV 542 (tr. Liszt)\nViolin Partita No. 3 (tr. Rachmaninov)\nPassacaglia and Fugue in C minor BWV 582 (tr. D’Albert)\nToccata and Fugue in D minor BWV 565 (tr. Busoni)\nBrandenburg Concerto No. 3 BWV 1048 (tr. Friedman)
 Béla Bartók | Suite Op. 14\nDance Suite Sz. 77 BB86b
 Jerzy Bauer | Sonata for cello and piano
-Ludwig van Beethoven | Sonatas Op. 2 Nos.1 & 3\nSonata Op. 14 No.2\nSonata Op. 22\nSonata Op. 27 No.2\nSonata Op. 28\nSonata Op. 31 No.1\nSonata Op. 53 “Waldstein”\nSonata Op. 81a “Les Adieux”\nSonata Op.111\nVariations and Fugue Op. 35 “Eroica”\nVariations in C minor WoO 80\nVariations on “Es war einmal ein alter Mann” WoO 66\nSerenade for flute and piano Op. 41\nSonata for cello and piano No. 3 Op. 69\nSonata for violin and piano No. 5 Op. 24\nTrio Op. 1 No.1
-Pierre Boulez | Douze Notations\nSonatina for flute and piano
-Johannes Brahms | Rhapsodies Op. 79\nSouvenir de la Russie Ans.4/6 for piano four hands\nHungarian Dances for piano four hands (selection)\nTrio No. 1 Op. 8
-William Byrd | The Battell, BK 94\nPavana Lachrimae
-John Cage | In a landscape\nMysterious Adventure for prepared piano\nFads and Fancies in the Academy for piano and percussions\nCredo in US for piano, percussions, radio and phonograph
-Elliott Carter | Epigrams, for piano trio
-Alfredo Casella | Pupazzetti, for piano four hands
-Fryderyk Chopin | Etudes Op. 10\nEtudes Op. 25 (selection)\nSonata No.1 Op. 4\nBallade No. 2 Op. 38\nPolonaise Op. 44\nPolonaise KK IVa N.5 “Adieu! Á Guillaume Kolberg”\nVariations Brillantes Op. 12\nBerceuse Op. 57\nBarcarolle Op. 60
-Muzio Clementi | Sonata Op. 50 No. 3 “Didone Abbandonata”
-Claude Debussy | Children’s Corner\nSuite Bergamasque\nPreludes (selection)
-Antonin Dvořák | Piano quintet No. 2 Op. 81
-César Franck | Prélude, Aria et Final
-Girolamo Frescobaldi | Aria detto Balletto
-Carlo Galante | Domenico Fragments, for guitar and piano
-Gentle Giant | Experience, for piano (tr. Chines)\nExperience, for flute, electric guitar, cello and piano (tr. Chines)
-Carlo Gesualdo | Canzon Francese del Principe\nAestimatus sum (tr. Delucchi)\nMoro, lasso, al mio duolo (tr. Delucchi)
-Louis Moreau Gottschalk | Souvenir de la Havane Op. 39\nSouvenir de Porto Rico Op. 31
-Franz Josef Haydn | Sonata in C minor Hob.XVI:20\nSonata in B minor Hob.XVI:32\nSonata in C major Hob.XVI:50
-Henri Herz | Grandes Variations sul le choeur des chasseurs d’Euriante (Weber)
-Paul Hindemith | Sonata for viola and piano Op. 11 N.4
-György Ligeti | Musica Ricercata
-Franz Liszt | Réminescences de Lucia di Lammermoor S. 397\nAnnées de pèlerinage (selection)\nTotentanz S. 525\nHungarian Rhapsody N.2 S. 244/2
-Felix Mendelssohn | Variations Sérieuses Op. 54\nRondo Capriccioso Op. 14\nFantasia in F-sharp minor Op. 28\nLieder Ohne Worte (selezione)
-Roberto Molinelli | Milonga y Chacarera for viola and piano trio
-Wolfgang Amadeus Mozart | Sonata in A minor KV 310\nSonata in A major KV 331\nSonata in C minor KV457\nSonata in C major KV545\nSonata in B-flat major KV 570\nVariations on “Salve Tu Domine” (Paisiello) KV398\nVariations on “Unser dummer Pobel Meint (Gluck) KV455\nTrio E major KV 542
-Arvo Pärt | Fratres
-Sergei Prokofiev | Sonata No. 3 Op. 28\nSarcasms Op. 17\nFour Pieces Op.4\nToccata Op. 11
-Jean-Philippe Rameau | Suite in E minor\nSuite in A minor
-Maurice Ravel | Valses Nobles et sentimentales\nLa Valse, for two pianos
-Wolfgang Rihm | Mehrere kurze Walzer, for piano four hands
-Camille Saint-Saens | Le Carnaval des Animaux
-Domenico Scarlatti | 30 Sonatas
-Alfred Schnittke | Hommage a Stravinsky, Prokofiev and Shostakovich, for piano six hands
-Arnold Schönberg | Verklärte Nacht Op. 4 for piano trio (tr. Steuermann)
-Franz Schubert | Sonata in B-flat major D.960\nSonata in A minor D.784\nSonata in D major D.850\nImpromptus Op. 90\nSonata Arpeggione D.821 per violoncello e pianoforte\nMarches Caractéristiques D.968b (D.886) for piano four hands\nFantasia in F minor D.940 for piano four hands\nPiano Trio Op. 100
-Robert Schumann | Abegg Variations Op. 1\nPapillons Op. 2\nKreisleriana, Op. 16\nArabeske Op. 18\nPiano Quintet Op. 44
-Salvatore Sciarrino | Perduto in una città d’acque\nAnamorfosi
-Orazio Sciortino | Scarlattiana, for guitar and piano
-Alexander Scriabin | Sonata N. 9 Op. 68 “Black Mass”\nEtudes (selection)
-Dmitri Shostakovich | Piano Quintet Op. 57\nPiano Trio Op. 67\nPreludes and Fugues (selection)
-Bedřich Smetana | Piano Trio Op. 15
-Antonio Soler | Fandango in D minor R.146\nSonatas (selection)
-Igor Stravinskij | L’Oiseau de Feu (tr. Agosti)
-Jan Pieterszoon Sweelinck | Partitas on “Mein Junges Leben hat ein End”, SwWV 324
-Pyotr Ilyich Tchaikovsky | Scherzo from Symphony No. 6 (tr. Feinberg)
-Carl Maria von Weber | Sonata No. 3 Op. 49`,
-      orchestra: `Johann Sebastian Bach | Concerto in D minor BWV 1052\nConcerto for two pianos in C minor BWV 1060
+Ludwig van Beethoven | Sonatas Op. 2 Nos.1 & 3\nSonata Op. 14 No.2\nSonata Op. 22\nSonata Op. 27 No.2\nSonata Op. 28\nSonata Op. 31 No.1\nSonata Op. 53 “Waldstein”\nSonata Op. 81a “Les Adieux”\nSonata Op.111\nVariations and Fugue Op. 35 “Eroica”
+Johannes Brahms | Rhapsodies Op. 79\nTrio No. 1 Op. 8
+Fryderyk Chopin | Etudes Op. 10\nEtudes Op. 25 (selection)\nSonata No.1 Op. 4\nBallade No. 2 Op. 38\nPolonaise Op. 44\nBerceuse Op. 57\nBarcarolle Op. 60
+Franz Liszt | Années de pèlerinage (selection)\nTotentanz S. 525\nHungarian Rhapsody N.2 S. 244/2
+Wolfgang Amadeus Mozart | Sonata in A minor KV 310\nSonata in A major KV 331\nSonata in C minor KV457
+Robert Schumann | Abegg Variations Op. 1\nPapillons Op. 2\nKreisleriana, Op. 16\nArabeske Op. 18\nPiano Quintet Op. 44`,
+      orchestra: `Johann Sebastian Bach | Concerto in D minor BWV 1052
 Béla Bartók | Concerto No. 3 Sz.119
-Ludwig van Beethoven | Concerto No. 3 Op. 37\nConcerto No. 4 Op. 58\nTriple Concerto Op. 56
-Franz Liszt | Concerto No. 2 S.125\nTotentanz S.126
-Felix Mendelssohn | Concerto No. 1 Op. 25
-Wolfgang Amadeus Mozart | Concerto in A major KV. 414\nConcerto in C major KV. 415\nConcerto in A major KV. 488
+Ludwig van Beethoven | Concerto No. 3 Op. 37\nConcerto No. 4 Op. 58
+Franz Liszt | Totentanz S.126
+Wolfgang Amadeus Mozart | Concerto in A major KV. 488
 Sergei Vasilyevic Rachmaninov | Concerto No. 2 Op. 18`
     },
     media: { title: "Media" },
