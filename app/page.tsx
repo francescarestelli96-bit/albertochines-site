@@ -16,8 +16,8 @@ export default function HomePage() {
 
       {/* 1. SEZIONE FOTO (SOPRA MOBILE / DESTRA DESKTOP) */}
       <section className="relative w-full h-[55vh] md:h-screen md:w-1/2 md:order-2 overflow-hidden bg-black">
-        {/* DESKTOP: Usiamo un contenitore che esce dai bordi superiori per forzare la risalita */}
-        <div className="absolute -top-[5%] md:-top-[15%] left-0 w-full h-[120%] md:h-[130%]">
+        {/* DESKTOP: Aumentato scale al 130% per poter spingere il top al -25% senza tagliare la testa */}
+        <div className="absolute -top-[5%] md:-top-[25%] left-0 w-full h-[120%] md:h-[140%]">
           <Image
             src={fotoPortrait}
             alt="Alberto Chines Portrait"
@@ -28,11 +28,11 @@ export default function HomePage() {
           />
         </div>
         
-        {/* SFUMATURA MOBILE (NON TOCCARE) */}
+        {/* SFUMATURA MOBILE (PERFETTA) */}
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black z-20 pointer-events-none md:hidden" />
         
-        {/* SFUMATURA DESKTOP */}
-        <div className="hidden md:block absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-black via-black/30 to-transparent z-20 pointer-events-none" />
+        {/* SFUMATURA DESKTOP (LEGGERA PER NON SPORCARE IL VISO) */}
+        <div className="hidden md:block absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-black via-black/20 to-transparent z-20 pointer-events-none" />
       </section>
 
       {/* 2. SEZIONE LOGO (SOTTO MOBILE / SINISTRA DESKTOP) */}
