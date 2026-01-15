@@ -7,14 +7,14 @@ export default function HomePage() {
   return (
     <main className="relative min-h-screen w-full bg-black flex flex-col md:flex-row overflow-hidden">
       
-      {/* NAVBAR */}
+      {/* HEADER NAVBAR */}
       <header className="absolute top-0 left-0 w-full py-6 px-8 md:px-24 z-50 pointer-events-none">
         <p className="text-[9px] text-zinc-500 tracking-[0.5em] uppercase font-light">
           Official Website
         </p>
       </header>
 
-      {/* 1. LOGO SECTION */}
+      {/* 1. SEZIONE LOGO (SINISTRA DESKTOP / SOTTO MOBILE) */}
       <section className="relative w-full h-[40vh] md:h-screen md:w-1/2 bg-black flex items-center justify-center p-12 md:p-24 md:order-1 z-30">
         <div className="relative w-full max-w-[240px] sm:max-w-[280px] md:max-w-[500px] aspect-[3/2]">
           <Image 
@@ -27,25 +27,25 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 2. FOTO SECTION */}
-      <section className="relative w-full h-[60vh] md:h-screen md:w-1/2 md:order-2 bg-black overflow-hidden">
-        {/* Usiamo object-position 5% per stare vicini al bordo senza tagliare i capelli */}
-        <div className="absolute inset-0 w-full h-full md:scale-105 origin-top">
+      {/* 2. SEZIONE FOTO (DESTRA DESKTOP / SOPRA MOBILE) */}
+      <section className="relative w-full h-[60vh] md:h-screen md:w-1/2 md:order-2 overflow-hidden bg-black">
+        {/* Usiamo un container con zoom e traslazione per portare gli occhiali in linea col nome */}
+        <div className="absolute inset-0 w-full h-full scale-110 md:scale-105 origin-top translate-y-[-2%] md:translate-y-[-4%]">
           <Image
             src={fotoPortrait}
             alt="Alberto Chines Portrait"
             fill
             className="object-cover grayscale brightness-90 md:brightness-100"
             priority
-            style={{ objectPosition: 'center 5%' }} 
+            style={{ objectPosition: 'center 0%' }} 
           />
         </div>
         
-        {/* SFUMATURA LATERALE (PIÙ LEGGERA PER NON COPRIRE LA FACCIA) */}
-        <div className="hidden md:block absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-black via-black/20 to-transparent z-20 pointer-events-none" />
+        {/* SFUMATURA LATERALE (PER DESKTOP - UNISCE FOTO E LOGO) */}
+        <div className="hidden md:block absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-black via-black/40 to-transparent z-20 pointer-events-none" />
         
-        {/* SFUMATURA IN BASSO (MOBILE) */}
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/10 to-black z-20 pointer-events-none md:hidden" />
+        {/* SFUMATURA IN BASSO (PER MOBILE - SFUMA NEL LOGO) */}
+        <div className="md:hidden absolute inset-0 bg-gradient-to-b from-transparent via-black/10 to-black z-20 pointer-events-none" />
       </section>
 
     </main>
