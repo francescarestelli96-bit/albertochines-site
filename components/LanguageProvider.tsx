@@ -87,7 +87,17 @@ Sergei Rachmaninov | Concerto N. 2 Op. 18`
     },
     concerts: { title: "Concerti", message: "Date in aggiornamento" },
     media: { title: "Media" },
-    contact: { title: "Contatti" }
+    contact: { title: "Contatti" },
+    video: {
+      performanceTitle: "Video Performance",
+      handelTitle: "Händel - Lascia ch'io pianga",
+      handelDescription: "Trascritto per pianoforte da Moszkowski/Chines",
+      chopinTitle: "Chopin - Variations Brillantes",
+      chopinDescription: "Tema di Hérold, Op. 12",
+      bartokTitle: "Bartók - Suite Op. 14",
+      bartokDescription: "Allegro Barbaro. Op. 14, Sz. 62, BB 70",
+      moreOnYoutube: "Guarda altro su YouTube",
+    }
   },
   en: {
     nav: { about: "Bio", concerts: "Concerts", repertorio: "Repertoire", media: "Media", contact: "Contact" },
@@ -109,7 +119,7 @@ He is a Professor of Piano at the "Francesco Venezze" Conservatory in Rovigo.`
       solistico: `Thomas Adès | Darknesse Visible (after John Dowland)
 Carl Philipp Emanuel Bach | Variations on Folie d'Espagne H. 263
 Johann Christian Bach | Sonata in C minor Op. 5 No. 6\nPiano quartet in G major W B66
-Johann Sebastian Bach | Partita No. 1 BWV 825\nPartita No. 2 BWV 826\nEnglish Suite No. 2 BWV 807\nEnglish Suite No. 3 BWV 808\nFrench Suite No. 5 BWV 816\nToccata in E minor BWV 914\nSonata in D major BWV 963\nDas wohltemperierte Klavier I&II (selection)\nDie Kunst der Fuge (selection)\nFantasia and Fugue in G minor BWV 542 (tr. Liszt)\nViolin Partita No. 3 (tr. Rachmaninov)\nPassacaglia and Fugue in C minor BWV 582 (tr. D'Albert)\nToccata and Fugue in D minor BWV 565 (tr. Busoni)\nBrandenburg Concerto No. 3 BWV 1048 (tr. Friedman)
+Johann Sebastian Bach | Partita No. 1 BWV 825\nPartita No. 2 BWV 826\nEnglish Suite No. 2 BWV 807\nEnglish Suite No. 3 BWV 808\nFrench Suite No. 5 BWV 816\nToccata in E minor BWV 914\nSonata in D major BWV 963\nDas wohltemperierte Klavier I&II (selection)\nDie Kunst della Fuge (selection)\nFantasia and Fugue in G minor BWV 542 (tr. Liszt)\nViolin Partita No. 3 (tr. Rachmaninov)\nPassacaglia and Fugue in C minor BWV 582 (tr. D'Albert)\nToccata and Fugue in D minor BWV 565 (tr. Busoni)\nBrandenburg Concerto No. 3 BWV 1048 (tr. Friedman)
 Béla Bartók | Suite Op. 14\nDance Suite Sz. 77 BB86b
 Jerzy Bauer | Sonata for cello and piano
 Ludwig van Beethoven | Sonatas Op. 2 Nos. 1 & 3\nSonata Op. 14 No. 2\nSonata Op. 22\nSonata Op. 27 No. 2\nSonata Op. 28\nSonata Op. 31 No. 1\nSonata Op. 53 "Waldstein"\nSonata Op. 81a "Les Adieux"\nSonata Op. 111\nVariations and Fugue Op. 35 "Eroica"
@@ -127,7 +137,17 @@ Sergei Rachmaninov | Concerto No. 2 Op. 18`
     },
     concerts: { title: "Concerts", message: "Dates coming soon" },
     media: { title: "Media" },
-    contact: { title: "Contact" }
+    contact: { title: "Contact" },
+    video: {
+      performanceTitle: "Video Performances",
+      handelTitle: "Händel - Lascia ch'io pianga",
+      handelDescription: "Transcribed for piano by Moszkowski/Chines",
+      chopinTitle: "Chopin - Variations Brillantes",
+      chopinDescription: "Theme by Hérold, Op. 12",
+      bartokTitle: "Bartók - Suite Op. 14",
+      bartokDescription: "Allegro Barbaro. Op. 14, Sz. 62, BB 70",
+      moreOnYoutube: "Watch more on YouTube",
+    }
   }
 };
 
