@@ -20,12 +20,15 @@ export default function MediaPage() {
   ];
 
   useEffect(() => {
+    // Mescola l'ordine delle foto al caricamento
     setShuffledPhotos([...photos].sort(() => Math.random() - 0.5));
   }, []);
 
   return (
     <main className="min-h-screen bg-black text-white pt-40 px-6 pb-32">
       <div className="max-w-6xl mx-auto">
+        
+        {/* Header della pagina */}
         <div className="flex justify-between items-end mb-24 border-b border-white/10 pb-8 text-left">
           <h1 className="text-4xl md:text-5xl font-extralight uppercase tracking-[0.4em]">
             {t('nav.media')}
@@ -35,13 +38,14 @@ export default function MediaPage() {
           </Link>
         </div>
 
+        {/* Griglia Masonry con Super Zoom */}
         <div className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
           {shuffledPhotos.map((photo, index) => (
-            <div key={index} className="break-inside-avoid overflow-hidden">
+            <div key={index} className="break-inside-avoid overflow-hidden bg-zinc-900 group">
               <img 
                 src={photo.src} 
                 alt={photo.alt}
-                className="w-full h-auto grayscale hover:grayscale-0 transition-all duration-1000 border border-white/5 hover:scale-[1.02]"
+                className="w-full h-auto object-cover transition-transform duration-1000 ease-in-out group-hover:scale-110 border border-white/5"
                 loading="lazy"
               />
             </div>
