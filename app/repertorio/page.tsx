@@ -7,26 +7,30 @@ export default function Repertorio() {
   const renderList = (text: string) => {
     if (!text || text.includes('repertorio.')) return null;
     
-    return text.split('\n').map((line, i) => {
-      const parts = line.split('|');
+    // Filtriamo le righe vuote per evitare buchi nel layout
+    const lines = text.split('\n').filter(line => line.trim() !== '');
+    
+    return lines.map((line, i) => {
+      const isAuthorLine = line.includes('|');
       
-      // BLOCCO AUTORE (Bianco Bold)
-      if (parts.length >= 2) {
+      if (isAuthorLine) {
+        const [author, work] = line.split('|');
         return (
-          <div key={i} className="mb-6 break-inside-avoid">
-            <h3 className="text-white text-sm md:text-base font-bold tracking-wider mb-1 uppercase">
-              {parts[0].trim()}
+          <div key={i} className="mb-8 break-inside-avoid">
+            <h3 className="text-white text-sm md:text-base font-bold tracking-wider mb-1 uppercase leading-tight">
+              {author.trim()}
             </h3>
-            <p className="text-zinc-500 text-xs md:text-sm font-extralight tracking-wide leading-tight">
-              {parts[1].trim()}
+            <p className="text-zinc-500 text-xs md:text-sm font-extralight tracking-wide leading-relaxed">
+              {work.trim()}
             </p>
           </div>
         );
       }
       
-      // OPERA SINGOLA (Attaccata alla precedente, senza spazio vuoto)
+      // CASO ANALOGO PER TUTTI: Se la riga non ha il "|", è un'opera che segue.
+      // Usiamo un margine superiore negativo per incollarla a quella sopra.
       return (
-        <div key={i} className="text-zinc-500 text-xs md:text-sm font-extralight tracking-wide leading-tight mt-[-4px] mb-1 break-inside-avoid">
+        <div key={i} className="text-zinc-500 text-xs md:text-sm font-extralight tracking-wide leading-relaxed mb-1 mt-[-28px] pb-7 break-inside-avoid">
           {line.trim()}
         </div>
       );
@@ -41,24 +45,22 @@ export default function Repertorio() {
         </h1>
 
         <div className="space-y-32">
-          {/* SEZIONE SOLISTICO */}
           <section>
             <h2 className="text-lg md:text-xl uppercase tracking-[0.3em] text-white font-light mb-16 flex items-center gap-6">
               <span className="w-12 h-[1px] bg-zinc-700"></span>
               {t('repertorio.solisticoTitle')}
             </h2>
-            <div className="columns-1 md:columns-2 gap-12 lg:gap-24 overflow-hidden">
+            <div className="columns-1 md:columns-2 gap-12 lg:gap-20">
               {renderList(t('repertorio.solistico'))}
             </div>
           </section>
 
-          {/* SEZIONE ORCHESTRA */}
           <section>
             <h2 className="text-lg md:text-xl uppercase tracking-[0.3em] text-white font-light mb-16 flex items-center gap-6">
               <span className="w-12 h-[1px] bg-zinc-700"></span>
               {t('repertorio.orchestraTitle')}
             </h2>
-            <div className="columns-1 md:columns-2 gap-12 lg:gap-24 overflow-hidden">
+            <div className="columns-1 md:columns-2 gap-12 lg:gap-20">
               {renderList(t('repertorio.orchestra'))}
             </div>
           </section>
