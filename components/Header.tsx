@@ -15,8 +15,8 @@ export default function Header() {
         <Link href="/about" className="hover:opacity-50 transition-opacity">{t('nav.about')}</Link>
         <Link href="/concerts" className="hover:opacity-50 transition-opacity">{t('nav.concerts')}</Link>
         <Link href="/repertorio" className="hover:opacity-50 transition-opacity">{t('nav.repertorio')}</Link>
-        {/* LINK CORRETTO PER EVITARE IL 404 */}
-        <Link href="/media/videos" className="hover:opacity-50 transition-opacity">{t('nav.media')}</Link>
+        {/* TORNATO COME PRIMA */}
+        <Link href="/media" className="hover:opacity-50 transition-opacity">{t('nav.media')}</Link>
         <Link href="/contact" className="hover:opacity-50 transition-opacity">{t('nav.contact')}</Link>
         
         <button 
