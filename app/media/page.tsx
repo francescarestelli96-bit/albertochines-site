@@ -1,9 +1,27 @@
 'use client';
 import { useLanguage } from "../../components/LanguageProvider";
 import Link from 'next/link';
+import { useEffect, useState } from 'react';
 
 export default function MediaPage() {
   const { t } = useLanguage();
+  const [shuffledPhotos, setShuffledPhotos] = useState<any[]>([]);
+
+  const photos = [
+    { src: "/media/01-portrait.jpeg", alt: "Portrait" },
+    { src: "/media/02-profile.jpeg", alt: "Profile" },
+    { src: "/media/03-wide-piano.jpeg", alt: "Wide Piano" },
+    { src: "/media/04-back.jpeg", alt: "Back View" },
+    { src: "/media/05-hands.jpeg", alt: "Hands" },
+    { src: "/media/06-score-open.jpeg", alt: "Score" },
+    { src: "/media/07-vertical-stage.jpeg", alt: "Stage" },
+    { src: "/media/08-mid-performance.jpeg", alt: "Performance" },
+    { src: "/media/09-close-reading.jpeg", alt: "Reading" }
+  ];
+
+  useEffect(() => {
+    setShuffledPhotos([...photos].sort(() => Math.random() - 0.5));
+  }, []);
 
   return (
     <main className="min-h-screen bg-black text-white pt-40 px-6 pb-32">
@@ -17,11 +35,17 @@ export default function MediaPage() {
           </Link>
         </div>
 
-        {/* QUI VANNO LE TUE FOTO */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <div className="aspect-[3/4] bg-zinc-900 border border-white/5 flex items-center justify-center">
-            <span className="text-zinc-700 uppercase tracking-widest text-[10px]">Photo Gallery</span>
-          </div>
+        <div className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
+          {shuffledPhotos.map((photo, index) => (
+            <div key={index} className="break-inside-avoid overflow-hidden">
+              <img 
+                src={photo.src} 
+                alt={photo.alt}
+                className="w-full h-auto grayscale hover:grayscale-0 transition-all duration-1000 border border-white/5 hover:scale-[1.02]"
+                loading="lazy"
+              />
+            </div>
+          ))}
         </div>
       </div>
     </main>

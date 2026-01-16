@@ -2,8 +2,6 @@
 import { useLanguage } from "../../../components/LanguageProvider";
 import Link from 'next/link';
 
-const videoIDs = ["bK0ZWsJIhQU", "j_L7m7L_I40", "K8N3XvU-r2Y"];
-
 export default function VideoPage() {
   const { t } = useLanguage();
 
@@ -19,31 +17,24 @@ export default function VideoPage() {
           </Link>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {videoIDs.map((id, index) => {
-            const keys = ["handel", "chopin", "bartok"];
-            return (
-              <div key={id} className="flex flex-col">
-                <div className="relative w-full aspect-video rounded-sm overflow-hidden border border-white/5 bg-zinc-900/20">
-                  <iframe
-                    className="absolute top-0 left-0 w-full h-full"
-                    src={`https://www.youtube.com/embed/${id}`}
-                    title={t(`video.${keys[index]}Title`)}
-                    frameBorder="0"
-                    allowFullScreen
-                  ></iframe>
-                </div>
-                <div className="mt-4 text-left">
-                  <h3 className="text-white text-sm font-bold tracking-wider uppercase">
-                    {t(`video.${keys[index]}Title`)}
-                  </h3>
-                  <p className="text-zinc-500 text-xs font-extralight mt-1">
-                    {t(`video.${keys[index]}Description`)}
-                  </p>
-                </div>
-              </div>
-            );
-          })}
+        <div className="max-w-3xl mx-auto">
+          <div className="relative w-full aspect-video rounded-sm overflow-hidden border border-white/5 bg-zinc-900/20">
+            <iframe
+              className="absolute top-0 left-0 w-full h-full"
+              src="https://www.youtube.com/embed/bK0ZWsJIhQU"
+              title={t('video.handelTitle')}
+              frameBorder="0"
+              allowFullScreen
+            ></iframe>
+          </div>
+          <div className="mt-8 text-center">
+            <h3 className="text-white text-xl font-bold tracking-wider uppercase">
+              {t('video.handelTitle')}
+            </h3>
+            <p className="text-zinc-500 text-sm font-extralight mt-2 italic">
+              {t('video.handelDescription')}
+            </p>
+          </div>
         </div>
       </div>
     </main>
