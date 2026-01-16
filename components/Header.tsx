@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { useLanguage } from './LanguageProvider';
 
 export default function Header() {
-  const { lang, setLang, t }: any = useLanguage();
+  const { language, toggleLanguage, t }: any = useLanguage();
 
   return (
     <header className="fixed top-0 left-0 w-full z-[100] px-4 py-6 md:px-12 md:py-8 flex flex-col md:flex-row justify-between items-center bg-black/90 backdrop-blur-md border-b border-white/5 gap-4 md:gap-0">
@@ -15,14 +15,15 @@ export default function Header() {
         <Link href="/about" className="hover:opacity-50 transition-opacity">{t('nav.about')}</Link>
         <Link href="/concerts" className="hover:opacity-50 transition-opacity">{t('nav.concerts')}</Link>
         <Link href="/repertorio" className="hover:opacity-50 transition-opacity">{t('nav.repertorio')}</Link>
-        <Link href="/media" className="hover:opacity-50 transition-opacity">{t('nav.media')}</Link>
+        {/* LINK CORRETTO PER EVITARE IL 404 */}
+        <Link href="/media/videos" className="hover:opacity-50 transition-opacity">{t('nav.media')}</Link>
         <Link href="/contact" className="hover:opacity-50 transition-opacity">{t('nav.contact')}</Link>
         
         <button 
-          onClick={() => setLang(lang === 'it' ? 'en' : 'it')} 
+          onClick={toggleLanguage} 
           className="ml-2 md:ml-4 border border-white/20 px-2 py-0.5 md:px-3 md:py-1 hover:bg-white hover:text-black transition-all text-[8px] font-extralight"
         >
-          {lang === 'it' ? 'EN' : 'IT'}
+          {language === 'it' ? 'EN' : 'IT'}
         </button>
       </nav>
     </header>
