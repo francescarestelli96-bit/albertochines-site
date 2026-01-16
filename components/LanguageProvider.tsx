@@ -17,8 +17,6 @@ La sua attività concertistica lo ha portato a esibirsi in sedi di prestigio int
 
 Alberto Chines è inoltre un camerista appassionato. Collabora regolarmente con artisti quali Anna Serova, Eugenio Della Chiara, Emanuele Delucchi, Rebecca Taio, Danilo Pastore e il Quartetto Nôus, esplorando il repertorio dal duo al quintetto con grandi aperture verso la nuova musica. La sua discografia include un album di debutto per BAM International con opere di Bach, Schumann, Ravel e Bartók.
 
-Attivo anche nella promozione culturale, è stato l'ideatore del Musica Manent Festival di Ustica e collabora stabilmente con la Primavera di Baggio di Milano.
-
 Alberto Chines è docente di pianoforte presso il Conservatorio "Francesco Venezze" di Rovigo.`
     },
     repertorio: {
@@ -106,11 +104,9 @@ Sergei Rachmaninov | Concerto N. 2 Op. 18`
       title: "Biography",
       content: `Alberto Chines, a Steinway Artist since 2020, is a versatile pianist who balances an extensive solo career with a profound dedication to chamber music and education.
 
-His training, enriched by world-renowned artists, was consolidated at the Imola Academy under the guidance of Franco Scala and Piero Rattalino, and at the Bolzano Conservatory with Davide Cabassi. After debuting at fifteen at the Teatro Massimo in Palermo, he won first prize at the International Palma d'Oro Competition (2011), the Sony Classical Talent Scout in Madesimo (2013), and second prize at the Euregio Piano Award (2014).
+His training was consolidated at the Imola Academy under the guidance of Franco Scala and Piero Rattalino, and at the Bolzano Conservatory with Davide Cabassi. After debuting at fifteen at the Teatro Massimo in Palermo, he won first prize at the International Palma d'Oro Competition (2011) and the Sony Classical Talent Scout (2013).
 
-His concert activity has led him to prestigious venues including the Van Cliburn Recital Hall, Teatro alla Scala, and Politeama Garibaldi. He recently debuted at the Bartolomeo Cristofori Festival performing Schönberg’s Pierrot Lunaire.
-
-He is a Professor of Piano at the "Francesco Venezze" Conservatory in Rovigo.`
+He has performed at venues including the Van Cliburn Recital Hall, Teatro alla Scala, and Politeama Garibaldi. He is a Professor of Piano at the "Francesco Venezze" Conservatory in Rovigo.`
     },
     repertorio: {
       title: "Repertoire",

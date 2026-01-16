@@ -6,8 +6,6 @@ export default function Repertorio() {
 
   const renderList = (text: string) => {
     if (!text || text.includes('repertorio.')) return null;
-    
-    // Filtriamo le righe vuote per evitare buchi nel layout
     const lines = text.split('\n').filter(line => line.trim() !== '');
     
     return lines.map((line, i) => {
@@ -27,8 +25,6 @@ export default function Repertorio() {
         );
       }
       
-      // CASO ANALOGO PER TUTTI: Se la riga non ha il "|", è un'opera che segue.
-      // Usiamo un margine superiore negativo per incollarla a quella sopra.
       return (
         <div key={i} className="text-zinc-500 text-xs md:text-sm font-extralight tracking-wide leading-relaxed mb-1 mt-[-28px] pb-7 break-inside-avoid">
           {line.trim()}
@@ -40,13 +36,13 @@ export default function Repertorio() {
   return (
     <main className="min-h-screen bg-black text-white pt-40 px-6 pb-32">
       <div className="max-w-6xl mx-auto">
-        <h1 className="text-4xl md:text-5xl font-extralight uppercase tracking-[0.4em] mb-24 border-b border-white/10 pb-8">
+        <h1 className="text-4xl md:text-5xl font-extralight uppercase tracking-[0.4em] mb-24 border-b border-white/10 pb-8 text-left">
           {t('repertorio.title')}
         </h1>
 
         <div className="space-y-32">
           <section>
-            <h2 className="text-lg md:text-xl uppercase tracking-[0.3em] text-white font-light mb-16 flex items-center gap-6">
+            <h2 className="text-lg md:text-xl uppercase tracking-[0.3em] text-white font-light mb-12 flex items-center gap-6">
               <span className="w-12 h-[1px] bg-zinc-700"></span>
               {t('repertorio.solisticoTitle')}
             </h2>
@@ -56,7 +52,7 @@ export default function Repertorio() {
           </section>
 
           <section>
-            <h2 className="text-lg md:text-xl uppercase tracking-[0.3em] text-white font-light mb-16 flex items-center gap-6">
+            <h2 className="text-lg md:text-xl uppercase tracking-[0.3em] text-white font-light mb-12 flex items-center gap-6">
               <span className="w-12 h-[1px] bg-zinc-700"></span>
               {t('repertorio.orchestraTitle')}
             </h2>
