@@ -1,9 +1,9 @@
 'use client';
-import { useLanguage } from "../../../components/LanguageProvider"; // PERCORSO BLINDATO
+import { useLanguage } from "../../../components/LanguageProvider";
 
 const videoIDs = ["bK0ZWsJIhQU", "j_L7m7L_I40", "K8N3XvU-r2Y"];
 
-export default function Videos() {
+export default function VideoPage() {
   const { t } = useLanguage();
 
   return (
@@ -14,11 +14,6 @@ export default function Videos() {
         </h1>
 
         <section>
-          <h2 className="text-lg md:text-xl uppercase tracking-[0.3em] text-white font-light mb-12 flex items-center gap-6">
-            <span className="w-12 h-[1px] bg-zinc-700"></span>
-            {t('video.performanceTitle')}
-          </h2>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {videoIDs.map((id, index) => {
               const keys = ["handel", "chopin", "bartok"];
@@ -46,12 +41,6 @@ export default function Videos() {
             })}
           </div>
         </section>
-
-        <footer className="pt-20 text-center">
-          <a href="https://www.youtube.com/@albertochines" target="_blank" className="text-[10px] uppercase tracking-[0.5em] text-zinc-500 hover:text-white transition-colors border border-zinc-800 px-8 py-4">
-            {t('video.moreOnYoutube')}
-          </a>
-        </footer>
       </div>
     </main>
   );
