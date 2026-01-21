@@ -16,7 +16,11 @@ export default function About() {
           </p>
         </div>
         <div className="mt-24 pt-12 border-t border-white/10 text-center">
-          <a href="#" className="inline-block px-10 py-4 border border-white/20 text-[10px] uppercase tracking-[0.4em] font-light hover:bg-white hover:text-black transition-all duration-500">
+          <a 
+            href={t('about.pressKitFile')} 
+            download={t('about.pressKitName')}
+            className="inline-block px-10 py-4 border border-white/20 text-[10px] uppercase tracking-[0.4em] font-light hover:bg-white hover:text-black transition-all duration-500"
+          >
             Download Press Kit
           </a>
         </div>
