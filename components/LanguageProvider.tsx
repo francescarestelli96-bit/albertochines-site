@@ -112,7 +112,7 @@ Alberto Chines is also a passionate chamber musician. He regularly collaborates 
 
 Also active in cultural promotion, he was the creator of the Musica Manent Festival in Ustica and collaborates regularly with the Primavera di Baggio in Milan.
 
-Alberto Chines is a Professor of Piano at the "Francesco Venezze" Conservatory in Rovigo.`
+Alberto Chines is a Piano Professor at the "Francesco Venezze" Conservatory in Rovigo.`
       },
       concerts: { 
         title: "Concerts", 
