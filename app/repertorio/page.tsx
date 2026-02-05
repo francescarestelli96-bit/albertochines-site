@@ -16,21 +16,22 @@ export default function RepertorioPage() {
     { name: "Antonin Dvořák", key: "dvorak" }, { name: "César Franck", key: "franck" },
     { name: "Girolamo Frescobaldi", key: "frescobaldi" }, { name: "Carlo Galante", key: "galante" },
     { name: "Gentle Giant", key: "giant" }, { name: "Carlo Gesualdo", key: "gesualdo" },
-    { name: "Louis Moreau Gottschalk", key: "gottschalk" }, { name: "Franz Josef Haydn", key: "haydn" },
+    { name: "Louis Moreau Gottschalk", key: "gottschalk" }, { name: "Franz Joseph Haydn", key: "haydn" },
     { name: "Henri Herz", key: "herz" }, { name: "Paul Hindemith", key: "hindemith" },
     { name: "György Ligeti", key: "ligeti" }, { name: "Franz Liszt", key: "liszt" },
     { name: "Felix Mendelssohn", key: "mendelssohn" }, { name: "Roberto Molinelli", key: "molinelli" },
     { name: "Wolfgang Amadeus Mozart", key: "mozart" }, { name: "Arvo Pärt", key: "part" },
-    { name: "Sergei Prokofiev", key: "prokofiev" }, { name: "Jean-Philippe Rameau", key: "rameau" },
+    { name: "Sergej Prokof'ev", key: "prokofiev" }, { name: "Jean-Philippe Rameau", key: "rameau" },
     { name: "Maurice Ravel", key: "ravel" }, { name: "Wolfgang Rihm", key: "rihm" },
-    { name: "Camille Saint-Saens", key: "saintsaens" }, { name: "Domenico Scarlatti", key: "scarlatti" },
+    { name: "Camille Saint-Saëns", key: "saintsaens" }, { name: "Domenico Scarlatti", key: "scarlatti" },
     { name: "Alfred Schnittke", key: "schnittke" }, { name: "Arnold Schönberg", key: "schonberg" },
     { name: "Franz Schubert", key: "schubert" }, { name: "Robert Schumann", key: "schumann" },
     { name: "Salvatore Sciarrino", key: "sciarrino" }, { name: "Orazio Sciortino", key: "sciortino" },
-    { name: "Alexander Scriabin", key: "scriabin" }, { name: "Dmitri Shostakovich", key: "shostakovich" },
+    { name: "Alexander Scriabin", key: "scriabin" }, { name: "Dmítrij Šostakóvič", key: "shostakovich" },
     { name: "Bedřich Smetana", key: "smetana" }, { name: "Antonio Soler", key: "soler" },
     { name: "Igor Stravinskij", key: "stravinsky" }, { name: "Jan Pieterszoon Sweelinck", key: "sweelinck" },
-    { name: "Pyotr Ilyich Tchaikovsky", key: "tchaikovsky" }, { name: "Carl Maria von Weber", key: "weber" }
+   { name: "Dmítrij Šostakóvič", key: "shostakovich" },
+{ name: "Pëtr Il'ič Čajkovskij", key: "tchaikovsky" }, { name: "Carl Maria von Weber", key: "weber" }
   ];
 
   const composersOrch = [
