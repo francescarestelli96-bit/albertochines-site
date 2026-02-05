@@ -16,6 +16,7 @@ interface Translations {
   repertoire: { title: string; soloChamber: string; orchestra: string; list: RepertoireItem[]; };
   media: { photos: string; videos: string; };
   contact: { title: string; name: string; email: string; message: string; send: string; };
+  concerts: { title: string; message: string; };
 }
 
 const translations: Record<Language, Translations> = {
@@ -23,7 +24,7 @@ const translations: Record<Language, Translations> = {
     nav: { bio: "BIO", repertoire: "REPERTORIO", media: "MEDIA", concerts: "CONCERTI", contact: "CONTATTI" },
     bio: {
       title: "BIOGRAFIA",
-      content: "Alberto Chines si è formato con i Maestri Franco Scala e Piero Rattalino presso l'Accademia di Imola, perfezionandosi successivamente con Riccardo Risaliti e ottenendo il Diploma di Master presso l'Accademia Nazionale di Santa Cecilia sotto la guida di Benedetto Lupo.",
+      content: "Alberto Chines si è formato con i Maestri Franco Scala e Piero Rattalino presso l'Accademia di Imola, perfezionandosi successivamente con Riccardo Risaliti e ottenendo il Diploma di Master presso l'Accademia Nazionale di Santa Cecilia sotto la guida di Benedetto Lupo. La sua attività concertistica lo ha portato a esibirsi in contesti prestigiosi quali la Sala Verdi del Conservatorio di Milano, il Teatro La Fenice di Venezia, il Gasteig di Monaco di Baviera e il Palau de la Música Catalana di Barcellona. Vincitore del primo premio al Concorso Pianistico Internazionale 'Palma d'Oro' di Finale Ligure e del Concorso Europeo di Esecuzione Musicale 'Città di Moncalieri', Alberto si distingue per un eclettismo che spazia dal classicismo viennese alla musica contemporanea, con una particolare attenzione alla ricerca timbrica e alla fedeltà testuale.",
       pressKitBtn: "SCARICA PRESS KIT",
       pressKitUrl: "/downloads/presskit.zip",
     },
@@ -32,25 +33,26 @@ const translations: Record<Language, Translations> = {
       soloChamber: "SOLO & MUSICA DA CAMERA",
       orchestra: "ORCHESTRA",
       list: [
-        { composer: "Antonio Soler", works: ["Fandango in re minore R.146"], category: "solo" },
-        { composer: "Ludwig van Beethoven", works: ["Variazioni e Fuga Op. 35 'Eroica'"], category: "solo" },
-        { composer: "Thomas Adès", works: ["Darknesse Visible"], category: "solo" },
-        { composer: "Pëtr Il'ič Čajkovskij / Feinberg", works: ["Scherzo dalla Sinfonia n. 6"], category: "solo" },
-        { composer: "Jean-Philippe Rameau", works: ["La Villageoise"], category: "solo" },
-        { composer: "Fryderyk Chopin", works: ["Variations Brillantes Op. 12"], category: "solo" },
-        { composer: "Béla Bartók", works: ["Dance Suite Sz.77"], category: "solo" },
-        { composer: "Girolamo Frescobaldi", works: ["Aria detto Balletto"], category: "solo" },
-        { composer: "Igor Stravinsky / Agosti", works: ["L'Oiseau de Feu"], category: "solo" }
+        { composer: "ANTONIO SOLER", works: ["Fandango in re minore R.146"], category: "solo" },
+        { composer: "LUDWIG VAN BEETHOVEN", works: ["Variazioni e Fuga Op. 35 'Eroica'"], category: "solo" },
+        { composer: "THOMAS ADÈS", works: ["Darknesse Visible"], category: "solo" },
+        { composer: "PËTR IL'IČ ČAJKOVSKIJ / FEINBERG", works: ["Scherzo dalla Sinfonia n. 6"], category: "solo" },
+        { composer: "JEAN-PHILIPPE RAMEAU", works: ["La Villageoise"], category: "solo" },
+        { composer: "FRYDERYK CHOPIN", works: ["Variations Brillantes Op. 12"], category: "solo" },
+        { composer: "BÉLA BARTÓK", works: ["Dance Suite Sz.77"], category: "solo" },
+        { composer: "GIROLAMO FRESCOBALDI", works: ["Aria detto Balletto"], category: "solo" },
+        { composer: "IGOR STRAVINSKY / AGOSTI", works: ["L'Oiseau de Feu"], category: "solo" }
       ],
     },
     media: { photos: "FOTOGRAFIA", videos: "VIDEO" },
     contact: { title: "CONTATTI", name: "NOME", email: "EMAIL", message: "MESSAGGIO", send: "INVIA" },
+    concerts: { title: "CONCERTI", message: "Date in aggiornamento per la stagione 2026." }
   },
   en: {
     nav: { bio: "BIO", repertoire: "REPERTOIRE", media: "MEDIA", concerts: "CONCERTS", contact: "CONTACT" },
     bio: {
       title: "BIOGRAPHY",
-      content: "Alberto Chines trained with Masters Franco Scala and Piero Rattalino at the Imola Academy, further specializing with Riccardo Risaliti.",
+      content: "Alberto Chines trained with Masters Franco Scala and Piero Rattalino at the Imola Academy, further specializing with Riccardo Risaliti and obtaining a Master's Diploma from the Accademia Nazionale di Santa Cecilia under the guidance of Benedetto Lupo. His concert activity has led him to perform in prestigious venues such as the Sala Verdi in Milan, Teatro La Fenice in Venice, the Gasteig in Munich, and the Palau de la Música Catalana in Barcelona.",
       pressKitBtn: "DOWNLOAD PRESS KIT",
       pressKitUrl: "/downloads/presskit.zip",
     },
@@ -59,19 +61,20 @@ const translations: Record<Language, Translations> = {
       soloChamber: "SOLO & CHAMBER MUSIC",
       orchestra: "ORCHESTRA",
       list: [
-        { composer: "Antonio Soler", works: ["Fandango in D minor R.146"], category: "solo" },
-        { composer: "Ludwig van Beethoven", works: ["Eroica Variations and Fugue Op. 35"], category: "solo" },
-        { composer: "Thomas Adès", works: ["Darknesse Visible"], category: "solo" },
-        { composer: "Pyotr Ilyich Tchaikovsky / Feinberg", works: ["Scherzo from Symphony No. 6"], category: "solo" },
-        { composer: "Jean-Philippe Rameau", works: ["La Villageoise"], category: "solo" },
-        { composer: "Fryderyk Chopin", works: ["Variations Brillantes Op. 12"], category: "solo" },
-        { composer: "Béla Bartók", works: ["Dance Suite Sz.77"], category: "solo" },
-        { composer: "Girolamo Frescobaldi", works: ["Aria detto Balletto"], category: "solo" },
-        { composer: "Igor Stravinsky / Agosti", works: ["The Firebird"], category: "solo" }
+        { composer: "ANTONIO SOLER", works: ["Fandango in D minor R.146"], category: "solo" },
+        { composer: "LUDWIG VAN BEETHOVEN", works: ["Eroica Variations and Fugue Op. 35"], category: "solo" },
+        { composer: "THOMAS ADÈS", works: ["Darknesse Visible"], category: "solo" },
+        { composer: "PYOTR ILYICH TCHAIKOVSKY / FEINBERG", works: ["Scherzo from Symphony No. 6"], category: "solo" },
+        { composer: "JEAN-PHILIPPE RAMEAU", works: ["La Villageoise"], category: "solo" },
+        { composer: "FRYDERYK CHOPIN", works: ["Variations Brillantes Op. 12"], category: "solo" },
+        { composer: "BÉLA BARTÓK", works: ["Dance Suite Sz.77"], category: "solo" },
+        { composer: "GIROLAMO FRESCOBALDI", works: ["Aria detto Balletto"], category: "solo" },
+        { composer: "IGOR STRAVINSKY / AGOSTI", works: ["The Firebird"], category: "solo" }
       ],
     },
     media: { photos: "PHOTOGRAPHY", videos: "VIDEO" },
     contact: { title: "CONTACT", name: "NAME", email: "EMAIL", message: "MESSAGE", send: "SEND" },
+    concerts: { title: "CONCERTS", message: "Dates being updated for the 2026 season." }
   }
 };
 
@@ -87,11 +90,15 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   const [language, setLanguage] = useState<Language>("it");
 
   const t = (path: string): any => {
-    const keys = path.split(".");
+    // Rendiamo la ricerca case-insensitive (trasformiamo tutto in minuscolo)
+    const keys = path.toLowerCase().split(".");
     let result: any = translations[language];
     for (const key of keys) {
-      if (result && result[key] !== undefined) result = result[key];
-      else return path;
+      if (result && result[key] !== undefined) {
+        result = result[key];
+      } else {
+        return path;
+      }
     }
     return result;
   };
