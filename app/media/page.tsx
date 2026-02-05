@@ -12,7 +12,7 @@ export default function MediaPage() {
     { title: "BEETHOVEN: Variations and Fugue Op.35 “Eroica”", id: "O6W-fI_fD_E" },
     { title: "ADÈS: Darknesse Visible (after John Dowland)", id: "UonCnd_rV9c" },
     { title: "ČAJKOVSKIJ/FEINBERG: Scherzo from Symphony N.6", id: "Y_8D3Y9PtcY" },
-    { title: "RAMEAU: La Villageoise", id: "5v0X2I2D_G8" },
+    { title: "RAMEAU: La Villageoise", id: "v_Vv0I2D8_G" },
     { title: "CHOPIN: Variations Brillantes Op.12", id: "hV_f7Fv4P8U" },
     { title: "BARTÓK: Dance Suite Sz.77 BB86b", id: "jLq89fXpGqA" },
     { title: "FRESCOBALDI: Aria detto Balletto", id: "oP0U2V_I1k8" },
@@ -33,7 +33,6 @@ export default function MediaPage() {
   ];
 
   useEffect(() => {
-    // Mescola l'ordine delle foto al caricamento
     setShuffledPhotos([...photos].sort(() => Math.random() - 0.5));
   }, []);
 
@@ -82,7 +81,7 @@ export default function MediaPage() {
                 <div className="relative aspect-video w-full overflow-hidden bg-zinc-900 mb-6 border border-white/5 group-hover:border-white/20 transition-all duration-700">
                   <iframe
                     className="absolute inset-0 w-full h-full grayscale hover:grayscale-0 transition-all duration-700 shadow-2xl"
-                    src={`https://www.youtube.com/embed/${video.id}?rel=0&modestbranding=1`}
+                    src={`https://www.youtube-nocookie.com/embed/${video.id}?rel=0&modestbranding=1`}
                     title={video.title}
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen

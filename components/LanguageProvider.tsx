@@ -11,7 +11,7 @@ export const LanguageProvider = ({ children }: { children: React.ReactNode }) =>
       nav: { about: "Bio", concerts: "Concerti", repertorio: "Repertorio", media: "Media", contact: "Contatti" },
       about: {
         title: "Bio",
-        pressKitFull: "/downloads/Alberto-Chines-PressKit.zip",
+        pressKitFull: "/downloads/presskit.zip",
         content: `Alberto Chines, Steinway Artist dal 2020, è un pianista poliedrico che unisce all'attività solistica un profondo interesse per la musica da camera e per la didattica.
 
 Il suo percorso formativo, ricco di incontri e masterclass con artisti di fama mondiale, si è consolidato presso l'Accademia di Imola sotto la guida di Franco Scala e Piero Rattalino, e al Conservatorio di Bolzano con Davide Cabassi. Dopo il debutto a soli quindici anni al Teatro Massimo di Palermo, si è imposto all'attenzione della critica vincendo il primo premio al Concorso Internazionale Palma d'Oro di Finale Ligure (2011), il Sony Classical Talent Scout di Madesimo (2013) e il secondo premio all'Euregio Piano Award di Geilenkirchen (2014).
@@ -111,7 +111,7 @@ Alberto Chines è docente di pianoforte presso il Conservatorio "Francesco Venez
       nav: { about: "Bio", concerts: "Concerts", repertorio: "Repertoire", media: "Media", contact: "Contact" },
       about: {
         title: "Bio",
-        pressKitFull: "/downloads/Alberto-Chines-PressKit.zip",
+        pressKitFull: "/downloads/presskit.zip",
         content: `Alberto Chines, a Steinway Artist since 2020, is a multifaceted pianist who combines an extensive solo career with a profound interest in chamber music and education.
 
 His training, enriched by encounters and masterclasses with world-renowned artists, was consolidated at the Imola Academy under the guidance of Franco Scala and Piero Rattalino, and at the Bolzano Conservatory with Davide Cabassi. After debuting at just fifteen years old at the Teatro Massimo in Palermo, he captured the attention of critics by winning first prize at the International "Palma d’Oro" Competition in Finale Ligure (2011), the Sony Classical Talent Scout in Madesimo (2013), and second prize at the Euregio Piano Award in Geilenkirchen (2014).
