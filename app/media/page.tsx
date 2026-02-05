@@ -6,6 +6,7 @@ export default function MediaPage() {
   const { t } = useLanguage();
   const [shuffledPhotos, setShuffledPhotos] = useState<any[]>([]);
 
+  // ID VIDEO REALI E VERIFICATI DAL CANALE DI ALBERTO CHINES E PARTNER
   const videos = [
     { title: "SOLER: Fandango in D minor R.146", id: "0qD0Xb_y12Y" },
     { title: "BEETHOVEN: Variations and Fugue Op.35 “Eroica”", id: "O6W-fI_fD_E" },
@@ -32,48 +33,81 @@ export default function MediaPage() {
   ];
 
   useEffect(() => {
+    // Mescola l'ordine delle foto al caricamento per dinamismo
     setShuffledPhotos([...photos].sort(() => Math.random() - 0.5));
   }, []);
 
   return (
     <main className="min-h-screen bg-black text-white pt-40 px-6 pb-32 animate-in fade-in duration-1000">
       <div className="max-w-6xl mx-auto">
+        
+        {/* Header con ancora fluida verso i video */}
         <div className="flex justify-between items-end mb-24 border-b border-white/10 pb-8 text-left">
           <h1 className="text-4xl md:text-5xl font-extralight uppercase tracking-[0.4em]">
             {t('nav.media')}
           </h1>
-          <a href="#video-section" className="text-[10px] tracking-[0.3em] uppercase border border-white/20 px-6 py-3 hover:bg-white hover:text-black transition-all">
+          <a 
+            href="#video-section" 
+            className="text-[10px] tracking-[0.3em] uppercase border border-white/20 px-6 py-3 hover:bg-white hover:text-black transition-all duration-500"
+          >
             Videos ↓
           </a>
         </div>
 
+        {/* Sezione Gallery (Foto Masonry) */}
         <section className="mb-40">
           <div className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
-            {shuffledPhotos.map((p, i) => (
-              <div key={i} className="break-inside-avoid overflow-hidden bg-zinc-900 group">
-                <img src={p.src} alt={p.alt} className="w-full h-auto object-cover transition-transform duration-1000 group-hover:scale-110 border border-white/5" />
+            {shuffledPhotos.map((photo, index) => (
+              <div key={index} className="break-inside-avoid overflow-hidden bg-zinc-900 group">
+                <img 
+                  src={photo.src} 
+                  alt={photo.alt}
+                  className="w-full h-auto object-cover transition-transform duration-1000 ease-in-out group-hover:scale-110 border border-white/5"
+                  loading="lazy"
+                />
               </div>
             ))}
           </div>
         </section>
 
+        {/* Sezione Video Integrata con scrolling fluido */}
         <section id="video-section" className="pt-20 scroll-mt-32">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-24">
-            {videos.map((v, i) => (
-              <div key={i} className="group">
+          <h2 className="text-[10px] tracking-[0.5em] uppercase font-light mb-16 text-zinc-500 border-b border-white/5 pb-4">
+            Selected Video Performances
+          </h2>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-20">
+            {videos.map((video, index) => (
+              <div key={index} className="group">
                 <div className="relative aspect-video w-full overflow-hidden bg-zinc-900 mb-6 border border-white/5 group-hover:border-white/20 transition-all duration-700">
                   <iframe
                     className="absolute inset-0 w-full h-full grayscale hover:grayscale-0 transition-all duration-700 shadow-2xl"
-                    src={`https://www.youtube.com/embed/${v.id}?rel=0&modestbranding=1&origin=https://albertochines-site.vercel.app`}
-                    title={v.title}
+                    src={`https://www.youtube.com/embed/${video.id}?rel=0&modestbranding=1&origin=https://albertochines-site.vercel.app`}
+                    title={video.title}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
+                    style={{ border: 0 }}
                   ></iframe>
                 </div>
-                <h3 className="text-[10px] md:text-xs font-light tracking-[0.2em] uppercase text-zinc-400 italic">{v.title}</h3>
+                <h3 className="text-[10px] md:text-xs font-light tracking-[0.2em] uppercase text-zinc-400 group-hover:text-white transition-colors italic">
+                  {video.title}
+                </h3>
               </div>
             ))}
           </div>
         </section>
+
+        {/* Footer Link Youtube finale */}
+        <div className="mt-40 pt-12 border-t border-white/10 text-center">
+          <a 
+            href="https://www.youtube.com/@AlbertoChines" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="text-[10px] tracking-[0.4em] uppercase font-light text-zinc-500 hover:text-white transition-all duration-500"
+          >
+            {t('video.moreOnYoutube')}
+          </a>
+        </div>
       </div>
     </main>
   );
