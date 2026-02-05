@@ -10,23 +10,22 @@ export const LanguageProvider = ({ children }: { children: React.ReactNode }) =>
     it: {
       nav: { bio: "BIO", repertoire: "REPERTORIO", media: "MEDIA", concerts: "CONCERTI", contact: "CONTATTI" },
       bio: {
-        title: "BIO",
+        title: "BIOGRAFIA",
         pressKitBtn: "DOWNLOAD PRESS KIT",
         pressKitUrl: "/downloads/presskit.zip",
         content: `Alberto Chines, Steinway Artist dal 2020, è un pianista poliedrico che unisce all'attività solistica un profondo interesse per la musica da camera e per la didattica.
-
-Il suo percorso formativo si è consolidato presso l'Accademia di Imola sotto la guida di Franco Scala e Piero Rattalino, e al Conservatorio di Bolzano con Davide Cabassi. Dopo il debutto a soli quindici anni al Teatro Massimo di Palermo, ha vinto il primo premio al Concorso Internazionale Palma d'Oro di Finale Ligure, il Sony Classical Talent Scout di Madesimo e il secondo premio all'Euregio Piano Award di Geilenkirchen.
-
-La sua attività concertistica lo ha portato a esibirsi in sedi quali la Van Cliburn Recital Hall di Fort Worth, la Sala Mozart di Bologna, il Teatro Olimpico di Vicenza, il Politeama Garibaldi di Palermo e il Teatro alla Scala di Milano. Collabora regolarmente con artisti quali Anna Serova, Eugenio Della Chiara, Emanuele Delucchi, Rebecca Taio, Danilo Pastore e il Quartetto Nôus. È docente di pianoforte presso il Conservatorio "Francesco Venezze" di Rovigo.`
+        
+Il suo percorso formativo si è consolidato presso l'Accademia di Imola sotto la guida di Franco Scala e Piero Rattalino, e al Conservatorio di Bolzano con Davide Cabassi. Collabora regolarmente con artisti quali Anna Serova, Eugenio Della Chiara, Emanuele Delucchi, Rebecca Taio, Danilo Pastore e il Quartetto Nôus.`
       },
       repertoire: {
         title: "REPERTORIO",
         subtitle: "MUSICA DA CAMERA E SOLISTICO",
-        items: [
+        orchestraTitle: "REPERTORIO CON ORCHESTRA",
+        content: [
           { composer: "THOMAS ADÈS", works: "Darknesse Visible (after John Dowland)" },
           { composer: "C.P.E. BACH", works: "Variazioni sulla Follia di Spagna H. 263" },
           { composer: "J.C. BACH", works: "Sonata in do minore Op. 5 N. 6, Quartetto con pianoforte in sol maggiore W B66" },
-          { composer: "J.S. BACH", works: "Partita N. 2 BWV 826, Suite Inglese N. 2 & 3, Suite Francese N. 5, Toccata in mi minore BWV 914, Das wohltemperierte Klavier (selezione), Die Kunst der Fuge (selezione), Fantasia e Fuga in sol minore (tr. Liszt), Passacaglia e Fuga in do minore (tr. D’Albert), Toccata e Fuga in re minore (tr. Busoni), Concerto Brandeburghese N. 3 (tr. Friedman)" },
+          { composer: "J.S. BACH", works: "Partita N. 2 BWV 826, Suite Inglese N. 2 & 3, Suite Francese N. 5, Toccata in mi minore BWV 914, Das wohltemperierte Klavier, Die Kunst der Fuge, Fantasia e Fuga in sol minore (tr. Liszt), Passacaglia e Fuga in do minore (tr. D’Albert), Toccata e Fuga in re minore (tr. Busoni), Concerto Brandeburghese N. 3 (tr. Friedman)" },
           { composer: "BÉLA BARTÓK", works: "Suite Op. 14, Suite di Danze Sz. 77 BB86b" },
           { composer: "LUDWIG VAN BEETHOVEN", works: "Sonate Op. 2, 14, 22, 27, 28, 31, 53 “Waldstein”, 81a “Les Adieux”, 111, Variazioni e Fuga Op. 35 “Eroica”, Variazioni WoO 80, Serenata Op. 41, Trio Op. 1 N. 1" },
           { composer: "PIERRE BOULEZ", works: "Douze Notations, Sonatina per flauto e pianoforte" },
@@ -60,26 +59,19 @@ La sua attività concertistica lo ha portato a esibirsi in sedi quali la Van Cli
           { composer: "ANTONIO SOLER", works: "Fandango in re minore R. 146, Sonate (selezione)" },
           { composer: "IGOR STRAVINSKIJ", works: "Le Sacre du Printemps (tr. Alberto Chines), L'Oiseau de Feu (tr. Agosti)" },
           { composer: "PËTR IL'IČ ČAJKOVSKIJ", works: "Scherzo dalla Sinfonia N. 6 (tr. Feinberg)" }
+        ],
+        orchestra: [
+          { composer: "J.S. BACH", works: "Concerto in re minore BWV 1052" },
+          { composer: "BÉLA BARTÓK", works: "Concerto N. 3 Sz. 119" },
+          { composer: "L. VAN BEETHOVEN", works: "Concerto N. 3 Op. 37, N. 4 Op. 58, Triplo Concerto" },
+          { composer: "W.A. MOZART", works: "Concerti KV 414, 415, 488" },
+          { composer: "SERGEJ RACHMANINOV", works: "Concerto N. 2 Op. 18" }
         ]
       },
-      concerts: { title: "CONCERTI", message: "DATE IN AGGIORNAMENTO PER IL 2026." }
+      concerts: { title: "CONCERTI", message: "DATE IN AGGIORNAMENTO PER LA STAGIONE 2026." },
+      contact: { title: "CONTATTI", email: "EMAIL", follow: "SEGUI" }
     },
-    en: {
-      nav: { bio: "BIO", repertoire: "REPERTOIRE", media: "MEDIA", concerts: "CONCERTS", contact: "CONTACT" },
-      bio: {
-        title: "BIO",
-        content: `Alberto Chines, Steinway Artist since 2020... Collaborates with the Nôus Quartet.`
-      },
-      repertoire: {
-        title: "REPERTOIRE",
-        subtitle: "CHAMBER AND SOLO MUSIC",
-        items: [
-          { composer: "CAMILLE SAINT-SAËNS", works: "The Carnival of the Animals, 6 Duos Op. 8" },
-          { composer: "IGOR STRAVINSKY", works: "The Rite of Spring (tr. Alberto Chines)" }
-        ]
-      },
-      concerts: { title: "CONCERTS", message: "DATES UPDATING FOR 2026." }
-    }
+    en: { /* ... inserisci qui le traduzioni EN speculari se necessario ... */ }
   };
 
   const t = (path: string) => {
@@ -95,4 +87,4 @@ La sua attività concertistica lo ha portato a esibirsi in sedi quali la Van Cli
   );
 };
 
-export const useLanguage = () => useContext(LanguageContext);
+export const useLanguage = () => React.useContext(LanguageContext);
