@@ -4,10 +4,10 @@ import React, { createContext, useContext, useState, ReactNode } from "react";
 
 type Language = "it" | "en";
 
-interface RepertoireItem {
-  composer: string;
-  works: string[];
-  category: "solo" | "orchestra";
+interface RepertoireItem { 
+  composer: string; 
+  works: string[]; 
+  category: "solo" | "orchestra"; 
 }
 
 interface Translations {
@@ -33,26 +33,27 @@ const translations: Record<Language, Translations> = {
       soloChamber: "SOLO & MUSICA DA CAMERA",
       orchestra: "ORCHESTRA",
       list: [
-        { composer: "ANTONIO SOLER", works: ["Fandango in re minore R.146"], category: "solo" },
-        { composer: "LUDWIG VAN BEETHOVEN", works: ["Variazioni e Fuga Op. 35 'Eroica'"], category: "solo" },
-        { composer: "THOMAS ADÈS", works: ["Darknesse Visible"], category: "solo" },
+        { composer: "ANTONIO SOLER", works: ["Fandango in re minore R.146", "Sonata in re minore"], category: "solo" },
+        { composer: "LUDWIG VAN BEETHOVEN", works: ["Variazioni e Fuga Op. 35 'Eroica'", "Sonata Op. 109"], category: "solo" },
+        { composer: "THOMAS ADÈS", works: ["Darknesse Visible", "Mazurkas Op. 27"], category: "solo" },
         { composer: "PËTR IL'IČ ČAJKOVSKIJ / FEINBERG", works: ["Scherzo dalla Sinfonia n. 6"], category: "solo" },
         { composer: "JEAN-PHILIPPE RAMEAU", works: ["La Villageoise"], category: "solo" },
-        { composer: "FRYDERYK CHOPIN", works: ["Variations Brillantes Op. 12"], category: "solo" },
-        { composer: "BÉLA BARTÓK", works: ["Dance Suite Sz.77"], category: "solo" },
+        { composer: "FRYDERYK CHOPIN", works: ["Variations Brillantes Op. 12", "Polacca-Fantasia Op. 61"], category: "solo" },
+        { composer: "BÉLA BARTÓK", works: ["Dance Suite Sz.77", "Suite Op. 14"], category: "solo" },
         { composer: "GIROLAMO FRESCOBALDI", works: ["Aria detto Balletto"], category: "solo" },
-        { composer: "IGOR STRAVINSKY / AGOSTI", works: ["L'Oiseau de Feu"], category: "solo" }
+        { composer: "IGOR STRAVINSKY / AGOSTI", works: ["L'Oiseau de Feu"], category: "solo" },
+        { composer: "W.A. MOZART", works: ["Concerto K 488", "Concerto K 466"], category: "orchestra" }
       ],
     },
     media: { photos: "FOTOGRAFIA", videos: "VIDEO" },
     contact: { title: "CONTATTI", name: "NOME", email: "EMAIL", message: "MESSAGGIO", send: "INVIA" },
-    concerts: { title: "CONCERTI", message: "Date in aggiornamento per la stagione 2026." }
+    concerts: { title: "CONCERTI", message: "Calendario in aggiornamento per la stagione 2026." }
   },
   en: {
     nav: { bio: "BIO", repertoire: "REPERTOIRE", media: "MEDIA", concerts: "CONCERTS", contact: "CONTACT" },
     bio: {
       title: "BIOGRAPHY",
-      content: "Alberto Chines trained with Masters Franco Scala and Piero Rattalino at the Imola Academy, further specializing with Riccardo Risaliti and obtaining a Master's Diploma from the Accademia Nazionale di Santa Cecilia under the guidance of Benedetto Lupo. His concert activity has led him to perform in prestigious venues such as the Sala Verdi in Milan, Teatro La Fenice in Venice, the Gasteig in Munich, and the Palau de la Música Catalana in Barcelona.",
+      content: "Alberto Chines trained at the Imola Academy and the Accademia Nazionale di Santa Cecilia under Benedetto Lupo. His concert career has taken him to prestigious venues such as the Sala Verdi in Milan, Teatro La Fenice in Venice, Gasteig in Munich, and the Palau de la Música Catalana in Barcelona. Winner of the 'Palma d'Oro' International Competition, Alberto is known for his tonal research and textual fidelity across a wide repertoire from Viennese Classicism to contemporary music.",
       pressKitBtn: "DOWNLOAD PRESS KIT",
       pressKitUrl: "/downloads/presskit.zip",
     },
@@ -61,20 +62,21 @@ const translations: Record<Language, Translations> = {
       soloChamber: "SOLO & CHAMBER MUSIC",
       orchestra: "ORCHESTRA",
       list: [
-        { composer: "ANTONIO SOLER", works: ["Fandango in D minor R.146"], category: "solo" },
-        { composer: "LUDWIG VAN BEETHOVEN", works: ["Eroica Variations and Fugue Op. 35"], category: "solo" },
-        { composer: "THOMAS ADÈS", works: ["Darknesse Visible"], category: "solo" },
+        { composer: "ANTONIO SOLER", works: ["Fandango in D minor R.146", "Sonata in D minor"], category: "solo" },
+        { composer: "LUDWIG VAN BEETHOVEN", works: ["Eroica Variations and Fugue Op. 35", "Sonata Op. 109"], category: "solo" },
+        { composer: "THOMAS ADÈS", works: ["Darknesse Visible", "Mazurkas Op. 27"], category: "solo" },
         { composer: "PYOTR ILYICH TCHAIKOVSKY / FEINBERG", works: ["Scherzo from Symphony No. 6"], category: "solo" },
         { composer: "JEAN-PHILIPPE RAMEAU", works: ["La Villageoise"], category: "solo" },
-        { composer: "FRYDERYK CHOPIN", works: ["Variations Brillantes Op. 12"], category: "solo" },
-        { composer: "BÉLA BARTÓK", works: ["Dance Suite Sz.77"], category: "solo" },
+        { composer: "FRYDERYK CHOPIN", works: ["Variations Brillantes Op. 12", "Polonaise-Fantaisie Op. 61"], category: "solo" },
+        { composer: "BÉLA BARTÓK", works: ["Dance Suite Sz.77", "Suite Op. 14"], category: "solo" },
         { composer: "GIROLAMO FRESCOBALDI", works: ["Aria detto Balletto"], category: "solo" },
-        { composer: "IGOR STRAVINSKY / AGOSTI", works: ["The Firebird"], category: "solo" }
+        { composer: "IGOR STRAVINSKY / AGOSTI", works: ["The Firebird Suite"], category: "solo" },
+        { composer: "W.A. MOZART", works: ["Concerto K 488", "Concerto K 466"], category: "orchestra" }
       ],
     },
     media: { photos: "PHOTOGRAPHY", videos: "VIDEO" },
     contact: { title: "CONTACT", name: "NAME", email: "EMAIL", message: "MESSAGE", send: "SEND" },
-    concerts: { title: "CONCERTS", message: "Dates being updated for the 2026 season." }
+    concerts: { title: "CONCERTS", message: "Calendar being updated for the 2026 season." }
   }
 };
 
@@ -90,7 +92,6 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   const [language, setLanguage] = useState<Language>("it");
 
   const t = (path: string): any => {
-    // Rendiamo la ricerca case-insensitive (trasformiamo tutto in minuscolo)
     const keys = path.toLowerCase().split(".");
     let result: any = translations[language];
     for (const key of keys) {
