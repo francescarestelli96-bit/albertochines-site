@@ -1,9 +1,9 @@
 'use client';
-import React, { createContext, useContext, useState } from 'react';
+import React, { createContext, useContext, useState, ReactNode } from 'react';
 
 const LanguageContext = createContext<any>(null);
 
-export const LanguageProvider = ({ children }: { children: React.ReactNode }) => {
+export const LanguageProvider = ({ children }: { children: ReactNode }) => {
   const [language, setLanguage] = useState<'it' | 'en'>('it');
 
   const translations: any = {
@@ -85,7 +85,7 @@ Alberto Chines è docente di pianoforte presso il Conservatorio "Francesco Venez
         title: "BIO",
         pressKitBtn: "DOWNLOAD PRESS KIT",
         pressKitUrl: "/downloads/presskit.zip",
-        content: `Alberto Chines, a Steinway Artist since 2020...`
+        content: `Alberto Chines, Steinway Artist since 2020, is a multifaceted pianist...`
       },
       repertoire: {
         title: "REPERTOIRE",
@@ -93,11 +93,14 @@ Alberto Chines è docente di pianoforte presso il Conservatorio "Francesco Venez
         orchestraTitle: "PIANO AND ORCHESTRA",
         content: [
           { composer: "THOMAS ADÈS", works: "Darknesse Visible" },
-          { composer: "CAMILLE SAINT-SAËNS", works: "Carnival of the Animals, 6 Duos Op. 8" },
+          { composer: "CAMILLE SAINT-SAËNS", works: "The Carnival of the Animals" },
           { composer: "IGOR STRAVINSKY", works: "The Rite of Spring (tr. Alberto Chines)" }
         ],
-        orchestra: []
-      }
+        orchestra: [
+          { composer: "W.A. MOZART", works: "Concerto KV 488" }
+        ]
+      },
+      concerts: { title: "CONCERTS", message: "DATES UPDATING FOR 2026." }
     }
   };
 
@@ -105,13 +108,15 @@ Alberto Chines è docente di pianoforte presso il Conservatorio "Francesco Venez
     return path.split('.').reduce((obj, key) => obj && obj[key], translations[language]) || path;
   };
 
-  const setLang = (lang: 'it' | 'en') => setLanguage(lang);
+  const toggleLanguage = () => {
+    setLanguage((prev) => (prev === 'it' ? 'en' : 'it'));
+  };
 
   return (
-    <LanguageContext.Provider value={{ language, setLang, t }}>
+    <LanguageContext.Provider value={{ language, setLanguage, toggleLanguage, t }}>
       {children}
     </LanguageContext.Provider>
   );
 };
 
-export const useLanguage = () => React.useContext(LanguageContext);
+export const useLanguage = () => useContext(LanguageContext);
