@@ -11,9 +11,7 @@ export const LanguageProvider = ({ children }: { children: React.ReactNode }) =>
       nav: { about: "Bio", concerts: "Concerti", repertorio: "Repertorio", media: "Media", contact: "Contatti" },
       about: {
         title: "Bio",
-        pressKitBio: "/downloads/bio-alberto-chines-ita.pdf",
-        pressKitProgs: "/downloads/programmi-alberto-chines.pdf",
-        pressKitPhotos: "/downloads/foto-alberto-chines-hd.zip",
+        pressKitFull: "/downloads/Alberto-Chines-PressKit.zip",
         content: `Alberto Chines, Steinway Artist dal 2020, è un pianista poliedrico che unisce all'attività solistica un profondo interesse per la musica da camera e per la didattica.
 
 Il suo percorso formativo, ricco di incontri e masterclass con artisti di fama mondiale, si è consolidato presso l'Accademia di Imola sotto la guida di Franco Scala e Piero Rattalino, e al Conservatorio di Bolzano con Davide Cabassi. Dopo il debutto a soli quindici anni al Teatro Massimo di Palermo, si è imposto all'attenzione della critica vincendo il primo premio al Concorso Internazionale Palma d'Oro di Finale Ligure (2011), il Sony Classical Talent Scout di Madesimo (2013) e il secondo premio all'Euregio Piano Award di Geilenkirchen (2014).
@@ -103,15 +101,17 @@ Alberto Chines è docente di pianoforte presso il Conservatorio "Francesco Venez
           orch_rach: "Concerto N. 2 Op. 18"
         }
       },
-      video: { handelTitle: "G.F. Händel - Lascia ch'io pianga", handelDescription: "Libera trascrizione per pianoforte", moreOnYoutube: "Scopri di più su YouTube" }
+      video: { 
+        handelTitle: "G.F. Händel - Lascia ch'io pianga", 
+        handelDescription: "Libera trascrizione per pianoforte", 
+        moreOnYoutube: "Scopri di più su YouTube" 
+      }
     },
     en: {
       nav: { about: "Bio", concerts: "Concerts", repertorio: "Repertoire", media: "Media", contact: "Contact" },
       about: {
         title: "Bio",
-        pressKitBio: "/downloads/bio-alberto-chines-eng.pdf",
-        pressKitProgs: "/downloads/programmi-alberto-chines.pdf",
-        pressKitPhotos: "/downloads/foto-alberto-chines-hd.zip",
+        pressKitFull: "/downloads/Alberto-Chines-PressKit.zip",
         content: `Alberto Chines, a Steinway Artist since 2020, is a multifaceted pianist who combines an extensive solo career with a profound interest in chamber music and education.
 
 His training, enriched by encounters and masterclasses with world-renowned artists, was consolidated at the Imola Academy under the guidance of Franco Scala and Piero Rattalino, and at the Bolzano Conservatory with Davide Cabassi. After debuting at just fifteen years old at the Teatro Massimo in Palermo, he captured the attention of critics by winning first prize at the International "Palma d’Oro" Competition in Finale Ligure (2011), the Sony Classical Talent Scout in Madesimo (2013), and second prize at the Euregio Piano Award in Geilenkirchen (2014).
@@ -132,7 +132,7 @@ Alberto Chines is a Piano Professor at the "Francesco Venezze" Conservatory in R
           ades: "Darknesse Visible (after John Dowland)",
           cpebach: "Variations on Folie d’Espagne H. 263",
           jcbach: "Sonata in C minor Op. 5 No. 6\nPiano quartet in G major W B66",
-          jsbach: "Partita No. 1 BWV 825\nPartita No. 2 BWV 826\nEnglish Suite No. 2 BWV 807\nEnglish Suite No. 3 BWV 808\nFrench Suite No.5 BWV 816\nToccata in E minor BWV 914\nSonata in D major BWV 963\nDas wohltemperierte Klavier I&II (selection)\nDie Kunst della Fuge (selection)\nFantasia and Fugue in G minor BWV 542 (tr. Liszt)\nViolin Partita No. 3 (tr. Rachmaninov)\nPassacaglia and Fugue in C minor BWV 582 (tr. D’Albert)\nToccata and Fugue in D minor BWV 565 (tr. Busoni)\nBrandenburg Concerto No. 3 BWV 1048 (tr. Friedman)",
+          jsbach: "Partita No. 2 BWV 826\nEnglish Suite No. 2 BWV 807\nEnglish Suite No. 3 BWV 808\nFrench Suite No.5 BWV 816\nToccata in E minor BWV 914\nSonata in D major BWV 963\nDas wohltemperierte Klavier I&II (selection)\nDie Kunst der Fuge (selection)\nFantasia and Fugue in G minor BWV 542 (tr. Liszt)\nViolin Partita No. 3 (tr. Rachmaninov)\nPassacaglia and Fugue in C minor BWV 582 (tr. D’Albert)\nToccata and Fugue in D minor BWV 565 (tr. Busoni)\nBrandenburg Concerto No. 3 BWV 1048 (tr. Friedman)",
           bartok: "Suite Op. 14\nDance Suite Sz. 77 BB86b",
           bauer: "Sonata for cello and piano",
           beethoven: "Sonatas Op. 2 Nos.1 & 3\nSonata Op. 14 No.2\nSonata Op. 22\nSonata Op. 27 No.2\nSonata Op. 28\nSonata Op. 31 No.1\nSonata Op. 53 “Waldstein”\nSonata Op. 81a “Les Adieux”\nSonata Op.111\nVariations and Fugue Op. 35 “Eroica”\nVariations in C minor WoO 80\nVariations on “Es war einmal ein alter Mann” WoO 66\nSerenade for flute and piano Op. 41\nSonata for cello and piano No. 3 Op. 69\nSonata for violin and piano No. 5 Op. 24\nTrio Op. 1 No.1",
@@ -140,7 +140,7 @@ Alberto Chines is a Piano Professor at the "Francesco Venezze" Conservatory in R
           brahms: "Rhapsodies Op. 79\nSouvenir de la Russie Ans.4/6 for piano four hands\nHungarian Dances for piano four hands (selection)\nTrio No. 1 Op. 8",
           busoni: "Albumblatt BV272 for flute and piano",
           byrd: "The Battell, BK 94\nPavana Lachrimae",
-          cage: "In a landscape\nMysterious Adventure for prepared piano\nBacchanale for prepared piano\nFads and Fancies in the Academy for piano and percussions\nCredo in US for piano, percussions, radio and fonograph",
+          cage: "In a landscape\nMysterious Adventure for prepared piano\nBacchanale for prepared piano\nFads and Fancies in the Academy for piano and percussions\nCredo in US for piano, percussions, radio and phonograph",
           carter: "Epigrams, for piano trio",
           casella: "Pupazzetti, for piano four hands\nBarcarola et Scherzo Op. 4 for flute and piano",
           chopin: "Etudes Op. 10\nEtudes Op. 25 (selection)\nSonata No.1 Op. 4\nBallade No. 2 Op. 38\nPolonaise Op. 44\nPolonaise KK IVa N.5 “Adieu! Á Guillaume Kolberg”\nVariations Brillantes Op. 12\nBerceuse Op. 57\nBarcarolle Op. 60",
@@ -201,7 +201,11 @@ Alberto Chines is a Piano Professor at the "Francesco Venezze" Conservatory in R
         noConcerts: "New dates are being scheduled." 
       },
       contact: { title: "Contact", getInTouch: "Get in touch", email: "Email", follow: "Follow" },
-      video: { handelTitle: "G.F. Händel - Lascia ch'io pianga", handelDescription: "Free piano transcription", moreOnYoutube: "More on YouTube" }
+      video: { 
+        handelTitle: "G.F. Händel - Lascia ch'io pianga", 
+        handelDescription: "Free piano transcription", 
+        moreOnYoutube: "More on YouTube" 
+      }
     }
   };
 
