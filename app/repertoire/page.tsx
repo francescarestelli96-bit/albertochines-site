@@ -8,22 +8,35 @@ export default function RepertoirePage() {
   const orchestra = t('repertoire.orchestra');
 
   return (
-    <main className="min-h-screen bg-black text-white pt-40 pb-20 px-6 md:px-24 font-extralight uppercase">
+    <main className="min-h-screen bg-black text-white pt-40 pb-32 px-6 md:px-24">
       <div className="max-w-3xl mx-auto">
-        <motion.h1 initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="text-3xl md:text-5xl tracking-[0.4em] mb-24 text-left">
+        <motion.h1 
+          initial={{ opacity: 0 }} 
+          animate={{ opacity: 1 }} 
+          className="text-3xl md:text-5xl tracking-[0.4em] mb-24 text-left font-extralight uppercase"
+        >
           {t('repertoire.title')}
         </motion.h1>
 
         {/* Sezione Solo & Chamber */}
         <section className="text-left mb-32">
-          <h2 className="text-zinc-500 text-[10px] tracking-[0.5em] mb-12 border-b border-white/10 pb-4 font-normal italic">
+          <h2 className="text-zinc-500 text-xs tracking-[0.5em] mb-16 border-b border-white/10 pb-4 font-light uppercase">
             {t('repertoire.subtitle')}
           </h2>
-          <div className="space-y-12">
+          
+          <div className="space-y-16"> {/* Spazio aumentato tra i blocchi */}
             {Array.isArray(chamber) && chamber.map((item: any, i: number) => (
-              <motion.div key={i} initial={{ opacity: 0, x: -10 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
-                <h3 className="text-[11px] tracking-[0.2em] mb-2 text-white">{item.composer}</h3>
-                <p className="text-zinc-500 text-[10px] tracking-widest leading-relaxed whitespace-pre-line lowercase first-letter:uppercase">
+              <motion.div 
+                key={i} 
+                initial={{ opacity: 0, y: 10 }} 
+                whileInView={{ opacity: 1, y: 0 }} 
+                viewport={{ once: true }}
+                className="group"
+              >
+                <h3 className="text-sm md:text-base tracking-[0.2em] mb-4 text-white font-normal uppercase transition-colors group-hover:text-zinc-400">
+                  {item.composer}
+                </h3>
+                <p className="text-zinc-400 text-xs md:text-sm tracking-widest leading-relaxed font-light italic">
                   {item.works}
                 </p>
               </motion.div>
@@ -33,14 +46,16 @@ export default function RepertoirePage() {
 
         {/* Sezione Orchestra */}
         <section className="text-left">
-          <h2 className="text-zinc-500 text-[10px] tracking-[0.5em] mb-12 border-b border-white/10 pb-4 font-normal italic">
+          <h2 className="text-zinc-500 text-xs tracking-[0.5em] mb-16 border-b border-white/10 pb-4 font-light uppercase">
             {t('repertoire.orchestraTitle')}
           </h2>
-          <div className="space-y-12">
+          <div className="space-y-16">
             {Array.isArray(orchestra) && orchestra.map((item: any, i: number) => (
-              <motion.div key={i} initial={{ opacity: 0, x: -10 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
-                <h3 className="text-[11px] tracking-[0.2em] mb-2 text-white">{item.composer}</h3>
-                <p className="text-zinc-500 text-[10px] tracking-widest leading-relaxed lowercase first-letter:uppercase">
+              <motion.div key={i} initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+                <h3 className="text-sm md:text-base tracking-[0.2em] mb-4 text-white font-normal uppercase">
+                  {item.composer}
+                </h3>
+                <p className="text-zinc-400 text-xs md:text-sm tracking-widest leading-relaxed font-light">
                   {item.works}
                 </p>
               </motion.div>
