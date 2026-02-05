@@ -10,12 +10,20 @@ export const LanguageProvider = ({ children }: { children: React.ReactNode }) =>
     it: {
       nav: { bio: "BIO", repertoire: "REPERTORIO", media: "MEDIA", concerts: "CONCERTI", contact: "CONTATTI" },
       bio: {
-        title: "BIOGRAFIA",
+        title: "BIO",
         pressKitBtn: "DOWNLOAD PRESS KIT",
         pressKitUrl: "/downloads/presskit.zip",
         content: `Alberto Chines, Steinway Artist dal 2020, è un pianista poliedrico che unisce all'attività solistica un profondo interesse per la musica da camera e per la didattica.
-        
-Il suo percorso formativo si è consolidato presso l'Accademia di Imola sotto la guida di Franco Scala e Piero Rattalino, e al Conservatorio di Bolzano con Davide Cabassi. Collabora regolarmente con artisti quali Anna Serova, Eugenio Della Chiara, Emanuele Delucchi, Rebecca Taio, Danilo Pastore e il Quartetto Nôus.`
+
+Il suo percorso formativo, ricco di incontri e masterclass con artisti di fama mondiale, si è consolidato presso l'Accademia di Imola sotto la guida di Franco Scala e Piero Rattalino, e al Conservatorio di Bolzano con Davide Cabassi. Dopo il debutto a soli quindici anni al Teatro Massimo di Palermo, si è imposto all'attenzione della critica vincendo il primo premio al Concorso Internazionale Palma d'Oro di Finale Ligure (2011), il Sony Classical Talent Scout di Madesimo (2013) e il secondo premio all'Euregio Piano Award di Geilenkirchen (2014).
+
+La sua attività concertistica lo ha portato a esibirsi in sedi di prestigio internazionale, tra cui la Van Cliburn Recital Hall di Fort Worth (USA), la Sala Mozart dell'Accademia Filarmonica di Bologna, il Teatro Olimpico di Vicenza, il Politeama Garibaldi di Palermo e il Teatro alla Scala di Milano. Ha suonato a Londra per il Keyboard Charitable Trust e ai Klaviertage del Tiroler Festspiele Erl (Austria), e ha recentemente debuttato al Festival Bartolomeo Cristofori di Padova eseguendo il Pierrot Lunaire di Schönberg per voce e pianoforte solo, insieme alla propria trascrizione del Sacre du Printemps di Stravinskij.
+
+Alberto Chines è inoltre un camerista appassionato. Collabora regolarmente con artisti quali Anna Serova, Eugenio Della Chiara, Emanuele Delucchi, Rebecca Taio, Danilo Pastore e il Quartetto Nôus, esplorando il repertorio dal duo al quintetto con grandi aperture verso la nuova musica. La sua discografia include un album di debutto per BAM International con opere di Bach, Schumann, Ravel e Bartók.
+
+Attivo anche nella promozione culturale, è stato l'ideatore del Musica Manent Festival di Ustica e collabora stabilmente con la Primavera di Baggio di Milano.
+
+Alberto Chines è docente di pianoforte presso il Conservatorio "Francesco Venezze" di Rovigo.`
       },
       repertoire: {
         title: "REPERTORIO",
@@ -25,7 +33,7 @@ Il suo percorso formativo si è consolidato presso l'Accademia di Imola sotto la
           { composer: "THOMAS ADÈS", works: "Darknesse Visible (after John Dowland)" },
           { composer: "C.P.E. BACH", works: "Variazioni sulla Follia di Spagna H. 263" },
           { composer: "J.C. BACH", works: "Sonata in do minore Op. 5 N. 6, Quartetto con pianoforte in sol maggiore W B66" },
-          { composer: "J.S. BACH", works: "Partita N. 2 BWV 826, Suite Inglese N. 2 & 3, Suite Francese N. 5, Toccata in mi minore BWV 914, Das wohltemperierte Klavier, Die Kunst der Fuge, Fantasia e Fuga in sol minore (tr. Liszt), Passacaglia e Fuga in do minore (tr. D’Albert), Toccata e Fuga in re minore (tr. Busoni), Concerto Brandeburghese N. 3 (tr. Friedman)" },
+          { composer: "J.S. BACH", works: "Partita N. 2 BWV 826, Suite Inglese N. 2 & 3, Suite Francese N. 5, Toccata in mi minore BWV 914, Das wohltemperierte Klavier (selezione), Die Kunst der Fuge (selezione), Fantasia e Fuga in sol minore (tr. Liszt), Passacaglia e Fuga in do minore (tr. D’Albert), Toccata e Fuga in re minore (tr. Busoni), Concerto Brandeburghese N. 3 (tr. Friedman)" },
           { composer: "BÉLA BARTÓK", works: "Suite Op. 14, Suite di Danze Sz. 77 BB86b" },
           { composer: "LUDWIG VAN BEETHOVEN", works: "Sonate Op. 2, 14, 22, 27, 28, 31, 53 “Waldstein”, 81a “Les Adieux”, 111, Variazioni e Fuga Op. 35 “Eroica”, Variazioni WoO 80, Serenata Op. 41, Trio Op. 1 N. 1" },
           { composer: "PIERRE BOULEZ", works: "Douze Notations, Sonatina per flauto e pianoforte" },
@@ -68,10 +76,29 @@ Il suo percorso formativo si è consolidato presso l'Accademia di Imola sotto la
           { composer: "SERGEJ RACHMANINOV", works: "Concerto N. 2 Op. 18" }
         ]
       },
-      concerts: { title: "CONCERTI", message: "DATE IN AGGIORNAMENTO PER LA STAGIONE 2026." },
+      concerts: { title: "CONCERTI", message: "DATE IN AGGIORNAMENTO PER IL 2026." },
       contact: { title: "CONTATTI", email: "EMAIL", follow: "SEGUI" }
     },
-    en: { /* ... inserisci qui le traduzioni EN speculari se necessario ... */ }
+    en: {
+      nav: { bio: "BIO", repertoire: "REPERTOIRE", media: "MEDIA", concerts: "CONCERTS", contact: "CONTACT" },
+      bio: {
+        title: "BIO",
+        pressKitBtn: "DOWNLOAD PRESS KIT",
+        pressKitUrl: "/downloads/presskit.zip",
+        content: `Alberto Chines, a Steinway Artist since 2020...`
+      },
+      repertoire: {
+        title: "REPERTOIRE",
+        subtitle: "CHAMBER AND SOLO MUSIC",
+        orchestraTitle: "PIANO AND ORCHESTRA",
+        content: [
+          { composer: "THOMAS ADÈS", works: "Darknesse Visible" },
+          { composer: "CAMILLE SAINT-SAËNS", works: "Carnival of the Animals, 6 Duos Op. 8" },
+          { composer: "IGOR STRAVINSKY", works: "The Rite of Spring (tr. Alberto Chines)" }
+        ],
+        orchestra: []
+      }
+    }
   };
 
   const t = (path: string) => {
