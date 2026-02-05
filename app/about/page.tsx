@@ -4,25 +4,38 @@ import { useLanguage } from "@/components/LanguageProvider";
 
 export default function AboutPage() {
   const { t } = useLanguage();
+
   return (
     <main className="min-h-screen bg-black text-white pt-40 pb-20 px-6 md:px-24 font-extralight uppercase">
-      <div className="max-w-5xl mx-auto">
-        <motion.h1 initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="text-4xl md:text-6xl tracking-[0.4em] mb-16">
+      <div className="max-w-4xl mx-auto text-center">
+        <motion.h1 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="text-4xl md:text-6xl tracking-[0.4em] mb-20"
+        >
           {t('bio.title')}
         </motion.h1>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
-          <div className="space-y-8">
-            <p className="text-zinc-400 text-sm leading-relaxed tracking-widest lowercase first-letter:uppercase whitespace-pre-line">
-              {t('bio.content')}
-            </p>
-            <div className="pt-12">
-              <a href={t('bio.pressKitUrl')} download className="border border-white/20 px-8 py-4 text-[10px] tracking-widest hover:bg-white hover:text-black transition-all">
-                {t('bio.pressKitBtn')}
-              </a>
-            </div>
+
+        <motion.div 
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.5 }}
+          className="space-y-12"
+        >
+          <p className="text-zinc-400 text-sm md:text-base leading-[2.2] tracking-[0.15em] lowercase first-letter:uppercase whitespace-pre-line">
+            {t('bio.content')}
+          </p>
+          
+          <div className="pt-16">
+            <a 
+              href={t('bio.pressKitUrl')} 
+              download
+              className="inline-block border border-white/20 px-10 py-5 text-[10px] tracking-[0.4em] hover:bg-white hover:text-black transition-all duration-500"
+            >
+              {t('bio.pressKitBtn')}
+            </a>
           </div>
-          <img src="/media/01-portrait.jpeg" alt="Alberto Chines" className="w-full grayscale h-auto shadow-2xl" />
-        </div>
+        </motion.div>
       </div>
     </main>
   );
