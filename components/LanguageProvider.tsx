@@ -76,7 +76,7 @@ Alberto Chines è docente di pianoforte presso il Conservatorio "Francesco Venez
           ravel: "Valses Nobles et sentimentales\nLa Valse, per due pianoforti",
           respighi: "Antiche Arie e Danze\nSonata per violino e pianoforte P. 110",
           rihm: "Mehrere kurze Walzer, per pianoforte a quattro mani",
-          saintsaens: "Le Carnaval des Animaux\n6 Duos Op. 8 per harmonium e pianoforte",
+          saintsaens: "Le Carnaval dei Animaux\n6 Duos Op. 8 per harmonium e pianoforte",
           scarlatti: "30 Sonate",
           schnittke: "Hommage a Stravinsky, Prokofiev and Shostakovich, per pianoforte sei mani\nSonata N.1 per violoncello e pianoforte",
           schonberg: "Verklärte Nacht Op. 4 per trio con pianoforte (tr. Steuermann)\nPierrot Lunaire, per voce e pianoforte (tr. Stein)\n6 Stücke per pianoforte a quattro mani",
@@ -200,7 +200,7 @@ Alberto Chines is a Piano Professor at the "Francesco Venezze" Conservatory in R
       },
       contact: { title: "Contact", getInTouch: "Get in touch", email: "Email", follow: "Follow" },
       video: { 
-        moreOnYoutube: "More on YouTube" 
+        moreOnYouTube: "More on YouTube" 
       }
     }
   };
