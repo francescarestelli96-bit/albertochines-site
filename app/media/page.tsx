@@ -7,17 +7,17 @@ export default function MediaPage() {
   const [shuffledPhotos, setShuffledPhotos] = useState<any[]>([]);
 
   // 10 Video definitivi con titoli millimetrici richiesti da Alberto
-  const videos = [
+   const videos = [
     { title: "SOLER: Fandango in D minor R.146", id: "0qD0Xb_y12Y" },
     { title: "BEETHOVEN: Variations and Fugue Op.35 “Eroica”", id: "O6W-fI_fD_E" },
     { title: "ADÈS: Darknesse Visible (after John Dowland)", id: "UonCnd_rV9c" },
     { title: "ČAJKOVSKIJ/FEINBERG: Scherzo from Symphony N.6", id: "Y_8D3Y9PtcY" },
-    { title: "RAMEAU: La Villageoise", id: "5v0X2I2D_G8" },
+    { title: "RAMEAU: La Villageoise", id: "R_F0I_f7Fv4" },
     { title: "CHOPIN: Variations Brillantes Op.12", id: "hV_f7Fv4P8U" },
     { title: "BARTÓK: Dance Suite Sz.77 BB86b", id: "jLq89fXpGqA" },
-    { title: "FRESCOBALDI: Aria detto Balletto", id: "Y_8D3Y9PtcY" },
-    { title: "STRAVINKSIJ/AGOSTI: L’Oiseau de Feu", id: "oP0U2V_I1k8" },
-    { title: "LECTURE: Le Sacre du Printemps (Alberto Chines transcriptions)", id: "dQw4w9WgXcQ" },
+    { title: "FRESCOBALDI: Aria detto Balletto", id: "oP0U2V_I1k8" },
+    { title: "STRAVINKSIJ/AGOSTI: L’Oiseau de Feu", id: "5v0X2I2D_G8" },
+    { title: "LECTURE: Le Sacre du Printemps (Alberto Chines transcriptions)", id: "z_YV7fD_f8U" },
   ];
 
   const photos = [
