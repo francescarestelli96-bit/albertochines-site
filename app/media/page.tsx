@@ -4,7 +4,6 @@ import React from "react";
 import { motion } from "framer-motion";
 import { useLanguage } from "@/components/LanguageProvider";
 
-// Percorsi reali dalle tue cartelle
 const photos = [
   "/media/01-portrait.jpeg",
   "/media/02-profile.jpeg",
@@ -30,7 +29,12 @@ const videos = [
 ];
 
 export default function MediaPage() {
-  const { t } = useLanguage();
+  const { language } = useLanguage();
+
+  // Definiamo i titoli qui così non sbagliamo più
+  const titlePhotos = language === 'it' ? 'FOTO' : 'PHOTOS';
+  const titleVideos = language === 'it' ? 'VIDEO' : 'VIDEOS';
+  const btnScroll = language === 'it' ? 'VAI AI VIDEO ↓' : 'GO TO VIDEOS ↓';
 
   return (
     <main className="min-h-screen bg-black text-white pt-32 pb-20 px-6 sm:px-12 lg:px-24 font-extralight uppercase">
@@ -41,9 +45,9 @@ export default function MediaPage() {
           <motion.h2 
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
-            className="text-4xl md:text-6xl tracking-[0.4em] font-extralight"
+            className="text-3xl md:text-5xl tracking-[0.4em] font-extralight"
           >
-            {t('media.photos')}
+            {titlePhotos}
           </motion.h2>
           
           <motion.a 
@@ -52,7 +56,7 @@ export default function MediaPage() {
             animate={{ opacity: 1 }}
             className="border border-white/20 px-8 py-3 text-[10px] tracking-[0.3em] hover:bg-white hover:text-black transition-all duration-500 w-fit font-light"
           >
-            VAI AI VIDEO ↓
+            {btnScroll}
           </motion.a>
         </div>
         
@@ -81,9 +85,9 @@ export default function MediaPage() {
           initial={{ opacity: 0, x: -20 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
-          className="text-4xl md:text-6xl tracking-[0.4em] mb-24 font-extralight"
+          className="text-3xl md:text-5xl tracking-[0.4em] mb-24 font-extralight"
         >
-          {t('media.videos')}
+          {titleVideos}
         </motion.h2>
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-12 gap-y-24">
