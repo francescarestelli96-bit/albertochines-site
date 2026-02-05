@@ -1,28 +1,27 @@
-'use client';
-import { useLanguage } from "../../components/LanguageProvider";
+"use client";
+import { motion } from "framer-motion";
+import { useLanguage } from "@/components/LanguageProvider";
 
-export default function About() {
+export default function AboutPage() {
   const { t } = useLanguage();
-
   return (
-    <main className="min-h-screen bg-black text-white pt-32 px-6 pb-20 animate-in fade-in duration-1000">
-      <div className="max-w-3xl mx-auto text-justify">
-        <h1 className="text-4xl md:text-5xl font-extralight uppercase tracking-[0.3em] border-b border-white/10 pb-8 mb-12 text-left">
-          {t('about.title')}
-        </h1>
-        <div className="prose prose-invert max-w-none">
-          <p className="text-base md:text-lg font-extralight leading-relaxed tracking-wide text-zinc-300 whitespace-pre-line hyphens-auto">
-            {t('about.content')}
-          </p>
-        </div>
-        <div className="mt-24 pt-12 border-t border-white/10 text-center">
-          <a 
-            href={t('about.pressKitFile')} 
-            download={t('about.pressKitName')}
-            className="inline-block px-10 py-4 border border-white/20 text-[10px] uppercase tracking-[0.4em] font-light hover:bg-white hover:text-black transition-all duration-500"
-          >
-            Download Press Kit
-          </a>
+    <main className="min-h-screen bg-black text-white pt-40 pb-20 px-6 md:px-24 font-extralight uppercase">
+      <div className="max-w-5xl mx-auto">
+        <motion.h1 initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="text-4xl md:text-6xl tracking-[0.4em] mb-16">
+          {t('bio.title')}
+        </motion.h1>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
+          <div className="space-y-8">
+            <p className="text-zinc-400 text-sm leading-relaxed tracking-widest lowercase first-letter:uppercase whitespace-pre-line">
+              {t('bio.content')}
+            </p>
+            <div className="pt-12">
+              <a href={t('bio.pressKitUrl')} download className="border border-white/20 px-8 py-4 text-[10px] tracking-widest hover:bg-white hover:text-black transition-all">
+                {t('bio.pressKitBtn')}
+              </a>
+            </div>
+          </div>
+          <img src="/media/01-portrait.jpeg" alt="Alberto Chines" className="w-full grayscale h-auto shadow-2xl" />
         </div>
       </div>
     </main>
