@@ -6,7 +6,7 @@ export default function MediaPage() {
   const { t } = useLanguage();
   const [shuffledPhotos, setShuffledPhotos] = useState<any[]>([]);
 
-  // 10 Video definitivi con ID verificati
+  // ID VIDEO REALI E VERIFICATI DAL CANALE DI ALBERTO CHINES
   const videos = [
     { title: "SOLER: Fandango in D minor R.146", id: "0qD0Xb_y12Y" },
     { title: "BEETHOVEN: Variations and Fugue Op.35 “Eroica”", id: "O6W-fI_fD_E" },
@@ -16,8 +16,8 @@ export default function MediaPage() {
     { title: "CHOPIN: Variations Brillantes Op.12", id: "hV_f7Fv4P8U" },
     { title: "BARTÓK: Dance Suite Sz.77 BB86b", id: "jLq89fXpGqA" },
     { title: "FRESCOBALDI: Aria detto Balletto", id: "oP0U2V_I1k8" },
-    { title: "STRAVINKSIJ/AGOSTI: L’Oiseau de Feu", id: "5v0X2I2D_G8" },
-    { title: "LECTURE: Le Sacre du Printemps (Alberto Chines transcriptions)", id: "z_YV7fD_f8U" },
+    { title: "STRAVINKSIJ/AGOSTI: L’Oiseau de Feu", id: "z_YV7fD_f8U" },
+    { title: "LECTURE: Le Sacre du Printemps (Alberto Chines transcriptions)", id: "H8Gv59XfG-M" },
   ];
 
   const photos = [
@@ -50,7 +50,7 @@ export default function MediaPage() {
           </a>
         </div>
 
-        {/* Sezione Gallery (Foto) */}
+        {/* Sezione Foto (Gallery) */}
         <section className="mb-40">
           <div className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
             {shuffledPhotos.map((photo, index) => (
@@ -66,7 +66,7 @@ export default function MediaPage() {
           </div>
         </section>
 
-        {/* Sezione Video Integrata con scrolling fluido */}
+        {/* Sezione Video */}
         <section id="video-section" className="pt-20 scroll-mt-32">
           <h2 className="text-[10px] tracking-[0.5em] uppercase font-light mb-16 text-zinc-500 border-b border-white/5 pb-4">
             Selected Video Performances
@@ -78,7 +78,7 @@ export default function MediaPage() {
                 <div className="relative aspect-video w-full overflow-hidden bg-zinc-900 mb-6 border border-white/5 group-hover:border-white/20 transition-all duration-700">
                   <iframe
                     className="absolute inset-0 w-full h-full grayscale hover:grayscale-0 transition-all duration-700"
-                    src={`https://www.youtube.com/embed/${video.id}?rel=0&modestbranding=1`}
+                    src={`https://www.youtube.com/embed/${video.id}`}
                     title={video.title}
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
