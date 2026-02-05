@@ -102,8 +102,6 @@ Alberto Chines è docente di pianoforte presso il Conservatorio "Francesco Venez
         }
       },
       video: { 
-        handelTitle: "G.F. Händel - Lascia ch'io pianga", 
-        handelDescription: "Libera trascrizione per pianoforte", 
         moreOnYoutube: "Scopri di più su YouTube" 
       }
     },
@@ -132,7 +130,7 @@ Alberto Chines is a Piano Professor at the "Francesco Venezze" Conservatory in R
           ades: "Darknesse Visible (after John Dowland)",
           cpebach: "Variations on Folie d’Espagne H. 263",
           jcbach: "Sonata in C minor Op. 5 No. 6\nPiano quartet in G major W B66",
-          jsbach: "Partita No. 2 BWV 826\nEnglish Suite No. 2 BWV 807\nEnglish Suite No. 3 BWV 808\nFrench Suite No.5 BWV 816\nToccata in E minor BWV 914\nSonata in D major BWV 963\nDas wohltemperierte Klavier I&II (selection)\nDie Kunst der Fuge (selection)\nFantasia and Fugue in G minor BWV 542 (tr. Liszt)\nViolin Partita No. 3 (tr. Rachmaninov)\nPassacaglia and Fugue in C minor BWV 582 (tr. D’Albert)\nToccata and Fugue in D minor BWV 565 (tr. Busoni)\nBrandenburg Concerto No. 3 BWV 1048 (tr. Friedman)",
+          jsbach: "Partita No. 2 BWV 826\nEnglish Suite No. 2 BWV 807\nEnglish Suite No. 3 BWV 808\nFrench Suite No.5 BWV 816\nToccata in E minor BWV 914\nSonata in D major BWV 963\nDas wohltemperierte Klavier I&II (selection)\nDie Kunst della Fuge (selection)\nFantasia and Fugue in G minor BWV 542 (tr. Liszt)\nViolin Partita No. 3 (tr. Rachmaninov)\nPassacaglia and Fugue in C minor BWV 582 (tr. D’Albert)\nToccata and Fugue in D minor BWV 565 (tr. Busoni)\nBrandenburg Concerto No. 3 BWV 1048 (tr. Friedman)",
           bartok: "Suite Op. 14\nDance Suite Sz. 77 BB86b",
           bauer: "Sonata for cello and piano",
           beethoven: "Sonatas Op. 2 Nos.1 & 3\nSonata Op. 14 No.2\nSonata Op. 22\nSonata Op. 27 No.2\nSonata Op. 28\nSonata Op. 31 No.1\nSonata Op. 53 “Waldstein”\nSonata Op. 81a “Les Adieux”\nSonata Op.111\nVariations and Fugue Op. 35 “Eroica”\nVariations in C minor WoO 80\nVariations on “Es war einmal ein alter Mann” WoO 66\nSerenade for flute and piano Op. 41\nSonata for cello and piano No. 3 Op. 69\nSonata for violin and piano No. 5 Op. 24\nTrio Op. 1 No.1",
@@ -169,7 +167,7 @@ Alberto Chines is a Piano Professor at the "Francesco Venezze" Conservatory in R
           ravel: "Valses Nobles et sentimentales\nLa Valse, for two pianos",
           respighi: "Antiche Arie e Danze\nSonata for violin and piano P. 110",
           rihm: "Mehrere kurze Walzer, for piano four hands",
-          saintsaens: "Le Carnaval des Animaux\n6 Duos Op. 8 for harmonium and piano",
+          saintsaens: "Le Carnaval dei Animaux\n6 Duos Op. 8 for harmonium and piano",
           scarlatti: "30 Sonatas",
           schnittke: "Hommage a Stravinsky, Prokofiev and Shostakovich, for piano six hands\nSonata No. 1 for cello and piano",
           schonberg: "Verklärte Nacht Op. 4 for piano trio (tr. Steuermann)\nPierrot Lunaire, for voice and piano (tr. Stein)\n6 Stücke for piano four hands",
@@ -181,7 +179,7 @@ Alberto Chines is a Piano Professor at the "Francesco Venezze" Conservatory in R
           shostakovich: "Piano Quintet Op. 57\nPiano Trio Op. 67\nSonata Op. 147 for viola and piano\nPreludes and Fugues (selection)",
           smetana: "Piano Trio Op. 15",
           soler: "Fandango in D minor R.146\nSonatas (selection)",
-          stravinsky: "L’Oiseau de Feu (tr. Agosti)\nLe Sacre du Printemps (tr. Alberto Chines)",
+          stravinsky: "L’Oiseau dei Feu (tr. Agosti)\nLe Sacre du Printemps (tr. Alberto Chines)",
           sweelinck: "Partitas on “Mein Junges Leben hat ein End”, SwWV 324",
           tchaikovsky: "Scherzo from Symphony No. 6 (tr. Feinberg)",
           weber: "Sonata No. 3 Op. 49",
@@ -202,8 +200,6 @@ Alberto Chines is a Piano Professor at the "Francesco Venezze" Conservatory in R
       },
       contact: { title: "Contact", getInTouch: "Get in touch", email: "Email", follow: "Follow" },
       video: { 
-        handelTitle: "G.F. Händel - Lascia ch'io pianga", 
-        handelDescription: "Free piano transcription", 
         moreOnYoutube: "More on YouTube" 
       }
     }

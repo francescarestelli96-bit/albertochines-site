@@ -49,9 +49,9 @@ export default function MediaPage() {
 
         <section className="mb-40">
           <div className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
-            {shuffledPhotos.map((photo, index) => (
-              <div key={index} className="break-inside-avoid overflow-hidden bg-zinc-900 group">
-                <img src={photo.src} alt={photo.alt} className="w-full h-auto object-cover transition-transform duration-1000 group-hover:scale-110 border border-white/5" />
+            {shuffledPhotos.map((p, i) => (
+              <div key={i} className="break-inside-avoid overflow-hidden bg-zinc-900 group">
+                <img src={p.src} alt={p.alt} className="w-full h-auto object-cover transition-transform duration-1000 group-hover:scale-110 border border-white/5" />
               </div>
             ))}
           </div>
@@ -59,17 +59,17 @@ export default function MediaPage() {
 
         <section id="video-section" className="pt-20 scroll-mt-32">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-24">
-            {videos.map((video, index) => (
-              <div key={index} className="group">
+            {videos.map((v, i) => (
+              <div key={i} className="group">
                 <div className="relative aspect-video w-full overflow-hidden bg-zinc-900 mb-6 border border-white/5 group-hover:border-white/20 transition-all duration-700">
                   <iframe
                     className="absolute inset-0 w-full h-full grayscale hover:grayscale-0 transition-all duration-700 shadow-2xl"
-                    src={`https://www.youtube.com/embed/${video.id}?rel=0&modestbranding=1&origin=https://albertochines-site.vercel.app`}
-                    title={video.title}
+                    src={`https://www.youtube.com/embed/${v.id}?rel=0&modestbranding=1&origin=https://albertochines-site.vercel.app`}
+                    title={v.title}
                     allowFullScreen
                   ></iframe>
                 </div>
-                <h3 className="text-[10px] md:text-xs font-light tracking-[0.2em] uppercase text-zinc-400 italic">{video.title}</h3>
+                <h3 className="text-[10px] md:text-xs font-light tracking-[0.2em] uppercase text-zinc-400 italic">{v.title}</h3>
               </div>
             ))}
           </div>
