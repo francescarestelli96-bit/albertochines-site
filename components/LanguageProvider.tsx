@@ -76,7 +76,7 @@ Alberto Chines è docente di pianoforte presso il Conservatorio "Francesco Venez
           { composer: "SERGEJ RACHMANINOV", works: "Concerto N. 2 Op. 18" }
         ]
       },
-      concerts: { title: "CONCERTI", message: "DATE IN AGGIORNAMENTO PER IL 2026." },
+      concerts: { title: "CONCERTI", message: "SEZIONE IN AGGIORNAMENTO" },
       contact: { title: "CONTATTI", email: "EMAIL", follow: "SEGUI" }
     },
     en: {
@@ -85,7 +85,7 @@ Alberto Chines è docente di pianoforte presso il Conservatorio "Francesco Venez
         title: "BIO",
         pressKitBtn: "DOWNLOAD PRESS KIT",
         pressKitUrl: "/downloads/presskit.zip",
-        content: `Alberto Chines, Steinway Artist since 2020, is a multifaceted pianist...`
+        content: `Alberto Chines, Steinway Artist since 2020, is a multifaceted pianist who combines an extensive solo career with a profound interest in chamber music and education. Trained at the Imola Academy and Bolzano Conservatory, he won first prize at the International "Palma d’Oro" Competition. He has performed at the Teatro alla Scala in Milan and Van Cliburn Recital Hall in the USA. He is a Piano Professor at the "Francesco Venezze" Conservatory in Rovigo.`
       },
       repertoire: {
         title: "REPERTOIRE",
@@ -93,14 +93,15 @@ Alberto Chines è docente di pianoforte presso il Conservatorio "Francesco Venez
         orchestraTitle: "PIANO AND ORCHESTRA",
         content: [
           { composer: "THOMAS ADÈS", works: "Darknesse Visible" },
-          { composer: "CAMILLE SAINT-SAËNS", works: "The Carnival of the Animals" },
+          { composer: "CAMILLE SAINT-SAËNS", works: "The Carnival of the Animals, 6 Duos Op. 8" },
           { composer: "IGOR STRAVINSKY", works: "The Rite of Spring (tr. Alberto Chines)" }
         ],
         orchestra: [
           { composer: "W.A. MOZART", works: "Concerto KV 488" }
         ]
       },
-      concerts: { title: "CONCERTS", message: "DATES UPDATING FOR 2026." }
+      concerts: { title: "CONCERTS", message: "SECTION UNDER UPDATE" },
+      contact: { title: "CONTACT", email: "EMAIL", follow: "FOLLOW" }
     }
   };
 
