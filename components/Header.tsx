@@ -14,7 +14,7 @@ export default function Header() {
       
       <nav className="flex flex-wrap justify-center gap-x-4 gap-y-2 md:gap-8 items-center text-[8px] md:text-[10px] tracking-[0.2em] md:tracking-[0.4em] text-white">
         <Link href="/about" className="hover:opacity-50 transition-opacity">{t('nav.bio')}</Link>
-        <Link href="/concerts" className="hover:opacity-50 transition-opacity">{t('nav.concerts')}</Link>
+        {/* <Link href="/concerts" className="hover:opacity-50 transition-opacity">{t('nav.concerts')}</Link> */}
         <Link href="/repertoire" className="hover:opacity-50 transition-opacity">{t('nav.repertoire')}</Link>
         <Link href="/media" className="hover:opacity-50 transition-opacity">{t('nav.media')}</Link>
         <Link href="/contact" className="hover:opacity-50 transition-opacity">{t('nav.contact')}</Link>
