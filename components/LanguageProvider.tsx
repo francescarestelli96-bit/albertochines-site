@@ -72,7 +72,7 @@ Alberto Chines è docente di pianoforte presso il Conservatorio "Francesco Venez
         orchestra: [
           { composer: "J.S. BACH", works: "Concerto in re minore BWV 1052" },
           { composer: "BÉLA BARTÓK", works: "Concerto N. 3 Sz. 119" },
-          { composer: "L. VAN BEETHOVEN", works: "Concerto N. 3 Op. 37, N. 4 Op. 58, Triplo Concerto" },
+          { composer: "L. VAN BEETHOVEN", works: "Concerto N. 3 Op. 37, N. 4 Op. 58, Triplo Concerto Op. 56" },
           { composer: "W.A. MOZART", works: "Concerti KV 414, 415, 488" },
           { composer: "SERGEJ RACHMANINOV", works: "Concerto N. 2 Op. 18" }
         ]
@@ -144,7 +144,7 @@ Alberto Chines is a Piano Professor at the "Francesco Venezze" Conservatory in R
         orchestra: [
           { composer: "J.S. BACH", works: "Concerto in D minor BWV 1052" },
           { composer: "BÉLA BARTÓK", works: "Concerto No. 3 Sz. 119" },
-          { composer: "L. VAN BEETHOVEN", works: "Concerto No. 3 Op. 37, No. 4 Op. 58, Triple Concerto" },
+          { composer: "L. VAN BEETHOVEN", works: "Concerto No. 3 Op. 37, No. 4 Op. 58, Triple Concerto Op. 56" },
           { composer: "W.A. MOZART", works: "Concertos KV 414, 415, 488" },
           { composer: "SERGEI RACHMANINOFF", works: "Concerto No. 2 Op. 18" }
         ]
