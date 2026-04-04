@@ -24,7 +24,7 @@ export default function AboutPage() {
           <div className="pt-20">
             <a 
               href={t('bio.pressKitUrl')} 
-              download 
+              download="alberto-chines-presskit.zip"
               className="inline-block border border-white/20 px-10 py-5 text-xs tracking-[0.4em] font-light hover:bg-white hover:text-black transition-all uppercase"
             >
               {t('bio.pressKitBtn')}
