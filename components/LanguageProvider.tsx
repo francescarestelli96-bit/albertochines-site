@@ -28,7 +28,7 @@ Alberto Chines è docente di pianoforte presso il Conservatorio "Francesco Venez
       },
       repertoire: {
         title: "REPERTORIO",
-        subtitle: "MUSICA DA CAMERA E SOLISTICO",
+        subtitle: "SOLISTICO E CAMERISTICO",
         orchestraTitle: "REPERTORIO CON ORCHESTRA",
         content: [
           { composer: "THOMAS ADÈS", works: "Darknesse Visible (after John Dowland)" },
@@ -100,7 +100,7 @@ Alberto Chines is a Piano Professor at the "Francesco Venezze" Conservatory in R
       },
       repertoire: {
         title: "REPERTOIRE",
-        subtitle: "CHAMBER AND SOLO MUSIC",
+        subtitle: "SOLO AND CHAMBER MUSIC",
         orchestraTitle: "PIANO AND ORCHESTRA",
         content: [
           { composer: "THOMAS ADÈS", works: "Darknesse Visible (after John Dowland)" },
