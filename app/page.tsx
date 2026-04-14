@@ -9,7 +9,6 @@ export const metadata: Metadata = {
 };
 
 export default function HomePage() {
-  const logoImmagine = siteConfig.logoPath;
   const fotoPortrait = "/media/01-portrait.jpeg"; 
   const structuredData = getHomeJsonLd();
 
@@ -29,8 +28,8 @@ export default function HomePage() {
           </p>
         </header>
 
-        {/* 1. SEZIONE FOTO (SOPRA MOBILE / DESTRA DESKTOP) */}
-        <section className="relative w-full h-[55vh] md:h-screen md:w-1/2 md:order-2 overflow-hidden bg-black">
+        {/* SEZIONE FOTO PORTRAIT - ORA A TUTTO SCHERMO */}
+        <section className="relative w-full h-screen overflow-hidden bg-black">
           <div className="absolute -top-[5%] md:-top-[25%] left-0 w-full h-[120%] md:h-[140%]">
             <Image
               src={fotoPortrait}
@@ -45,20 +44,6 @@ export default function HomePage() {
           {/* SFUMATURE */}
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black z-20 pointer-events-none md:hidden" />
           <div className="hidden md:block absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-black via-black/20 to-transparent z-20 pointer-events-none" />
-        </section>
-
-        {/* 2. SEZIONE LOGO (SOTTO MOBILE / SINISTRA DESKTOP) */}
-        <section className="relative w-full h-[45vh] md:h-screen md:w-1/2 bg-black flex items-center justify-center p-4 md:p-24 md:order-1 z-30">
-          <div className="relative w-full max-w-[260px] md:max-w-[500px] aspect-square -mt-12 md:mt-0">
-            <Image 
-              src={logoImmagine} 
-              alt="Alberto Chines"
-              fill
-              sizes="(max-width: 768px) 260px, 500px"
-              className="object-contain brightness-110 contrast-110" 
-              priority
-            />
-          </div>
         </section>
 
       </main>
