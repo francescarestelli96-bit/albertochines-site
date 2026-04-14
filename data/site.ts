@@ -1,17 +1,22 @@
 export const siteConfig = {
   name: "Alberto Chines",
-  title: "Alberto Chines | Official Website",
-  description:
-    "Official website of pianist Alberto Chines. Biography, repertoire, media, videos, concerts and contacts.",
+  title: "Alberto Chines",
+  description: "Steinway Artist - Italian Pianist - Professor",
+  longDescription:
+    "Official website of Alberto Chines. Steinway Artist, Italian pianist and professor. Biography, repertoire, media, videos, concerts and contacts.",
   url: "https://www.albertochines.com",
   logoPath: "/branding/ac-logo-square.png",
   ogImagePath: "/branding/ac-logo-og.png",
   email: "mailto:info@albertochines.com",
-  profession: "Pianist",
+  profession: "Steinway Artist",
+  subtitle: "Steinway Artist - Italian Pianist - Professor",
   locale: "it_IT",
   keywords: [
     "Alberto Chines",
     "Alberto Chines pianist",
+    "Steinway Artist",
+    "Italian pianist",
+    "Professor",
     "pianist",
     "classical piano",
     "concert pianist",
@@ -46,7 +51,9 @@ export function getHomeJsonLd() {
         name: siteConfig.name,
         url: siteConfig.url,
         image: logoUrl,
-        jobTitle: siteConfig.profession,
+        description: siteConfig.subtitle,
+        jobTitle: "Italian Pianist and Professor",
+        award: "Steinway Artist",
         email: siteConfig.email,
         sameAs: siteConfig.socialLinks,
       },
@@ -61,6 +68,7 @@ export function getHomeJsonLd() {
           width: 560,
           height: 560,
         },
+        description: siteConfig.subtitle,
         sameAs: siteConfig.socialLinks,
       },
       {
@@ -69,7 +77,7 @@ export function getHomeJsonLd() {
         url: siteConfig.url,
         name: siteConfig.name,
         alternateName: siteConfig.title,
-        description: siteConfig.description,
+        description: siteConfig.subtitle,
         inLanguage: ["it", "en"],
         publisher: {
           "@id": `${siteConfig.url}/#organization`,
@@ -80,7 +88,7 @@ export function getHomeJsonLd() {
         "@id": `${siteConfig.url}/#webpage`,
         url: siteConfig.url,
         name: siteConfig.title,
-        description: siteConfig.description,
+        description: siteConfig.subtitle,
         isPartOf: {
           "@id": `${siteConfig.url}/#website`,
         },

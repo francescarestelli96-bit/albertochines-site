@@ -11,23 +11,26 @@ export const metadata: Metadata = {
     default: siteConfig.title,
     template: `%s | ${siteConfig.name}`,
   },
-  description: siteConfig.description,
+  description: siteConfig.longDescription,
   keywords: [...siteConfig.keywords],
   authors: [{ name: siteConfig.name }],
   creator: siteConfig.name,
   publisher: siteConfig.name,
   manifest: "/manifest.webmanifest",
   icons: {
-    icon: [{ url: "/icon.png", sizes: "512x512", type: "image/png" }],
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/icon.png", sizes: "512x512", type: "image/png" },
+    ],
     apple: [{ url: "/apple-icon.png", sizes: "180x180", type: "image/png" }],
-    shortcut: ["/icon.png"],
+    shortcut: ["/favicon.ico"],
   },
   openGraph: {
     type: "website",
     url: siteConfig.url,
     siteName: siteConfig.name,
     title: siteConfig.title,
-    description: siteConfig.description,
+    description: siteConfig.subtitle,
     locale: siteConfig.locale,
     images: [
       {
@@ -41,7 +44,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: siteConfig.title,
-    description: siteConfig.description,
+    description: siteConfig.subtitle,
     images: [siteConfig.ogImagePath],
   },
   robots: {
