@@ -9,6 +9,7 @@ export const metadata: Metadata = {
 };
 
 export default function HomePage() {
+  const nameplateImage = "/media/alberto-chines-wordmark.jpeg";
   const fotoPortrait = "/media/01-portrait.jpeg";
   const structuredData = getHomeJsonLd();
 
@@ -43,12 +44,15 @@ export default function HomePage() {
         </section>
 
         <section className="relative w-full h-[45vh] md:h-screen md:w-1/2 bg-black flex items-center justify-center p-4 md:p-24 md:order-1 z-30">
-          <div className="w-full max-w-[280px] md:max-w-[500px] -mt-16 md:mt-0 text-center">
-            <h1 className="text-5xl md:text-8xl tracking-[0.28em] uppercase leading-[0.95]">
-              Alberto
-              <br />
-              Chines
-            </h1>
+          <div className="relative w-full max-w-[280px] md:max-w-[500px] aspect-[3/2] -mt-16 md:mt-0">
+            <Image
+              src={nameplateImage}
+              alt="Alberto Chines"
+              fill
+              sizes="(max-width: 768px) 280px, 500px"
+              className="object-contain brightness-110 contrast-110"
+              priority
+            />
           </div>
         </section>
       </main>
