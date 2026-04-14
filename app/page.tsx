@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { getHomeJsonLd, siteConfig } from "../data/site";
+import { getHomeJsonLd } from "../data/site";
 
 export const metadata: Metadata = {
   alternates: {
@@ -43,18 +43,12 @@ export default function HomePage() {
         </section>
 
         <section className="relative w-full h-[45vh] md:h-screen md:w-1/2 bg-black flex items-center justify-center p-4 md:p-24 md:order-1 z-30">
-          <div className="w-full max-w-[420px] -mt-12 md:mt-0 text-center md:text-left">
-            <p className="text-[10px] md:text-xs text-zinc-500 tracking-[0.55em] uppercase mb-6">
-              {siteConfig.profession}
-            </p>
-            <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl tracking-[0.22em] uppercase leading-[0.95]">
+          <div className="w-full max-w-[280px] md:max-w-[500px] -mt-16 md:mt-0 text-center">
+            <h1 className="text-5xl md:text-8xl tracking-[0.28em] uppercase leading-[0.95]">
               Alberto
               <br />
               Chines
             </h1>
-            <p className="mt-6 text-[10px] md:text-xs text-zinc-400 tracking-[0.45em] uppercase">
-              Official Website
-            </p>
           </div>
         </section>
       </main>
