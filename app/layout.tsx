@@ -78,7 +78,14 @@ export default function RootLayout({
           <Header />
           <main className="relative z-10 flex-1">{children}</main>
           <footer className="relative z-10 border-t border-white/5 px-6 py-5 text-center text-[10px] uppercase tracking-[0.38em] text-zinc-500">
-            powered by francesca restelli
+            <a
+              href="https://www.francescarestelli.com/"
+              target="_blank"
+              rel="noreferrer"
+              className="hover:text-white transition-colors"
+            >
+              powered by francesca restelli
+            </a>
           </footer>
         </LanguageProvider>
       </body>
