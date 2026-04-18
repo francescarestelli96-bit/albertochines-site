@@ -4,14 +4,14 @@ import { getHomeJsonLd, siteConfig } from "../data/site";
 
 export const metadata: Metadata = {
   title: {
-    absolute: siteConfig.name,
+    absolute: siteConfig.title,
   },
   description: siteConfig.subtitle,
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: siteConfig.name,
+    title: siteConfig.title,
     description: siteConfig.subtitle,
     url: siteConfig.url,
     images: [
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: siteConfig.name,
+    title: siteConfig.title,
     description: siteConfig.subtitle,
     images: [siteConfig.ogImagePath],
   },
@@ -70,7 +70,7 @@ export default function HomePage() {
           <div className="relative w-full max-w-[280px] md:max-w-[500px] aspect-[3/2] -mt-16 md:mt-0">
             <Image
               src={nameplateImage}
-              alt="Alberto Chines. Steinway Artist - Italian Pianist - Professor"
+              alt="Alberto Chines. Italian pianist, educator, Steinway Artist"
               fill
               sizes="(max-width: 768px) 280px, 500px"
               className="object-contain brightness-110 contrast-110"
